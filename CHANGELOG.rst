@@ -1,0 +1,7 @@
+Changelog
+=========
+
+Next
+----
+
+ * Inital Release
