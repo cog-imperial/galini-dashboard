@@ -1,6 +1,12 @@
 GALINI Dashboard
 ================
 
+Installation
+------------
+
+ 1. Download and install `galini-io <https://github.com/cog-imperial/galini-io>`.
+ 2. Run ``python setup.py develop``
+
 
 License
 -------
