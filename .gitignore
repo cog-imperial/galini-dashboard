@@ -18,3 +18,4 @@ docs/_build
 *.so
 galini/core/*.c
 galini/core/*.html
+*.vscode
