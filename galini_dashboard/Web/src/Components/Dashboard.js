@@ -1,122 +1,158 @@
 // @flow
 import React from "react";
 import { fetchRawLogs } from "../Utils/Network";
-import { Icon, Button, Header } from "semantic-ui-react";
+import { Icon, Button, Header, Ref } from "semantic-ui-react";
+import { connect } from "react-redux";
+import Modules from "./ModulesControl";
+import store from "../Store";
+import { setModulesHeight } from "../Actions";
 
-type Props = { selected: String };
+const mapStateToProps = state => {
+  return { rawLogs: state.rawLogs, modulesHeight: state.modulesHeight };
+};
 
-type State = { logs: Array, visible: number };
+type Props = { selected: String, rawLogs: Array, modulesHeight: number };
+
+type State = { rawLogsVisibility: number };
 
 class Dashboard extends React.Component<Props, State> {
-  state = { visible: 1 };
+  state = { rawLogsVisibility: 1 };
+  dashboardRef = null;
+  headerRef = null;
 
   componentDidUpdate(prevProps: Props) {
     if (prevProps.selected !== this.props.selected) {
-      this.fetchLogs(this.props.selected);
+      fetchRawLogs(this.props.selected);
+      this.setState({ rawLogsVisibility: 1 });
     }
   }
 
-  fetchLogs = async (name: string) => {
-    const reader = await fetchRawLogs(name);
-    const logs = [];
-    await reader.read().then(function processText({ done, value }) {
-      if (!done) {
-        logs.push(new TextDecoder("utf-8").decode(value));
-        return reader.read().then(processText);
-      }
-    });
-    this.setState({ logs });
-  };
+  componentDidMount() {
+    window.addEventListener("resize", () => this.updateHeight(this.state.rawLogsVisibility));
+  }
 
-  renderModulesControl = () => {
-    return (
-      <div style={controlHeaderStyle}>
-        <Button icon basic color="black" size="mini">
-          <Icon name="plus" />
-        </Button>
-        <div style={{ flexGrow: "2", display: "flex", flexDirection: "column", justifyContent: "space-around" }}>
-          <Header as="a2">Modules</Header>
-        </div>
-      </div>
-    );
+  componentWillUnmount() {
+    window.removeEventListener("resize", () => this.updateHeight(this.state.rawLogsVisibility));
+  }
+
+  updateHeight = (rawLogsVisibility: number) => {
+    console.log("Update");
+    const totalHeight = this.dashboardRef ? this.dashboardRef.clientHeight : 0;
+    const usedHeight = this.headerRef ? this.headerRef.clientHeight : 0;
+    const availableHeight = totalHeight - usedHeight;
+    const rawLogsHeight = rawLogsVisibility === 0 ? 0 : rawLogsVisibility === 1 ? availableHeight / 2 : availableHeight;
+    this.setState({ rawLogsHeight });
+    store.dispatch(setModulesHeight(availableHeight - rawLogsHeight));
   };
 
   renderModules = () => {
-    return <div style={{ flexGrow: 2 }}>Modules will go here.</div>;
-  };
-
-  renderRawLogsControl = (visible: number) => {
+    const { rawLogsVisibility } = this.state;
+    const { modulesHeight } = this.props;
+    const { selected } = this.props;
     return (
-      <div style={controlHeaderStyle}>
-        <Button.Group size="mini">
-          <Button
-            icon
-            disabled={visible === 0}
-            basic
-            color="black"
-            size="mini"
-            onClick={() => this.setState({ visible: visible - 1 })}
-          >
-            <Icon name="minus" />
-          </Button>
-          <Button
-            icon
-            disabled={visible === 2}
-            basic
-            color="black"
-            size="mini"
-            onClick={() => this.setState({ visible: visible + 1 })}
-          >
-            <Icon name="plus" />
-          </Button>
-        </Button.Group>
-        <div style={{ flexGrow: "2", display: "flex", flexDirection: "column", justifyContent: "space-around" }}>
-          <Header as="a2">Raw Logs</Header>
-        </div>
+      <div style={{ display: rawLogsVisibility === 2 ? "none" : "block", height: `${modulesHeight}px` }}>
+        <Modules selected={selected} />
       </div>
     );
   };
 
-  renderRawLogs = (rawLogs: Array, visible: number) => {
-    return visible === 0 ? null : (
-      <div
-        style={{
-          whiteSpace: "pre-wrap",
-          overflow: "auto",
-          maxHeight: visible === 1 ? "50%" : "100%",
-          width: "100%",
-          paddingLeft: "10px",
-          paddingRight: "10px"
+  renderRawLogsControl = (rawLogsVisibility: number) => {
+    return (
+      <Ref
+        innerRef={node => {
+          this.headerRef = node;
+          this.updateHeight(rawLogsVisibility);
         }}
       >
-        {rawLogs}
-      </div>
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "row-reverse",
+            padding: "7px",
+            background: "lightGray"
+          }}
+        >
+          <Button.Group size="mini">
+            <Button
+              icon
+              disabled={rawLogsVisibility === 0}
+              basic
+              color="black"
+              size="mini"
+              onClick={() =>
+                this.setState({ rawLogsVisibility: rawLogsVisibility - 1 }, this.updateHeight(rawLogsVisibility - 1))
+              }
+            >
+              <Icon name="minus" />
+            </Button>
+            <Button
+              icon
+              disabled={rawLogsVisibility === 2}
+              basic
+              color="black"
+              size="mini"
+              onClick={() =>
+                this.setState({ rawLogsVisibility: rawLogsVisibility + 1 }, this.updateHeight(rawLogsVisibility + 1))
+              }
+            >
+              <Icon name="plus" />
+            </Button>
+          </Button.Group>
+          <div style={{ flexGrow: "2", display: "flex", flexDirection: "column", justifyContent: "space-around" }}>
+            <Header as="h2">Raw Logs</Header>
+          </div>
+        </div>
+      </Ref>
     );
+  };
+
+  renderRawLogs = () => {
+    const { rawLogs } = this.props;
+    const { rawLogsVisibility, rawLogsHeight } = this.state;
+    const usedHeight = this.headerRef ? this.headerRef.clientHeight : 0;
+    return rawLogs && rawLogs.length > 0 ? (
+      <div style={{ height: `${usedHeight + rawLogsHeight}px` }}>
+        {this.renderRawLogsControl(rawLogsVisibility)}
+        <div
+          style={{
+            whiteSpace: "pre-wrap",
+            overflow: "auto",
+            width: "100%",
+            paddingLeft: "10px",
+            paddingRight: "10px",
+            fontFamily: "monospace",
+            display: rawLogsVisibility === 0 ? "none" : "block",
+            height: `${rawLogsHeight}px`
+          }}
+        >
+          {rawLogs.join("")}
+        </div>
+      </div>
+    ) : null;
   };
 
   render() {
-    const { logs, visible } = this.state;
     const modules = this.renderModules();
-    const modulesControl = this.renderModulesControl();
-    const rawLogs = logs ? this.renderRawLogs(logs, visible) : null;
-    const rawLogsControl = logs ? this.renderRawLogsControl(visible) : null;
-    return (
-      <div style={{ height: "100%", width: "100%", display: "flex", flexDirection: "column" }}>
-        {modulesControl}
-        {modules}
-        {rawLogsControl}
-        {rawLogs}
-      </div>
+    const rawLogs = this.renderRawLogs();
+    const { rawLogsVisibility } = this.state;
+    const { selected } = this.props;
+    return selected ? (
+      <Ref
+        innerRef={node => {
+          this.dashboardRef = node;
+          this.updateHeight(rawLogsVisibility);
+        }}
+      >
+        <div style={{ height: "100%", width: "100%", display: "flex", flexDirection: "column" }}>
+          {modules}
+          {rawLogs}
+        </div>
+      </Ref>
+    ) : (
+      <div />
     );
   }
 }
 
-const controlHeaderStyle = {
-  width: "100%",
-  display: "flex",
-  flexDirection: "row-reverse",
-  padding: "7px",
-  background: "lightGray"
-};
-
-export default Dashboard;
+export default connect(mapStateToProps)(Dashboard);

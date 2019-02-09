@@ -1,0 +1,1406 @@
+D
+outer_approximation"outer_approximation_20190205124040÷ø²í‹-2(
+ipoptipopt_20190205124041ºû²í‹-2°
+ipoptipopt_20190205124041¼û²í‹-"‰„
+******************************************************************************
+This program contains Ipopt, a library for large-scale nonlinear optimization.
+ Ipopt is released as open source code under the Eclipse Public License (EPL).
+         For more information visit http://projects.coin-or.org/Ipopt
+******************************************************************************
+
+i
+ipoptipopt_20190205124041¼û²í‹-"C?This is Ipopt version 3.12.8, running with linear solver ma27.
++
+ipoptipopt_20190205124041¼û²í‹-"
+j
+ipoptipopt_20190205124041¼û²í‹-"D@Number of nonzeros in equality constraint Jacobian...:      300
+j
+ipoptipopt_20190205124041¼û²í‹-"D@Number of nonzeros in inequality constraint Jacobian.:      500
+k
+ipoptipopt_20190205124041¼û²í‹-"EANumber of nonzeros in Lagrangian Hessian.............:      325
+
+j
+ipoptipopt_20190205124041½û²í‹-"D@Total number of variables............................:       25
+j
+ipoptipopt_20190205124041½û²í‹-"D@                     variables with only lower bounds:       16
+j
+ipoptipopt_20190205124041½û²í‹-"D@                variables with lower and upper bounds:        0
+j
+ipoptipopt_20190205124041½û²í‹-"D@                     variables with only upper bounds:        0
+j
+ipoptipopt_20190205124041½û²í‹-"D@Total number of equality constraints.................:       12
+j
+ipoptipopt_20190205124041½û²í‹-"D@Total number of inequality constraints...............:       20
+j
+ipoptipopt_20190205124041½û²í‹-"D@        inequality constraints with only lower bounds:       18
+j
+ipoptipopt_20190205124041½û²í‹-"D@   inequality constraints with lower and upper bounds:        0
+k
+ipoptipopt_20190205124041½û²í‹-"EA        inequality constraints with only upper bounds:        2
+
+{
+ipoptipopt_20190205124041½û²í‹-"UQiter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+z
+ipoptipopt_20190205124041½û²í‹-"TP   0  2.9065895e+04 1.00e-02 1.22e+00  -1.0 0.00e+00    -  0.00e+00 0.00e+00   0+
+ipoptipopt_20190205124041½û²í‹-"
+z
+ipoptipopt_20190205124041¾û²í‹-"TP   1  6.4080085e+06 7.70e-05 4.76e+01  -1.0 3.26e+01    -  9.90e-01 9.92e-01h  1+
+ipoptipopt_20190205124041¾û²í‹-"
+z
+ipoptipopt_20190205124041¾û²í‹-"TP   2  3.3620451e+06 2.17e-19 7.31e+02  -1.0 1.57e+02    -  2.61e-01 1.00e+00f  1+
+ipoptipopt_20190205124041¿û²í‹-"
+z
+ipoptipopt_20190205124041¿û²í‹-"TP   3  3.3395514e+06 2.17e-19 1.30e+02  -1.0 3.60e+02    -  5.89e-01 1.00e+00f  1+
+ipoptipopt_20190205124041¿û²í‹-"
+z
+ipoptipopt_20190205124041¿û²í‹-"TP   4  3.3379001e+06 4.34e-19 1.95e+02  -1.0 5.83e+02    -  6.76e-01 1.00e+00f  1+
+ipoptipopt_20190205124041Àû²í‹-"
+z
+ipoptipopt_20190205124041Àû²í‹-"TP   5  3.3716143e+06 4.34e-19 4.56e+00  -1.0 9.03e+02    -  9.23e-01 1.00e+00f  1+
+ipoptipopt_20190205124041Àû²í‹-"
+z
+ipoptipopt_20190205124041Àû²í‹-"TP   6  3.4472544e+06 8.67e-19 9.74e+00  -1.0 1.41e+03    -  9.20e-01 1.00e+00f  1+
+ipoptipopt_20190205124041Áû²í‹-"
+z
+ipoptipopt_20190205124041Áû²í‹-"TP   7  3.4891851e+06 1.73e-18 1.22e-01  -1.0 6.83e+02    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041Áû²í‹-"
+z
+ipoptipopt_20190205124041Áû²í‹-"TP   8  5.8895476e+05 8.67e-19 3.08e-01  -2.5 9.84e+01    -  9.43e-01 9.37e-01f  1+
+ipoptipopt_20190205124041Âû²í‹-"
+z
+ipoptipopt_20190205124041Âû²í‹-"TP   9  2.6844792e+05 1.30e-18 3.73e+00  -2.5 2.61e+03    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041Âû²í‹-"
+{
+ipoptipopt_20190205124041Ãû²í‹-"UQiter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+z
+ipoptipopt_20190205124041Ãû²í‹-"TP  10  2.7682732e+05 8.67e-19 1.18e-01  -2.5 4.45e+01    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041Ãû²í‹-"
+z
+ipoptipopt_20190205124041Ãû²í‹-"TP  11  2.7721944e+05 4.34e-19 3.53e-03  -2.5 1.29e+01    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041Ãû²í‹-"
+z
+ipoptipopt_20190205124041Äû²í‹-"TP  12  1.7613061e+05 4.34e-19 4.90e+00  -3.8 8.41e+02    -  7.91e-01 9.58e-01f  1+
+ipoptipopt_20190205124041Äû²í‹-"
+z
+ipoptipopt_20190205124041Äû²í‹-"TP  13  1.7699338e+05 2.17e-19 3.73e-02  -3.8 2.41e+01    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041Äû²í‹-"
+z
+ipoptipopt_20190205124041Åû²í‹-"TP  14  1.7655494e+05 2.17e-19 6.02e-03  -3.8 5.25e+00    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041Åû²í‹-"
+z
+ipoptipopt_20190205124041Åû²í‹-"TP  15  1.7655931e+05 4.34e-19 3.53e-06  -3.8 3.04e-02    -  1.00e+00 1.00e+00h  1+
+ipoptipopt_20190205124041Åû²í‹-"
+z
+ipoptipopt_20190205124041Æû²í‹-"TP  16  1.7342370e+05 2.17e-19 8.45e-02  -5.7 4.72e+01    -  9.99e-01 9.67e-01f  1+
+ipoptipopt_20190205124041Æû²í‹-"
+z
+ipoptipopt_20190205124041Æû²í‹-"TP  17  1.7338140e+05 2.17e-19 5.60e-04  -5.7 1.83e+00    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041Æû²í‹-"
+z
+ipoptipopt_20190205124041Çû²í‹-"TP  18  1.7338137e+05 2.17e-19 8.76e-08  -5.7 8.83e-03    -  1.00e+00 1.00e+00h  1+
+ipoptipopt_20190205124041Çû²í‹-"
+z
+ipoptipopt_20190205124041Çû²í‹-"TP  19  1.7334542e+05 2.17e-19 1.89e-05  -8.6 5.93e-01    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041Çû²í‹-"
+{
+ipoptipopt_20190205124041Èû²í‹-"UQiter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+z
+ipoptipopt_20190205124041Èû²í‹-"TP  20  1.7334543e+05 2.17e-19 1.23e-11  -8.6 6.13e-05    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041Èû²í‹-"
+z
+ipoptipopt_20190205124041Èû²í‹-"TP  21  1.7334538e+05 4.34e-19 3.50e-11 -11.3 8.04e-04    -  1.00e+00 1.00e+00h  1+
+ipoptipopt_20190205124041Èû²í‹-"
+H
+ipoptipopt_20190205124041Èû²í‹-""
+Number of Iterations....: 21
+r
+ipoptipopt_20190205124041Èû²í‹-"LH
+                                   (scaled)                 (unscaled)
+w
+ipoptipopt_20190205124041Èû²í‹-"QMObjective...............:   9.7862524315762714e-02    1.7334537683087969e+05
+w
+ipoptipopt_20190205124041Èû²í‹-"QMDual infeasibility......:   3.4960595546086354e-11    6.1926234291834905e-05
+w
+ipoptipopt_20190205124041Èû²í‹-"QMConstraint violation....:   4.3368086899420177e-19    4.3368086899420177e-19
+w
+ipoptipopt_20190205124041Éû²í‹-"QMComplementarity.........:   5.1434685603076310e-12    9.1107040415950013e-06
+x
+ipoptipopt_20190205124041Éû²í‹-"RNOverall NLP error.......:   3.4960595546086354e-11    6.1926234291834905e-05
+
+e
+ipoptipopt_20190205124041Éû²í‹-"?;
+Number of objective function evaluations             = 22
+d
+ipoptipopt_20190205124041Éû²í‹-">:Number of objective gradient evaluations             = 22
+d
+ipoptipopt_20190205124041Éû²í‹-">:Number of equality constraint evaluations            = 22
+d
+ipoptipopt_20190205124041Éû²í‹-">:Number of inequality constraint evaluations          = 22
+d
+ipoptipopt_20190205124041Éû²í‹-">:Number of equality constraint Jacobian evaluations   = 22
+d
+ipoptipopt_20190205124041Éû²í‹-">:Number of inequality constraint Jacobian evaluations = 22
+d
+ipoptipopt_20190205124041Éû²í‹-">:Number of Lagrangian Hessian evaluations             = 21
+l
+ipoptipopt_20190205124041Éû²í‹-"FBTotal CPU secs in IPOPT (w/o function evaluations)   =      0.008
+l
+ipoptipopt_20190205124041Éû²í‹-"FBTotal CPU secs in NLP function evaluations           =      0.004
+I
+ipoptipopt_20190205124041Éû²í‹-"#
+EXIT: Optimal Solution Found.
+(
+ipoptipopt_20190205124041Éû²í‹-:…
+outer_approximation"outer_approximation_20190205124040Ëû²í‹-"C?Starting iterations, maximum iterations = 50, tolerance = 1e-08
+outer_approximation"outer_approximation_20190205124040Ëû²í‹-"=9Starting Iteration: State(iteration=0, z_l=-inf, z_u=inf)$
+mipmip_20190205124041Þû²í‹-2Y
+mipmip_20190205124041âû²í‹-"73CPXPARAM_Read_DataCheck                          1
+c
+mipmip_20190205124041äû²í‹-"A=Warning:  Non-integral bounds for integer variables rounded.
+@
+mipmip_20190205124041äû²í‹-"Tried aggregator 2 times.
+U
+mipmip_20190205124041äû²í‹-"3/MIP Presolve eliminated 14 rows and 1 columns.
+L
+mipmip_20190205124041äû²í‹-"*&MIP Presolve modified 1 coefficients.
+G
+mipmip_20190205124041äû²í‹-"%!Aggregator did 12 substitutions.
+\
+mipmip_20190205124041äû²í‹-":6Reduced MIP has 19 rows, 13 columns, and 58 nonzeros.
+h
+mipmip_20190205124041åû²í‹-"FBReduced MIP has 0 binaries, 4 generals, 0 SOSs, and 0 indicators.
+M
+mipmip_20190205124041åû²í‹-"+'Presolve time = 0.00 sec. (0.07 ticks)
+j
+mipmip_20190205124041åû²í‹-"HDFound incumbent of value 473078.780273 after 0.00 sec. (0.09 ticks)
+?
+mipmip_20190205124041åû²í‹-"Tried aggregator 1 time.
+\
+mipmip_20190205124041åû²í‹-":6Reduced MIP has 19 rows, 13 columns, and 58 nonzeros.
+h
+mipmip_20190205124041åû²í‹-"FBReduced MIP has 0 binaries, 4 generals, 0 SOSs, and 0 indicators.
+M
+mipmip_20190205124041æû²í‹-"+'Presolve time = 0.00 sec. (0.03 ticks)
+X
+mipmip_20190205124041æû²í‹-"62MIP emphasis: balance optimality and feasibility.
+I
+mipmip_20190205124041æû²í‹-"'#MIP search method: dynamic search.
+[
+mipmip_20190205124041æû²í‹-"95Parallel mode: deterministic, using up to 8 threads.
+]
+mipmip_20190205124041çû²í‹-";7Root relaxation solution time = 0.00 sec. (0.04 ticks)
+c
+mipmip_20190205124041çû²í‹-"A=
+        Nodes                                         Cuts/
+t
+mipmip_20190205124041çû²í‹-"RN   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap(
+mipmip_20190205124041çû²í‹-"
+
+u
+mipmip_20190205124041çû²í‹-"SO*     0+    0                       473078.7803 -1350353.3742           385.44%'
+mipmip_20190205124041çû²í‹-"
+u
+mipmip_20190205124041çû²í‹-"SO*     0+    0                       173378.9057 -1350353.3742           878.85%'
+mipmip_20190205124041çû²í‹-"
+u
+mipmip_20190205124041çû²í‹-"SO      0     0   173346.0965     2   173378.9057   173346.0965       17    0.02%'
+mipmip_20190205124041çû²í‹-"
+u
+mipmip_20190205124041Ÿü²í‹-"SO      0     2   173346.0965     2   173378.9057   173346.0965       17    0.02%'
+mipmip_20190205124041Ÿü²í‹-"
+Z
+mipmip_20190205124041Ÿü²í‹-"84Elapsed time = 0.06 sec. (0.33 ticks, tree = 0.01 MB5
+mipmip_20190205124041Ÿü²í‹-", solutions = 2(
+mipmip_20190205124041Ÿü²í‹-")
+J
+mipmip_20190205124041ºü²í‹-"($
+Root node processing (before b&c):
+Z
+mipmip_20190205124041ºü²í‹-"84  Real time             =    0.06 sec. (0.32 ticks)
+?
+mipmip_20190205124041ºü²í‹-"Parallel b&c, 8 threads:
+Z
+mipmip_20190205124041ºü²í‹-"84  Real time             =    0.03 sec. (0.31 ticks)
+M
+mipmip_20190205124041ºü²í‹-"+'  Sync time (average)   =    0.02 sec.
+M
+mipmip_20190205124041ºü²í‹-"+'  Wait time (average)   =    0.00 sec.
+M
+mipmip_20190205124041ºü²í‹-"+'                          ------------
+Z
+mipmip_20190205124041ºü²í‹-"84Total (root+branch&cut) =    0.09 sec. (0.63 ticks)
+$
+mipmip_20190205124041¼ü²í‹-:P
+outer_approximation"outer_approximation_20190205124040¼ü²í‹-B
+z_l„Ó>*A(
+ipoptipopt_20190205124041½ü²í‹-2i
+ipoptipopt_20190205124041¾ü²í‹-"C?This is Ipopt version 3.12.8, running with linear solver ma27.
++
+ipoptipopt_20190205124041¾ü²í‹-"
+j
+ipoptipopt_20190205124041¾ü²í‹-"D@Number of nonzeros in equality constraint Jacobian...:      252
+j
+ipoptipopt_20190205124041¾ü²í‹-"D@Number of nonzeros in inequality constraint Jacobian.:      420
+k
+ipoptipopt_20190205124041¾ü²í‹-"EANumber of nonzeros in Lagrangian Hessian.............:      231
+
+j
+ipoptipopt_20190205124041¾ü²í‹-"D@Total number of variables............................:       21
+j
+ipoptipopt_20190205124041¾ü²í‹-"D@                     variables with only lower bounds:       12
+j
+ipoptipopt_20190205124041¿ü²í‹-"D@                variables with lower and upper bounds:        0
+j
+ipoptipopt_20190205124041¿ü²í‹-"D@                     variables with only upper bounds:        0
+j
+ipoptipopt_20190205124041¿ü²í‹-"D@Total number of equality constraints.................:       12
+j
+ipoptipopt_20190205124041¿ü²í‹-"D@Total number of inequality constraints...............:       20
+j
+ipoptipopt_20190205124041¿ü²í‹-"D@        inequality constraints with only lower bounds:       18
+j
+ipoptipopt_20190205124041¿ü²í‹-"D@   inequality constraints with lower and upper bounds:        0
+k
+ipoptipopt_20190205124041¿ü²í‹-"EA        inequality constraints with only upper bounds:        2
+
+{
+ipoptipopt_20190205124041¿ü²í‹-"UQiter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+z
+ipoptipopt_20190205124041¿ü²í‹-"TP   0  2.8860895e+04 1.00e-02 1.22e+00  -1.0 0.00e+00    -  0.00e+00 0.00e+00   0+
+ipoptipopt_20190205124041¿ü²í‹-"
+z
+ipoptipopt_20190205124041Àü²í‹-"TP   1  6.3960056e+06 1.00e-04 4.77e+01  -1.0 9.31e-02    -  9.90e-01 9.90e-01h  1+
+ipoptipopt_20190205124041Àü²í‹-"
+z
+ipoptipopt_20190205124041Àü²í‹-"TP   2  3.4625362e+06 9.90e-07 2.25e+01  -1.0 4.59e-02    -  9.90e-01 9.90e-01h  1+
+ipoptipopt_20190205124041Àü²í‹-"
+z
+ipoptipopt_20190205124041Áü²í‹-"TP   3  3.4504651e+06 0.00e+00 9.83e+02  -1.0 1.94e-04    -  9.90e-01 1.00e+00h  1+
+ipoptipopt_20190205124041Áü²í‹-"
+z
+ipoptipopt_20190205124041Áü²í‹-"TP   4  3.4504657e+06 0.00e+00 1.00e-06  -1.0 1.03e-08    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041Áü²í‹-"
+z
+ipoptipopt_20190205124041Áü²í‹-"TP   5  2.9571189e+05 0.00e+00 1.05e+05  -8.6 5.90e-02    -  1.00e+00 9.89e-01f  1+
+ipoptipopt_20190205124041Âü²í‹-"
+z
+ipoptipopt_20190205124041Âü²í‹-"TP   6  2.7600838e+05 0.00e+00 3.03e+04  -8.6 6.21e-04    -  1.00e+00 7.12e-01f  1+
+ipoptipopt_20190205124041Âü²í‹-"
+z
+ipoptipopt_20190205124041Âü²í‹-"TP   7  2.7333712e+05 0.00e+00 9.67e+03  -8.6 1.79e-04    -  1.00e+00 6.81e-01f  1+
+ipoptipopt_20190205124041Ãü²í‹-"
+z
+ipoptipopt_20190205124041Ãü²í‹-"TP   8  2.7271654e+05 0.00e+00 8.66e+02  -8.6 5.71e-05    -  1.00e+00 9.10e-01f  1+
+ipoptipopt_20190205124041Ãü²í‹-"
+z
+ipoptipopt_20190205124041Ãü²í‹-"TP   9  2.7269336e+05 0.00e+00 1.68e+02  -8.6 4.79e-06    -  1.00e+00 8.06e-01f  1+
+ipoptipopt_20190205124041Ãü²í‹-"
+{
+ipoptipopt_20190205124041Äü²í‹-"UQiter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+z
+ipoptipopt_20190205124041Äü²í‹-"TP  10  2.7269336e+05 0.00e+00 5.00e-14  -8.6 1.16e-09    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041Äü²í‹-"
+z
+ipoptipopt_20190205124041Äü²í‹-"TP  11  2.7269332e+05 0.00e+00 7.66e-15 -11.3 1.15e-09    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041Äü²í‹-"
+H
+ipoptipopt_20190205124041Äü²í‹-""
+Number of Iterations....: 11
+r
+ipoptipopt_20190205124041Åü²í‹-"LH
+                                   (scaled)                 (unscaled)
+w
+ipoptipopt_20190205124041Åü²í‹-"QMObjective...............:   1.5394962793772160e-01    2.7269331600043026e+05
+w
+ipoptipopt_20190205124041Åü²í‹-"QMDual infeasibility......:   7.6605388699135801e-15    1.3569228940468715e-08
+w
+ipoptipopt_20190205124041Åü²í‹-"QMConstraint violation....:   0.0000000000000000e+00    0.0000000000000000e+00
+w
+ipoptipopt_20190205124041Åü²í‹-"QMComplementarity.........:   5.6197711513250103e-12    9.9543860608634668e-06
+x
+ipoptipopt_20190205124041Åü²í‹-"RNOverall NLP error.......:   5.6197711513250103e-12    9.9543860608634668e-06
+
+e
+ipoptipopt_20190205124041Åü²í‹-"?;
+Number of objective function evaluations             = 12
+d
+ipoptipopt_20190205124041Åü²í‹-">:Number of objective gradient evaluations             = 12
+d
+ipoptipopt_20190205124041Åü²í‹-">:Number of equality constraint evaluations            = 12
+d
+ipoptipopt_20190205124041Åü²í‹-">:Number of inequality constraint evaluations          = 12
+d
+ipoptipopt_20190205124041Åü²í‹-">:Number of equality constraint Jacobian evaluations   = 12
+d
+ipoptipopt_20190205124041Åü²í‹-">:Number of inequality constraint Jacobian evaluations = 12
+d
+ipoptipopt_20190205124041Åü²í‹-">:Number of Lagrangian Hessian evaluations             = 11
+l
+ipoptipopt_20190205124041Åü²í‹-"FBTotal CPU secs in IPOPT (w/o function evaluations)   =      0.008
+l
+ipoptipopt_20190205124041Åü²í‹-"FBTotal CPU secs in NLP function evaluations           =      0.000
+I
+ipoptipopt_20190205124041Åü²í‹-"#
+EXIT: Optimal Solution Found.
+(
+ipoptipopt_20190205124041Æü²í‹-:P
+outer_approximation"outer_approximation_20190205124040Æü²í‹-B
+z_uæ•CÕ¤A
+outer_approximation"outer_approximation_20190205124040Æü²í‹-"=9P_X solution was successful, new z_u = 272693.31600043026
+outer_approximation"outer_approximation_20190205124040Æü²í‹-"[WIteration Completed: State(iteration=0, z_l=173378.90567687564, z_u=272693.31600043026)œ
+outer_approximation"outer_approximation_20190205124040Æü²í‹-"ZVStarting Iteration: State(iteration=1, z_l=173378.90567687564, z_u=272693.31600043026)$
+mipmip_20190205124041Ûü²í‹-2Y
+mipmip_20190205124041àü²í‹-"73CPXPARAM_Read_DataCheck                          1
+j
+mipmip_20190205124041àü²í‹-"HDFound incumbent of value 272694.035920 after 0.00 sec. (0.01 ticks)
+c
+mipmip_20190205124041àü²í‹-"A=Warning:  Non-integral bounds for integer variables rounded.
+@
+mipmip_20190205124041àü²í‹-"Tried aggregator 2 times.
+U
+mipmip_20190205124041áü²í‹-"3/MIP Presolve eliminated 57 rows and 0 columns.
+L
+mipmip_20190205124041áü²í‹-"*&MIP Presolve modified 2 coefficients.
+G
+mipmip_20190205124041áü²í‹-"%!Aggregator did 12 substitutions.
+\
+mipmip_20190205124041áü²í‹-":6Reduced MIP has 21 rows, 14 columns, and 86 nonzeros.
+h
+mipmip_20190205124041áü²í‹-"FBReduced MIP has 0 binaries, 4 generals, 0 SOSs, and 0 indicators.
+M
+mipmip_20190205124041áü²í‹-"+'Presolve time = 0.00 sec. (0.11 ticks)
+?
+mipmip_20190205124041áü²í‹-"Tried aggregator 1 time.
+\
+mipmip_20190205124041áü²í‹-":6Reduced MIP has 21 rows, 14 columns, and 86 nonzeros.
+h
+mipmip_20190205124041áü²í‹-"FBReduced MIP has 0 binaries, 4 generals, 0 SOSs, and 0 indicators.
+M
+mipmip_20190205124041áü²í‹-"+'Presolve time = 0.00 sec. (0.04 ticks)
+X
+mipmip_20190205124041âü²í‹-"62MIP emphasis: balance optimality and feasibility.
+I
+mipmip_20190205124041âü²í‹-"'#MIP search method: dynamic search.
+[
+mipmip_20190205124041âü²í‹-"95Parallel mode: deterministic, using up to 8 threads.
+]
+mipmip_20190205124041âü²í‹-";7Root relaxation solution time = 0.00 sec. (0.07 ticks)
+c
+mipmip_20190205124041âü²í‹-"A=
+        Nodes                                         Cuts/
+t
+mipmip_20190205124041âü²í‹-"RN   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap(
+mipmip_20190205124041âü²í‹-"
+
+u
+mipmip_20190205124041ãü²í‹-"SO*     0+    0                       272694.0359 -1350353.3742           595.19%'
+mipmip_20190205124041ãü²í‹-"
+u
+mipmip_20190205124041ãü²í‹-"SO      0     0   173346.0966     4   272694.0359   173346.0966       20   36.43%'
+mipmip_20190205124041ãü²í‹-"
+u
+mipmip_20190205124041äü²í‹-"SO*     0+    0                       204646.3311   173346.0966            15.29%'
+mipmip_20190205124041äü²í‹-"
+u
+mipmip_20190205124041äü²í‹-"SO*     0+    0                       186959.9213   173346.0966             7.28%'
+mipmip_20190205124041äü²í‹-"
+u
+mipmip_20190205124041÷ü²í‹-"SO*     0+    0                       173411.7149   173346.0966             0.04%'
+mipmip_20190205124041÷ü²í‹-"
+u
+mipmip_20190205124041úü²í‹-"SO      0     1   173346.0966     4   173411.7149   173346.0968       20    0.04%'
+mipmip_20190205124041úü²í‹-"
+Z
+mipmip_20190205124041úü²í‹-"84Elapsed time = 0.03 sec. (0.66 ticks, tree = 0.01 MB5
+mipmip_20190205124041úü²í‹-", solutions = 4(
+mipmip_20190205124041úü²í‹-")
+J
+mipmip_20190205124041üü²í‹-"($
+Root node processing (before b&c):
+Z
+mipmip_20190205124041üü²í‹-"84  Real time             =    0.02 sec. (0.65 ticks)
+?
+mipmip_20190205124041üü²í‹-"Parallel b&c, 8 threads:
+Z
+mipmip_20190205124041üü²í‹-"84  Real time             =    0.00 sec. (0.42 ticks)
+M
+mipmip_20190205124041üü²í‹-"+'  Sync time (average)   =    0.00 sec.
+M
+mipmip_20190205124041üü²í‹-"+'  Wait time (average)   =    0.00 sec.
+M
+mipmip_20190205124041üü²í‹-"+'                          ------------
+Z
+mipmip_20190205124041üü²í‹-"84Total (root+branch&cut) =    0.03 sec. (1.07 ticks)
+$
+mipmip_20190205124041ÿü²í‹-:R
+outer_approximation"outer_approximation_20190205124040ÿü²í‹-B
+z_líŽ#¸+A(
+ipoptipopt_20190205124041ÿü²í‹-2i
+ipoptipopt_20190205124041€ý²í‹-"C?This is Ipopt version 3.12.8, running with linear solver ma27.
++
+ipoptipopt_20190205124041€ý²í‹-"
+j
+ipoptipopt_20190205124041€ý²í‹-"D@Number of nonzeros in equality constraint Jacobian...:      252
+j
+ipoptipopt_20190205124041€ý²í‹-"D@Number of nonzeros in inequality constraint Jacobian.:      420
+k
+ipoptipopt_20190205124041€ý²í‹-"EANumber of nonzeros in Lagrangian Hessian.............:      231
+
+j
+ipoptipopt_20190205124041ý²í‹-"D@Total number of variables............................:       21
+j
+ipoptipopt_20190205124041ý²í‹-"D@                     variables with only lower bounds:       12
+j
+ipoptipopt_20190205124041ý²í‹-"D@                variables with lower and upper bounds:        0
+j
+ipoptipopt_20190205124041ý²í‹-"D@                     variables with only upper bounds:        0
+j
+ipoptipopt_20190205124041ý²í‹-"D@Total number of equality constraints.................:       12
+j
+ipoptipopt_20190205124041ý²í‹-"D@Total number of inequality constraints...............:       20
+j
+ipoptipopt_20190205124041ý²í‹-"D@        inequality constraints with only lower bounds:       18
+j
+ipoptipopt_20190205124041ý²í‹-"D@   inequality constraints with lower and upper bounds:        0
+k
+ipoptipopt_20190205124041ý²í‹-"EA        inequality constraints with only upper bounds:        2
+
+{
+ipoptipopt_20190205124041ý²í‹-"UQiter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+z
+ipoptipopt_20190205124041ý²í‹-"TP   0  4.9360895e+04 9.78e-03 1.22e+00  -1.0 0.00e+00    -  0.00e+00 0.00e+00   0+
+ipoptipopt_20190205124041ý²í‹-"
+z
+ipoptipopt_20190205124041‚ý²í‹-"TP   1  6.4163379e+06 6.51e-19 2.48e+01  -1.0 9.31e-02    -  9.90e-01 1.00e+00h  1+
+ipoptipopt_20190205124041‚ý²í‹-"
+z
+ipoptipopt_20190205124041‚ý²í‹-"TP   2  3.3330914e+06 0.00e+00 4.35e+00  -1.0 4.66e-02    -  9.90e-01 1.00e+00f  1+
+ipoptipopt_20190205124041‚ý²í‹-"
+z
+ipoptipopt_20190205124041ƒý²í‹-"TP   3  3.3503880e+06 0.00e+00 4.28e-02  -1.0 3.01e-04    -  9.90e-01 1.00e+00f  1+
+ipoptipopt_20190205124041ƒý²í‹-"
+z
+ipoptipopt_20190205124041ƒý²í‹-"TP   4  3.3503876e+06 0.00e+00 1.00e-06  -1.0 2.05e-08    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041ƒý²í‹-"
+z
+ipoptipopt_20190205124041„ý²í‹-"TP   5  2.5245017e+05 0.00e+00 2.83e-08  -2.5 5.74e-02    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041„ý²í‹-"
+z
+ipoptipopt_20190205124041„ý²í‹-"TP   6  2.0105367e+05 0.00e+00 3.96e+00  -3.8 1.58e-03    -  1.00e+00 6.69e-01f  1+
+ipoptipopt_20190205124041„ý²í‹-"
+z
+ipoptipopt_20190205124041…ý²í‹-"TP   7  1.8504610e+05 0.00e+00 4.00e-01  -3.8 5.23e-04    -  1.00e+00 8.99e-01f  1+
+ipoptipopt_20190205124041…ý²í‹-"
+z
+ipoptipopt_20190205124041…ý²í‹-"TP   8  1.8625395e+05 0.00e+00 1.50e-09  -3.8 5.29e-05    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041…ý²í‹-"
+z
+ipoptipopt_20190205124041†ý²í‹-"TP   9  1.8326653e+05 0.00e+00 6.25e-02  -5.7 8.77e-05    -  1.00e+00 9.06e-01f  1+
+ipoptipopt_20190205124041†ý²í‹-"
+{
+ipoptipopt_20190205124041†ý²í‹-"UQiter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+z
+ipoptipopt_20190205124041†ý²í‹-"TP  10  1.8312020e+05 0.00e+00 1.59e-01  -5.7 7.59e-06    -  1.00e+00 9.09e-01f  1+
+ipoptipopt_20190205124041†ý²í‹-"
+z
+ipoptipopt_20190205124041‡ý²í‹-"TP  11  1.8311303e+05 0.00e+00 1.85e-11  -5.7 8.30e-07    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041‡ý²í‹-"
+z
+ipoptipopt_20190205124041‡ý²í‹-"TP  12  1.8308284e+05 0.00e+00 6.11e-03  -8.6 8.67e-07    -  1.00e+00 9.58e-01f  1+
+ipoptipopt_20190205124041‡ý²í‹-"
+z
+ipoptipopt_20190205124041ˆý²í‹-"TP  13  1.8308183e+05 0.00e+00 2.81e-14  -8.6 2.27e-08    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041ˆý²í‹-"
+z
+ipoptipopt_20190205124041ˆý²í‹-"TP  14  1.8308179e+05 0.00e+00 2.34e-15 -11.3 7.44e-10    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041ˆý²í‹-"
+H
+ipoptipopt_20190205124041ˆý²í‹-""
+Number of Iterations....: 14
+r
+ipoptipopt_20190205124041ˆý²í‹-"LH
+                                   (scaled)                 (unscaled)
+w
+ipoptipopt_20190205124041ˆý²í‹-"QMObjective...............:   1.0335923805127212e-01    1.8308178942063625e+05
+w
+ipoptipopt_20190205124041ˆý²í‹-"QMDual infeasibility......:   2.3409737554469165e-15    4.1466023958241959e-09
+w
+ipoptipopt_20190205124041ˆý²í‹-"QMConstraint violation....:   0.0000000000000000e+00    0.0000000000000000e+00
+w
+ipoptipopt_20190205124041ˆý²í‹-"QMComplementarity.........:   5.4890763715260864e-12    9.7228844108449803e-06
+x
+ipoptipopt_20190205124041ˆý²í‹-"RNOverall NLP error.......:   5.4890763715260864e-12    9.7228844108449803e-06
+
+e
+ipoptipopt_20190205124041‰ý²í‹-"?;
+Number of objective function evaluations             = 15
+d
+ipoptipopt_20190205124041‰ý²í‹-">:Number of objective gradient evaluations             = 15
+d
+ipoptipopt_20190205124041‰ý²í‹-">:Number of equality constraint evaluations            = 15
+d
+ipoptipopt_20190205124041‰ý²í‹-">:Number of inequality constraint evaluations          = 15
+d
+ipoptipopt_20190205124041‰ý²í‹-">:Number of equality constraint Jacobian evaluations   = 15
+d
+ipoptipopt_20190205124041‰ý²í‹-">:Number of inequality constraint Jacobian evaluations = 15
+d
+ipoptipopt_20190205124041‰ý²í‹-">:Number of Lagrangian Hessian evaluations             = 14
+l
+ipoptipopt_20190205124041‰ý²í‹-"FBTotal CPU secs in IPOPT (w/o function evaluations)   =      0.004
+l
+ipoptipopt_20190205124041‰ý²í‹-"FBTotal CPU secs in NLP function evaluations           =      0.004
+I
+ipoptipopt_20190205124041‰ý²í‹-"#
+EXIT: Optimal Solution Found.
+(
+ipoptipopt_20190205124041‰ý²í‹-:R
+outer_approximation"outer_approximation_20190205124040‰ý²í‹-B
+z_u<Ä»PNYA
+outer_approximation"outer_approximation_20190205124040‰ý²í‹-"=9P_X solution was successful, new z_u = 183081.78942063625
+outer_approximation"outer_approximation_20190205124040‰ý²í‹-"[WIteration Completed: State(iteration=1, z_l=173411.71491157208, z_u=183081.78942063625)œ
+outer_approximation"outer_approximation_20190205124040Šý²í‹-"ZVStarting Iteration: State(iteration=2, z_l=173411.71491157208, z_u=183081.78942063625)$
+mipmip_20190205124041šý²í‹-2Y
+mipmip_20190205124041 ý²í‹-"73CPXPARAM_Read_DataCheck                          1
+j
+mipmip_20190205124041¡ý²í‹-"HDFound incumbent of value 272694.035920 after 0.00 sec. (0.01 ticks)
+c
+mipmip_20190205124041¡ý²í‹-"A=Warning:  Non-integral bounds for integer variables rounded.
+@
+mipmip_20190205124041¡ý²í‹-"Tried aggregator 2 times.
+V
+mipmip_20190205124041¡ý²í‹-"40MIP Presolve eliminated 101 rows and 0 columns.
+L
+mipmip_20190205124041¡ý²í‹-"*&MIP Presolve modified 3 coefficients.
+G
+mipmip_20190205124041¡ý²í‹-"%!Aggregator did 12 substitutions.
+]
+mipmip_20190205124041¡ý²í‹-";7Reduced MIP has 22 rows, 14 columns, and 100 nonzeros.
+h
+mipmip_20190205124041¡ý²í‹-"FBReduced MIP has 0 binaries, 4 generals, 0 SOSs, and 0 indicators.
+M
+mipmip_20190205124041¢ý²í‹-"+'Presolve time = 0.00 sec. (0.15 ticks)
+?
+mipmip_20190205124041¢ý²í‹-"Tried aggregator 1 time.
+]
+mipmip_20190205124041¢ý²í‹-";7Reduced MIP has 22 rows, 14 columns, and 100 nonzeros.
+h
+mipmip_20190205124041¢ý²í‹-"FBReduced MIP has 0 binaries, 4 generals, 0 SOSs, and 0 indicators.
+M
+mipmip_20190205124041¢ý²í‹-"+'Presolve time = 0.00 sec. (0.04 ticks)
+X
+mipmip_20190205124041£ý²í‹-"62MIP emphasis: balance optimality and feasibility.
+I
+mipmip_20190205124041£ý²í‹-"'#MIP search method: dynamic search.
+[
+mipmip_20190205124041£ý²í‹-"95Parallel mode: deterministic, using up to 8 threads.
+]
+mipmip_20190205124041£ý²í‹-";7Root relaxation solution time = 0.00 sec. (0.07 ticks)
+c
+mipmip_20190205124041£ý²í‹-"A=
+        Nodes                                         Cuts/
+t
+mipmip_20190205124041£ý²í‹-"RN   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap(
+mipmip_20190205124041£ý²í‹-"
+
+u
+mipmip_20190205124041£ý²í‹-"SO*     0+    0                       272694.0359 -1350353.3742           595.19%'
+mipmip_20190205124041£ý²í‹-"
+u
+mipmip_20190205124041£ý²í‹-"SO      0     0   173346.0967     4   272694.0359   173346.0967       19   36.43%'
+mipmip_20190205124041£ý²í‹-"
+u
+mipmip_20190205124041¤ý²í‹-"SO*     0+    0                       173411.7149   173346.0967             0.04%'
+mipmip_20190205124041¤ý²í‹-"
+u
+mipmip_20190205124041Èý²í‹-"SO      0     2   173346.0967     3   173411.7149   173346.0967       20    0.04%'
+mipmip_20190205124041Èý²í‹-"
+Z
+mipmip_20190205124041Èý²í‹-"84Elapsed time = 0.04 sec. (0.67 ticks, tree = 0.01 MB5
+mipmip_20190205124041Èý²í‹-", solutions = 2(
+mipmip_20190205124041Èý²í‹-")
+J
+mipmip_20190205124041Êý²í‹-"($
+Root node processing (before b&c):
+Z
+mipmip_20190205124041Êý²í‹-"84  Real time             =    0.04 sec. (0.65 ticks)
+?
+mipmip_20190205124041Êý²í‹-"Parallel b&c, 8 threads:
+Z
+mipmip_20190205124041Êý²í‹-"84  Real time             =    0.00 sec. (0.32 ticks)
+M
+mipmip_20190205124041Êý²í‹-"+'  Sync time (average)   =    0.00 sec.
+M
+mipmip_20190205124041Êý²í‹-"+'  Wait time (average)   =    0.00 sec.
+M
+mipmip_20190205124041Êý²í‹-"+'                          ------------
+Z
+mipmip_20190205124041Êý²í‹-"84Total (root+branch&cut) =    0.04 sec. (0.97 ticks)
+$
+mipmip_20190205124041Îý²í‹-:R
+outer_approximation"outer_approximation_20190205124040Îý²í‹-B
+z_làÔ*¸+A(
+ipoptipopt_20190205124041Îý²í‹-2i
+ipoptipopt_20190205124041Ïý²í‹-"C?This is Ipopt version 3.12.8, running with linear solver ma27.
++
+ipoptipopt_20190205124041Ïý²í‹-"
+j
+ipoptipopt_20190205124041Ïý²í‹-"D@Number of nonzeros in equality constraint Jacobian...:      252
+j
+ipoptipopt_20190205124041Ïý²í‹-"D@Number of nonzeros in inequality constraint Jacobian.:      420
+k
+ipoptipopt_20190205124041Ïý²í‹-"EANumber of nonzeros in Lagrangian Hessian.............:      231
+
+j
+ipoptipopt_20190205124041Ïý²í‹-"D@Total number of variables............................:       21
+j
+ipoptipopt_20190205124041Ðý²í‹-"D@                     variables with only lower bounds:       12
+j
+ipoptipopt_20190205124041Ðý²í‹-"D@                variables with lower and upper bounds:        0
+j
+ipoptipopt_20190205124041Ðý²í‹-"D@                     variables with only upper bounds:        0
+j
+ipoptipopt_20190205124041Ðý²í‹-"D@Total number of equality constraints.................:       12
+j
+ipoptipopt_20190205124041Ðý²í‹-"D@Total number of inequality constraints...............:       20
+j
+ipoptipopt_20190205124041Ðý²í‹-"D@        inequality constraints with only lower bounds:       18
+j
+ipoptipopt_20190205124041Ðý²í‹-"D@   inequality constraints with lower and upper bounds:        0
+k
+ipoptipopt_20190205124041Ðý²í‹-"EA        inequality constraints with only upper bounds:        2
+
+{
+ipoptipopt_20190205124041Ðý²í‹-"UQiter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+z
+ipoptipopt_20190205124041Ðý²í‹-"TP   0  5.4360895e+04 9.78e-03 1.22e+00  -1.0 0.00e+00    -  0.00e+00 0.00e+00   0+
+ipoptipopt_20190205124041Ðý²í‹-"
+z
+ipoptipopt_20190205124041Ñý²í‹-"TP   1  6.4081296e+06 8.67e-19 2.48e+01  -1.0 9.31e-02    -  9.90e-01 1.00e+00h  1+
+ipoptipopt_20190205124041Ñý²í‹-"
+z
+ipoptipopt_20190205124041Ñý²í‹-"TP   2  3.3254835e+06 0.00e+00 4.35e+00  -1.0 4.66e-02    -  9.90e-01 1.00e+00f  1+
+ipoptipopt_20190205124041Ñý²í‹-"
+z
+ipoptipopt_20190205124041Òý²í‹-"TP   3  3.3426515e+06 0.00e+00 4.28e-02  -1.0 3.01e-04    -  9.90e-01 1.00e+00f  1+
+ipoptipopt_20190205124041Òý²í‹-"
+z
+ipoptipopt_20190205124041Òý²í‹-"TP   4  3.3426519e+06 0.00e+00 1.00e-06  -1.0 1.25e-07    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041Òý²í‹-"
+z
+ipoptipopt_20190205124041Óý²í‹-"TP   5  2.9025825e+05 0.00e+00 6.31e+00  -2.5 5.74e-02    -  1.00e+00 9.85e-01f  1+
+ipoptipopt_20190205124041Óý²í‹-"
+z
+ipoptipopt_20190205124041Óý²í‹-"TP   6  2.5907114e+05 0.00e+00 2.83e-08  -2.5 8.39e-04    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041Óý²í‹-"
+z
+ipoptipopt_20190205124041Óý²í‹-"TP   7  1.8525368e+05 0.00e+00 1.26e+00  -3.8 1.58e-03    -  1.00e+00 8.95e-01f  1+
+ipoptipopt_20190205124041Ôý²í‹-"
+z
+ipoptipopt_20190205124041Ôý²í‹-"TP   8  1.8281498e+05 0.00e+00 1.50e-09  -3.8 1.66e-04    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041Ôý²í‹-"
+z
+ipoptipopt_20190205124041Ôý²í‹-"TP   9  1.7953554e+05 0.00e+00 6.59e-02  -5.7 8.77e-05    -  1.00e+00 9.01e-01f  1+
+ipoptipopt_20190205124041Ôý²í‹-"
+{
+ipoptipopt_20190205124041Õý²í‹-"UQiter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+z
+ipoptipopt_20190205124041Õý²í‹-"TP  10  1.7937167e+05 0.00e+00 3.78e-01  -5.7 8.05e-06    -  1.00e+00 7.94e-01f  1+
+ipoptipopt_20190205124041Õý²í‹-"
+z
+ipoptipopt_20190205124041Õý²í‹-"TP  11  1.7934563e+05 0.00e+00 1.85e-11  -5.7 7.30e-07    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041Öý²í‹-"
+z
+ipoptipopt_20190205124041Öý²í‹-"TP  12  1.7931821e+05 0.00e+00 3.54e-02  -8.6 5.58e-07    -  1.00e+00 8.98e-01f  1+
+ipoptipopt_20190205124041Öý²í‹-"
+z
+ipoptipopt_20190205124041Öý²í‹-"TP  13  1.7931566e+05 0.00e+00 3.00e-14  -8.6 5.51e-08    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041Öý²í‹-"
+z
+ipoptipopt_20190205124041×ý²í‹-"TP  14  1.7931562e+05 0.00e+00 2.33e-15 -11.3 7.47e-10    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041×ý²í‹-"
+H
+ipoptipopt_20190205124041×ý²í‹-""
+Number of Iterations....: 14
+r
+ipoptipopt_20190205124041×ý²í‹-"LH
+                                   (scaled)                 (unscaled)
+w
+ipoptipopt_20190205124041×ý²í‹-"QMObjective...............:   1.0123303882445460e-01    1.7931562041194615e+05
+w
+ipoptipopt_20190205124041×ý²í‹-"QMDual infeasibility......:   2.3310050246906806e-15    4.1289446315109680e-09
+w
+ipoptipopt_20190205124041×ý²í‹-"QMConstraint violation....:   0.0000000000000000e+00    0.0000000000000000e+00
+w
+ipoptipopt_20190205124041×ý²í‹-"QMComplementarity.........:   5.4890487409567878e-12    9.7228354683975971e-06
+x
+ipoptipopt_20190205124041×ý²í‹-"RNOverall NLP error.......:   5.4890487409567878e-12    9.7228354683975971e-06
+
+e
+ipoptipopt_20190205124041×ý²í‹-"?;
+Number of objective function evaluations             = 15
+d
+ipoptipopt_20190205124041×ý²í‹-">:Number of objective gradient evaluations             = 15
+d
+ipoptipopt_20190205124041×ý²í‹-">:Number of equality constraint evaluations            = 15
+d
+ipoptipopt_20190205124041×ý²í‹-">:Number of inequality constraint evaluations          = 15
+d
+ipoptipopt_20190205124041Øý²í‹-">:Number of equality constraint Jacobian evaluations   = 15
+d
+ipoptipopt_20190205124041Øý²í‹-">:Number of inequality constraint Jacobian evaluations = 15
+d
+ipoptipopt_20190205124041Øý²í‹-">:Number of Lagrangian Hessian evaluations             = 14
+l
+ipoptipopt_20190205124041Øý²í‹-"FBTotal CPU secs in IPOPT (w/o function evaluations)   =      0.008
+l
+ipoptipopt_20190205124041Øý²í‹-"FBTotal CPU secs in NLP function evaluations           =      0.000
+I
+ipoptipopt_20190205124041Øý²í‹-"#
+EXIT: Optimal Solution Found.
+(
+ipoptipopt_20190205124041Øý²í‹-:R
+outer_approximation"outer_approximation_20190205124040Øý²í‹-B
+z_uÖ‰šöœãA
+outer_approximation"outer_approximation_20190205124040Øý²í‹-"=9P_X solution was successful, new z_u = 179315.62041194615
+outer_approximation"outer_approximation_20190205124040Øý²í‹-"[WIteration Completed: State(iteration=2, z_l=173411.71492544468, z_u=179315.62041194615)œ
+outer_approximation"outer_approximation_20190205124040Øý²í‹-"ZVStarting Iteration: State(iteration=3, z_l=173411.71492544468, z_u=179315.62041194615)$
+mipmip_20190205124041éý²í‹-2Y
+mipmip_20190205124041ðý²í‹-"73CPXPARAM_Read_DataCheck                          1
+j
+mipmip_20190205124041ðý²í‹-"HDFound incumbent of value 272694.035920 after 0.00 sec. (0.01 ticks)
+c
+mipmip_20190205124041ðý²í‹-"A=Warning:  Non-integral bounds for integer variables rounded.
+@
+mipmip_20190205124041ðý²í‹-"Tried aggregator 2 times.
+V
+mipmip_20190205124041ðý²í‹-"40MIP Presolve eliminated 145 rows and 0 columns.
+L
+mipmip_20190205124041ðý²í‹-"*&MIP Presolve modified 4 coefficients.
+G
+mipmip_20190205124041ðý²í‹-"%!Aggregator did 12 substitutions.
+]
+mipmip_20190205124041ñý²í‹-";7Reduced MIP has 23 rows, 14 columns, and 114 nonzeros.
+h
+mipmip_20190205124041ñý²í‹-"FBReduced MIP has 0 binaries, 4 generals, 0 SOSs, and 0 indicators.
+M
+mipmip_20190205124041ñý²í‹-"+'Presolve time = 0.00 sec. (0.19 ticks)
+?
+mipmip_20190205124041ñý²í‹-"Tried aggregator 1 time.
+]
+mipmip_20190205124041ñý²í‹-";7Reduced MIP has 23 rows, 14 columns, and 114 nonzeros.
+h
+mipmip_20190205124041ñý²í‹-"FBReduced MIP has 0 binaries, 4 generals, 0 SOSs, and 0 indicators.
+M
+mipmip_20190205124041ñý²í‹-"+'Presolve time = 0.00 sec. (0.05 ticks)
+X
+mipmip_20190205124041ñý²í‹-"62MIP emphasis: balance optimality and feasibility.
+I
+mipmip_20190205124041òý²í‹-"'#MIP search method: dynamic search.
+[
+mipmip_20190205124041òý²í‹-"95Parallel mode: deterministic, using up to 8 threads.
+]
+mipmip_20190205124041òý²í‹-";7Root relaxation solution time = 0.00 sec. (0.07 ticks)
+c
+mipmip_20190205124041òý²í‹-"A=
+        Nodes                                         Cuts/
+t
+mipmip_20190205124041òý²í‹-"RN   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap(
+mipmip_20190205124041òý²í‹-"
+
+u
+mipmip_20190205124041òý²í‹-"SO*     0+    0                       272694.0359 -1350353.3742           595.19%'
+mipmip_20190205124041òý²í‹-"
+u
+mipmip_20190205124041òý²í‹-"SO      0     0   173346.0967     4   272694.0359   173346.0967       20   36.43%'
+mipmip_20190205124041óý²í‹-"
+u
+mipmip_20190205124041óý²í‹-"SO*     0+    0                       183082.5093   173346.0967             5.32%'
+mipmip_20190205124041óý²í‹-"
+u
+mipmip_20190205124041ôý²í‹-"SO*     0+    0                       181193.7014   173346.0967             4.33%'
+mipmip_20190205124041ôý²í‹-"
+u
+mipmip_20190205124041þ²í‹-"SO*     0+    0                       173444.5241   173346.0967             0.06%'
+mipmip_20190205124041þ²í‹-"
+u
+mipmip_20190205124041‘þ²í‹-"SO      0     1   173346.0967     4   173444.5241   173346.0967       20    0.06%'
+mipmip_20190205124041‘þ²í‹-"
+Z
+mipmip_20190205124041‘þ²í‹-"84Elapsed time = 0.03 sec. (0.72 ticks, tree = 0.01 MB5
+mipmip_20190205124041‘þ²í‹-", solutions = 4(
+mipmip_20190205124041‘þ²í‹-")
+J
+mipmip_20190205124041“þ²í‹-"($
+Root node processing (before b&c):
+Z
+mipmip_20190205124041“þ²í‹-"84  Real time             =    0.03 sec. (0.71 ticks)
+?
+mipmip_20190205124041“þ²í‹-"Parallel b&c, 8 threads:
+Z
+mipmip_20190205124041“þ²í‹-"84  Real time             =    0.00 sec. (0.50 ticks)
+M
+mipmip_20190205124041“þ²í‹-"+'  Sync time (average)   =    0.00 sec.
+M
+mipmip_20190205124041“þ²í‹-"+'  Wait time (average)   =    0.00 sec.
+M
+mipmip_20190205124041“þ²í‹-"+'                          ------------
+Z
+mipmip_20190205124041”þ²í‹-"84Total (root+branch&cut) =    0.04 sec. (1.20 ticks)
+$
+mipmip_20190205124041—þ²í‹-:R
+outer_approximation"outer_approximation_20190205124040—þ²í‹-B
+z_lXSl1$,A(
+ipoptipopt_20190205124041˜þ²í‹-2i
+ipoptipopt_20190205124041™þ²í‹-"C?This is Ipopt version 3.12.8, running with linear solver ma27.
++
+ipoptipopt_20190205124041™þ²í‹-"
+j
+ipoptipopt_20190205124041™þ²í‹-"D@Number of nonzeros in equality constraint Jacobian...:      252
+j
+ipoptipopt_20190205124041™þ²í‹-"D@Number of nonzeros in inequality constraint Jacobian.:      420
+k
+ipoptipopt_20190205124041™þ²í‹-"EANumber of nonzeros in Lagrangian Hessian.............:      231
+
+j
+ipoptipopt_20190205124041™þ²í‹-"D@Total number of variables............................:       21
+j
+ipoptipopt_20190205124041™þ²í‹-"D@                     variables with only lower bounds:       12
+j
+ipoptipopt_20190205124041™þ²í‹-"D@                variables with lower and upper bounds:        0
+j
+ipoptipopt_20190205124041™þ²í‹-"D@                     variables with only upper bounds:        0
+j
+ipoptipopt_20190205124041™þ²í‹-"D@Total number of equality constraints.................:       12
+j
+ipoptipopt_20190205124041šþ²í‹-"D@Total number of inequality constraints...............:       20
+j
+ipoptipopt_20190205124041šþ²í‹-"D@        inequality constraints with only lower bounds:       18
+j
+ipoptipopt_20190205124041šþ²í‹-"D@   inequality constraints with lower and upper bounds:        0
+k
+ipoptipopt_20190205124041šþ²í‹-"EA        inequality constraints with only upper bounds:        2
+
+{
+ipoptipopt_20190205124041šþ²í‹-"UQiter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+z
+ipoptipopt_20190205124041šþ²í‹-"TP   0  6.4860895e+04 9.78e-03 1.22e+00  -1.0 0.00e+00    -  0.00e+00 0.00e+00   0+
+ipoptipopt_20190205124041šþ²í‹-"
+z
+ipoptipopt_20190205124041šþ²í‹-"TP   1  6.4047901e+06 8.67e-19 2.47e+01  -1.0 9.31e-02    -  9.90e-01 1.00e+00h  1+
+ipoptipopt_20190205124041šþ²í‹-"
+z
+ipoptipopt_20190205124041›þ²í‹-"TP   2  3.3216939e+06 0.00e+00 4.35e+00  -1.0 4.66e-02    -  9.90e-01 1.00e+00f  1+
+ipoptipopt_20190205124041›þ²í‹-"
+z
+ipoptipopt_20190205124041›þ²í‹-"TP   3  3.3389098e+06 0.00e+00 4.27e-02  -1.0 3.01e-04    -  9.90e-01 1.00e+00f  1+
+ipoptipopt_20190205124041›þ²í‹-"
+z
+ipoptipopt_20190205124041œþ²í‹-"TP   4  3.3389095e+06 0.00e+00 1.00e-06  -1.0 2.88e-08    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041œþ²í‹-"
+z
+ipoptipopt_20190205124041œþ²í‹-"TP   5  2.4103991e+05 0.00e+00 2.83e-08  -2.5 5.74e-02    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041œþ²í‹-"
+z
+ipoptipopt_20190205124041þ²í‹-"TP   6  1.8946045e+05 0.00e+00 3.64e+00  -3.8 1.58e-03    -  1.00e+00 6.95e-01f  1+
+ipoptipopt_20190205124041þ²í‹-"
+z
+ipoptipopt_20190205124041þ²í‹-"TP   7  1.8003421e+05 0.00e+00 1.92e-01  -3.8 4.83e-04    -  1.00e+00 9.47e-01f  1+
+ipoptipopt_20190205124041þ²í‹-"
+z
+ipoptipopt_20190205124041žþ²í‹-"TP   8  1.8067426e+05 0.00e+00 1.50e-09  -3.8 3.74e-05    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041žþ²í‹-"
+z
+ipoptipopt_20190205124041žþ²í‹-"TP   9  1.7800909e+05 0.00e+00 8.27e-02  -5.7 8.76e-05    -  1.00e+00 8.75e-01f  1+
+ipoptipopt_20190205124041žþ²í‹-"
+{
+ipoptipopt_20190205124041Ÿþ²í‹-"UQiter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+z
+ipoptipopt_20190205124041Ÿþ²í‹-"TP  10  1.7780099e+05 0.00e+00 2.03e-01  -5.7 9.78e-06    -  1.00e+00 8.64e-01f  1+
+ipoptipopt_20190205124041Ÿþ²í‹-"
+z
+ipoptipopt_20190205124041Ÿþ²í‹-"TP  11  1.7777973e+05 0.00e+00 1.84e-11  -5.7 7.91e-07    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041Ÿþ²í‹-"
+z
+ipoptipopt_20190205124041 þ²í‹-"TP  12  1.7774964e+05 0.00e+00 3.98e-03  -8.6 8.19e-07    -  1.00e+00 9.66e-01f  1+
+ipoptipopt_20190205124041 þ²í‹-"
+z
+ipoptipopt_20190205124041 þ²í‹-"TP  13  1.7774882e+05 0.00e+00 2.81e-14  -8.6 1.83e-08    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041 þ²í‹-"
+z
+ipoptipopt_20190205124041¡þ²í‹-"TP  14  1.7774878e+05 0.00e+00 2.87e-15 -11.3 7.41e-10    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041¡þ²í‹-"
+H
+ipoptipopt_20190205124041¡þ²í‹-""
+Number of Iterations....: 14
+r
+ipoptipopt_20190205124041¡þ²í‹-"LH
+                                   (scaled)                 (unscaled)
+w
+ipoptipopt_20190205124041¡þ²í‹-"QMObjective...............:   1.0034847500397177e-01    1.7774877907135483e+05
+w
+ipoptipopt_20190205124041¡þ²í‹-"QMDual infeasibility......:   2.8726368546806540e-15    5.0883453247760213e-09
+w
+ipoptipopt_20190205124041¡þ²í‹-"QMConstraint violation....:   0.0000000000000000e+00    0.0000000000000000e+00
+w
+ipoptipopt_20190205124041¡þ²í‹-"QMComplementarity.........:   5.3701586982018857e-12    9.5122437285371895e-06
+x
+ipoptipopt_20190205124041¡þ²í‹-"RNOverall NLP error.......:   5.3701586982018857e-12    9.5122437285371895e-06
+
+e
+ipoptipopt_20190205124041¡þ²í‹-"?;
+Number of objective function evaluations             = 15
+d
+ipoptipopt_20190205124041¡þ²í‹-">:Number of objective gradient evaluations             = 15
+d
+ipoptipopt_20190205124041¡þ²í‹-">:Number of equality constraint evaluations            = 15
+d
+ipoptipopt_20190205124041¡þ²í‹-">:Number of inequality constraint evaluations          = 15
+d
+ipoptipopt_20190205124041¡þ²í‹-">:Number of equality constraint Jacobian evaluations   = 15
+d
+ipoptipopt_20190205124041¡þ²í‹-">:Number of inequality constraint Jacobian evaluations = 15
+d
+ipoptipopt_20190205124041¡þ²í‹-">:Number of Lagrangian Hessian evaluations             = 14
+l
+ipoptipopt_20190205124041¢þ²í‹-"FBTotal CPU secs in IPOPT (w/o function evaluations)   =      0.008
+l
+ipoptipopt_20190205124041¢þ²í‹-"FBTotal CPU secs in NLP function evaluations           =      0.000
+I
+ipoptipopt_20190205124041¢þ²í‹-"#
+EXIT: Optimal Solution Found.
+(
+ipoptipopt_20190205124041¢þ²í‹-:R
+outer_approximation"outer_approximation_20190205124040¢þ²í‹-B
+z_u2Ã‰;¦²A
+outer_approximation"outer_approximation_20190205124040¢þ²í‹-"=9P_X solution was successful, new z_u = 177748.77907135483
+outer_approximation"outer_approximation_20190205124040¢þ²í‹-"[WIteration Completed: State(iteration=3, z_l=173444.52413239586, z_u=177748.77907135483)œ
+outer_approximation"outer_approximation_20190205124040¢þ²í‹-"ZVStarting Iteration: State(iteration=4, z_l=173444.52413239586, z_u=177748.77907135483)$
+mipmip_20190205124041³þ²í‹-2Y
+mipmip_20190205124041ºþ²í‹-"73CPXPARAM_Read_DataCheck                          1
+j
+mipmip_20190205124041»þ²í‹-"HDFound incumbent of value 272694.035920 after 0.00 sec. (0.01 ticks)
+c
+mipmip_20190205124041»þ²í‹-"A=Warning:  Non-integral bounds for integer variables rounded.
+@
+mipmip_20190205124041»þ²í‹-"Tried aggregator 2 times.
+V
+mipmip_20190205124041»þ²í‹-"40MIP Presolve eliminated 189 rows and 0 columns.
+L
+mipmip_20190205124041»þ²í‹-"*&MIP Presolve modified 5 coefficients.
+G
+mipmip_20190205124041»þ²í‹-"%!Aggregator did 12 substitutions.
+]
+mipmip_20190205124041»þ²í‹-";7Reduced MIP has 24 rows, 14 columns, and 128 nonzeros.
+h
+mipmip_20190205124041¼þ²í‹-"FBReduced MIP has 0 binaries, 4 generals, 0 SOSs, and 0 indicators.
+M
+mipmip_20190205124041¼þ²í‹-"+'Presolve time = 0.00 sec. (0.23 ticks)
+?
+mipmip_20190205124041¼þ²í‹-"Tried aggregator 1 time.
+]
+mipmip_20190205124041¼þ²í‹-";7Reduced MIP has 24 rows, 14 columns, and 128 nonzeros.
+h
+mipmip_20190205124041¼þ²í‹-"FBReduced MIP has 0 binaries, 4 generals, 0 SOSs, and 0 indicators.
+M
+mipmip_20190205124041¼þ²í‹-"+'Presolve time = 0.00 sec. (0.05 ticks)
+X
+mipmip_20190205124041¼þ²í‹-"62MIP emphasis: balance optimality and feasibility.
+I
+mipmip_20190205124041½þ²í‹-"'#MIP search method: dynamic search.
+[
+mipmip_20190205124041½þ²í‹-"95Parallel mode: deterministic, using up to 8 threads.
+]
+mipmip_20190205124041½þ²í‹-";7Root relaxation solution time = 0.00 sec. (0.10 ticks)
+c
+mipmip_20190205124041½þ²í‹-"A=
+        Nodes                                         Cuts/
+t
+mipmip_20190205124041½þ²í‹-"RN   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap(
+mipmip_20190205124041½þ²í‹-"
+
+u
+mipmip_20190205124041½þ²í‹-"SO*     0+    0                       272694.0359 -1350353.3742           595.19%'
+mipmip_20190205124041½þ²í‹-"
+u
+mipmip_20190205124041½þ²í‹-"SO      0     0   173346.0967     4   272694.0359   173346.0967       25   36.43%'
+mipmip_20190205124041½þ²í‹-"
+u
+mipmip_20190205124041¾þ²í‹-"SO*     0+    0                       183082.5093   173346.0967             5.32%'
+mipmip_20190205124041¾þ²í‹-"
+u
+mipmip_20190205124041¾þ²í‹-"SO*     0+    0                       181193.7014   173346.0967             4.33%'
+mipmip_20190205124041¾þ²í‹-"
+u
+mipmip_20190205124041îþ²í‹-"SO*     0+    0                       177749.4990   173346.0967             2.48%'
+mipmip_20190205124041îþ²í‹-"
+u
+mipmip_20190205124041þþ²í‹-"SO*     0+    0                       173444.5241   173346.0968             0.06%'
+mipmip_20190205124041þþ²í‹-"
+u
+mipmip_20190205124041‡ÿ²í‹-"SO      0     1   173346.0967     4   173444.5241   173346.0969       25    0.06%'
+mipmip_20190205124041‡ÿ²í‹-"
+Z
+mipmip_20190205124041‡ÿ²í‹-"84Elapsed time = 0.08 sec. (0.85 ticks, tree = 0.01 MB5
+mipmip_20190205124041‡ÿ²í‹-", solutions = 5(
+mipmip_20190205124041‡ÿ²í‹-")
+J
+mipmip_20190205124041ÿ²í‹-"($
+Root node processing (before b&c):
+Z
+mipmip_20190205124041ÿ²í‹-"84  Real time             =    0.07 sec. (0.83 ticks)
+?
+mipmip_20190205124041ÿ²í‹-"Parallel b&c, 8 threads:
+Z
+mipmip_20190205124041ÿ²í‹-"84  Real time             =    0.02 sec. (0.41 ticks)
+M
+mipmip_20190205124041ÿ²í‹-"+'  Sync time (average)   =    0.01 sec.
+M
+mipmip_20190205124041ÿ²í‹-"+'  Wait time (average)   =    0.00 sec.
+M
+mipmip_20190205124041ÿ²í‹-"+'                          ------------
+Z
+mipmip_20190205124041ÿ²í‹-"84Total (root+branch&cut) =    0.08 sec. (1.24 ticks)
+$
+mipmip_20190205124041•ÿ²í‹-:R
+outer_approximation"outer_approximation_20190205124040•ÿ²í‹-B
+z_lJ™s1$,A(
+ipoptipopt_20190205124041•ÿ²í‹-2i
+ipoptipopt_20190205124041–ÿ²í‹-"C?This is Ipopt version 3.12.8, running with linear solver ma27.
++
+ipoptipopt_20190205124041–ÿ²í‹-"
+j
+ipoptipopt_20190205124041–ÿ²í‹-"D@Number of nonzeros in equality constraint Jacobian...:      252
+j
+ipoptipopt_20190205124041–ÿ²í‹-"D@Number of nonzeros in inequality constraint Jacobian.:      420
+k
+ipoptipopt_20190205124041–ÿ²í‹-"EANumber of nonzeros in Lagrangian Hessian.............:      231
+
+j
+ipoptipopt_20190205124041–ÿ²í‹-"D@Total number of variables............................:       21
+j
+ipoptipopt_20190205124041–ÿ²í‹-"D@                     variables with only lower bounds:       12
+j
+ipoptipopt_20190205124041—ÿ²í‹-"D@                variables with lower and upper bounds:        0
+j
+ipoptipopt_20190205124041—ÿ²í‹-"D@                     variables with only upper bounds:        0
+j
+ipoptipopt_20190205124041—ÿ²í‹-"D@Total number of equality constraints.................:       12
+j
+ipoptipopt_20190205124041—ÿ²í‹-"D@Total number of inequality constraints...............:       20
+j
+ipoptipopt_20190205124041—ÿ²í‹-"D@        inequality constraints with only lower bounds:       18
+j
+ipoptipopt_20190205124041—ÿ²í‹-"D@   inequality constraints with lower and upper bounds:        0
+k
+ipoptipopt_20190205124041—ÿ²í‹-"EA        inequality constraints with only upper bounds:        2
+
+{
+ipoptipopt_20190205124041—ÿ²í‹-"UQiter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+z
+ipoptipopt_20190205124041—ÿ²í‹-"TP   0  6.9860895e+04 9.55e-03 1.22e+00  -1.0 0.00e+00    -  0.00e+00 0.00e+00   0+
+ipoptipopt_20190205124041—ÿ²í‹-"
+z
+ipoptipopt_20190205124041˜ÿ²í‹-"TP   1  6.3965817e+06 8.67e-19 1.09e+01  -1.0 9.31e-02    -  9.90e-01 1.00e+00h  1+
+ipoptipopt_20190205124041˜ÿ²í‹-"
+z
+ipoptipopt_20190205124041˜ÿ²í‹-"TP   2  3.3137722e+06 0.00e+00 2.12e+00  -1.0 4.66e-02    -  9.90e-01 1.00e+00f  1+
+ipoptipopt_20190205124041˜ÿ²í‹-"
+z
+ipoptipopt_20190205124041˜ÿ²í‹-"TP   3  3.3309483e+06 0.00e+00 2.09e-02  -1.0 3.01e-04    -  9.90e-01 1.00e+00f  1+
+ipoptipopt_20190205124041™ÿ²í‹-"
+z
+ipoptipopt_20190205124041™ÿ²í‹-"TP   4  3.3309485e+06 0.00e+00 1.00e-06  -1.0 6.48e-08    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041™ÿ²í‹-"
+z
+ipoptipopt_20190205124041šÿ²í‹-"TP   5  2.4820515e+05 0.00e+00 1.04e+00  -2.5 5.74e-02    -  1.00e+00 9.95e-01f  1+
+ipoptipopt_20190205124041šÿ²í‹-"
+z
+ipoptipopt_20190205124041šÿ²í‹-"TP   6  2.4840495e+05 0.00e+00 2.83e-08  -2.5 8.56e-04    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041šÿ²í‹-"
+z
+ipoptipopt_20190205124041›ÿ²í‹-"TP   7  1.7871631e+05 0.00e+00 7.44e-01  -3.8 1.58e-03    -  1.00e+00 8.76e-01f  1+
+ipoptipopt_20190205124041›ÿ²í‹-"
+z
+ipoptipopt_20190205124041›ÿ²í‹-"TP   8  1.7716012e+05 0.00e+00 1.50e-09  -3.8 1.97e-04    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041›ÿ²í‹-"
+z
+ipoptipopt_20190205124041œÿ²í‹-"TP   9  1.7432390e+05 0.00e+00 6.12e-02  -5.7 8.76e-05    -  1.00e+00 8.59e-01f  1+
+ipoptipopt_20190205124041œÿ²í‹-"
+{
+ipoptipopt_20190205124041œÿ²í‹-"UQiter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+z
+ipoptipopt_20190205124041œÿ²í‹-"TP  10  1.7404409e+05 0.00e+00 2.24e-01  -5.7 1.13e-05    -  1.00e+00 8.67e-01f  1+
+ipoptipopt_20190205124041œÿ²í‹-"
+z
+ipoptipopt_20190205124041ÿ²í‹-"TP  11  1.7401373e+05 0.00e+00 1.85e-11  -5.7 8.51e-07    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041ÿ²í‹-"
+z
+ipoptipopt_20190205124041ÿ²í‹-"TP  12  1.7398339e+05 0.00e+00 3.28e-03  -8.6 8.43e-07    -  1.00e+00 9.69e-01f  1+
+ipoptipopt_20190205124041ÿ²í‹-"
+z
+ipoptipopt_20190205124041žÿ²í‹-"TP  13  1.7398265e+05 0.00e+00 2.68e-14  -8.6 1.65e-08    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041žÿ²í‹-"
+z
+ipoptipopt_20190205124041žÿ²í‹-"TP  14  1.7398261e+05 0.00e+00 1.01e-15 -11.3 7.41e-10    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041žÿ²í‹-"
+H
+ipoptipopt_20190205124041žÿ²í‹-""
+Number of Iterations....: 14
+r
+ipoptipopt_20190205124041žÿ²í‹-"LH
+                                   (scaled)                 (unscaled)
+w
+ipoptipopt_20190205124041žÿ²í‹-"QMObjective...............:   9.8222275777305579e-02    1.7398261006293277e+05
+w
+ipoptipopt_20190205124041žÿ²í‹-"QMDual infeasibility......:   1.0051485875182606e-15    1.7804349713296209e-09
+w
+ipoptipopt_20190205124041žÿ²í‹-"QMConstraint violation....:   0.0000000000000000e+00    0.0000000000000000e+00
+w
+ipoptipopt_20190205124041žÿ²í‹-"QMComplementarity.........:   5.3701591220385493e-12    9.5122444792855147e-06
+x
+ipoptipopt_20190205124041žÿ²í‹-"RNOverall NLP error.......:   5.3701591220385493e-12    9.5122444792855147e-06
+
+e
+ipoptipopt_20190205124041žÿ²í‹-"?;
+Number of objective function evaluations             = 15
+d
+ipoptipopt_20190205124041Ÿÿ²í‹-">:Number of objective gradient evaluations             = 15
+d
+ipoptipopt_20190205124041Ÿÿ²í‹-">:Number of equality constraint evaluations            = 15
+d
+ipoptipopt_20190205124041Ÿÿ²í‹-">:Number of inequality constraint evaluations          = 15
+d
+ipoptipopt_20190205124041Ÿÿ²í‹-">:Number of equality constraint Jacobian evaluations   = 15
+d
+ipoptipopt_20190205124041Ÿÿ²í‹-">:Number of inequality constraint Jacobian evaluations = 15
+d
+ipoptipopt_20190205124041Ÿÿ²í‹-">:Number of Lagrangian Hessian evaluations             = 14
+l
+ipoptipopt_20190205124041Ÿÿ²í‹-"FBTotal CPU secs in IPOPT (w/o function evaluations)   =      0.004
+l
+ipoptipopt_20190205124041Ÿÿ²í‹-"FBTotal CPU secs in NLP function evaluations           =      0.000
+I
+ipoptipopt_20190205124041Ÿÿ²í‹-"#
+EXIT: Optimal Solution Found.
+(
+ipoptipopt_20190205124041Ÿÿ²í‹-:R
+outer_approximation"outer_approximation_20190205124040Ÿÿ²í‹-B
+z_uÆ¬háô<A
+outer_approximation"outer_approximation_20190205124040Ÿÿ²í‹-"=9P_X solution was successful, new z_u = 173982.61006293277
+outer_approximation"outer_approximation_20190205124040Ÿÿ²í‹-"[WIteration Completed: State(iteration=4, z_l=173444.52414626844, z_u=173982.61006293277)œ
+outer_approximation"outer_approximation_20190205124040Ÿÿ²í‹-"ZVStarting Iteration: State(iteration=5, z_l=173444.52414626844, z_u=173982.61006293277)$
+mipmip_20190205124041°ÿ²í‹-2Y
+mipmip_20190205124041¸ÿ²í‹-"73CPXPARAM_Read_DataCheck                          1
+j
+mipmip_20190205124041¹ÿ²í‹-"HDFound incumbent of value 272694.035920 after 0.00 sec. (0.02 ticks)
+c
+mipmip_20190205124041¹ÿ²í‹-"A=Warning:  Non-integral bounds for integer variables rounded.
+@
+mipmip_20190205124041¹ÿ²í‹-"Tried aggregator 2 times.
+V
+mipmip_20190205124041¹ÿ²í‹-"40MIP Presolve eliminated 233 rows and 0 columns.
+L
+mipmip_20190205124041¹ÿ²í‹-"*&MIP Presolve modified 6 coefficients.
+G
+mipmip_20190205124041¹ÿ²í‹-"%!Aggregator did 12 substitutions.
+]
+mipmip_20190205124041ºÿ²í‹-";7Reduced MIP has 25 rows, 14 columns, and 142 nonzeros.
+h
+mipmip_20190205124041ºÿ²í‹-"FBReduced MIP has 0 binaries, 4 generals, 0 SOSs, and 0 indicators.
+M
+mipmip_20190205124041ºÿ²í‹-"+'Presolve time = 0.00 sec. (0.27 ticks)
+?
+mipmip_20190205124041ºÿ²í‹-"Tried aggregator 1 time.
+]
+mipmip_20190205124041ºÿ²í‹-";7Reduced MIP has 25 rows, 14 columns, and 142 nonzeros.
+h
+mipmip_20190205124041ºÿ²í‹-"FBReduced MIP has 0 binaries, 4 generals, 0 SOSs, and 0 indicators.
+M
+mipmip_20190205124041ºÿ²í‹-"+'Presolve time = 0.00 sec. (0.06 ticks)
+X
+mipmip_20190205124041»ÿ²í‹-"62MIP emphasis: balance optimality and feasibility.
+I
+mipmip_20190205124041»ÿ²í‹-"'#MIP search method: dynamic search.
+[
+mipmip_20190205124041»ÿ²í‹-"95Parallel mode: deterministic, using up to 8 threads.
+]
+mipmip_20190205124041»ÿ²í‹-";7Root relaxation solution time = 0.00 sec. (0.10 ticks)
+c
+mipmip_20190205124041»ÿ²í‹-"A=
+        Nodes                                         Cuts/
+t
+mipmip_20190205124041»ÿ²í‹-"RN   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap(
+mipmip_20190205124041»ÿ²í‹-"
+
+u
+mipmip_20190205124041»ÿ²í‹-"SO*     0+    0                       272694.0359 -1211224.7480           544.17%'
+mipmip_20190205124041»ÿ²í‹-"
+u
+mipmip_20190205124041»ÿ²í‹-"SO      0     0   173346.0967     4   272694.0359   173346.0967       23   36.43%'
+mipmip_20190205124041»ÿ²í‹-"
+u
+mipmip_20190205124041¼ÿ²í‹-"SO*     0+    0                       183082.5093   173346.0967             5.32%'
+mipmip_20190205124041¼ÿ²í‹-"
+u
+mipmip_20190205124041½ÿ²í‹-"SO*     0+    0                       181193.7014   173346.0967             4.33%'
+mipmip_20190205124041½ÿ²í‹-"
+u
+mipmip_20190205124041Ôÿ²í‹-"SO*     0+    0                       177749.4990   173346.0967             2.48%'
+mipmip_20190205124041Ôÿ²í‹-"
+u
+mipmip_20190205124041Ôÿ²í‹-"SO*     0+    0                       173983.3300   173839.5813             0.08%'
+mipmip_20190205124041Ôÿ²í‹-"
+u
+mipmip_20190205124041Ôÿ²í‹-"SO      0     0        cutoff         173983.3300   173983.3300       23    0.00%'
+mipmip_20190205124041Ôÿ²í‹-"
+Z
+mipmip_20190205124041Õÿ²í‹-"84Elapsed time = 0.03 sec. (0.89 ticks, tree = 0.01 MB5
+mipmip_20190205124041Õÿ²í‹-", solutions = 5(
+mipmip_20190205124041Õÿ²í‹-")
+J
+mipmip_20190205124041Õÿ²í‹-"($
+Root node processing (before b&c):
+Z
+mipmip_20190205124041Õÿ²í‹-"84  Real time             =    0.03 sec. (0.89 ticks)
+?
+mipmip_20190205124041Õÿ²í‹-"Parallel b&c, 8 threads:
+Z
+mipmip_20190205124041Õÿ²í‹-"84  Real time             =    0.00 sec. (0.00 ticks)
+M
+mipmip_20190205124041Õÿ²í‹-"+'  Sync time (average)   =    0.00 sec.
+M
+mipmip_20190205124041Õÿ²í‹-"+'  Wait time (average)   =    0.00 sec.
+M
+mipmip_20190205124041Õÿ²í‹-"+'                          ------------
+Z
+mipmip_20190205124041Õÿ²í‹-"84Total (root+branch&cut) =    0.03 sec. (0.89 ticks)
+$
+mipmip_20190205124041Úÿ²í‹-:R
+outer_approximation"outer_approximation_20190205124040Úÿ²í‹-B
+z_léjÍ£ú<A(
+ipoptipopt_20190205124041Ûÿ²í‹-2i
+ipoptipopt_20190205124041Üÿ²í‹-"C?This is Ipopt version 3.12.8, running with linear solver ma27.
++
+ipoptipopt_20190205124041Üÿ²í‹-"
+j
+ipoptipopt_20190205124041Üÿ²í‹-"D@Number of nonzeros in equality constraint Jacobian...:      252
+j
+ipoptipopt_20190205124041Üÿ²í‹-"D@Number of nonzeros in inequality constraint Jacobian.:      420
+k
+ipoptipopt_20190205124041Üÿ²í‹-"EANumber of nonzeros in Lagrangian Hessian.............:      231
+
+j
+ipoptipopt_20190205124041Üÿ²í‹-"D@Total number of variables............................:       21
+j
+ipoptipopt_20190205124041Üÿ²í‹-"D@                     variables with only lower bounds:       12
+j
+ipoptipopt_20190205124041Üÿ²í‹-"D@                variables with lower and upper bounds:        0
+j
+ipoptipopt_20190205124041Üÿ²í‹-"D@                     variables with only upper bounds:        0
+j
+ipoptipopt_20190205124041Ýÿ²í‹-"D@Total number of equality constraints.................:       12
+j
+ipoptipopt_20190205124041Ýÿ²í‹-"D@Total number of inequality constraints...............:       20
+j
+ipoptipopt_20190205124041Ýÿ²í‹-"D@        inequality constraints with only lower bounds:       18
+j
+ipoptipopt_20190205124041Ýÿ²í‹-"D@   inequality constraints with lower and upper bounds:        0
+k
+ipoptipopt_20190205124041Ýÿ²í‹-"EA        inequality constraints with only upper bounds:        2
+
+{
+ipoptipopt_20190205124041Ýÿ²í‹-"UQiter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+z
+ipoptipopt_20190205124041Ýÿ²í‹-"TP   0  6.9860895e+04 9.55e-03 1.22e+00  -1.0 0.00e+00    -  0.00e+00 0.00e+00   0+
+ipoptipopt_20190205124041Ýÿ²í‹-"
+z
+ipoptipopt_20190205124041Ýÿ²í‹-"TP   1  6.3965817e+06 8.67e-19 1.09e+01  -1.0 9.31e-02    -  9.90e-01 1.00e+00h  1+
+ipoptipopt_20190205124041Ýÿ²í‹-"
+z
+ipoptipopt_20190205124041Þÿ²í‹-"TP   2  3.3137722e+06 0.00e+00 2.12e+00  -1.0 4.66e-02    -  9.90e-01 1.00e+00f  1+
+ipoptipopt_20190205124041Þÿ²í‹-"
+z
+ipoptipopt_20190205124041Þÿ²í‹-"TP   3  3.3309483e+06 0.00e+00 2.09e-02  -1.0 3.01e-04    -  9.90e-01 1.00e+00f  1+
+ipoptipopt_20190205124041Þÿ²í‹-"
+z
+ipoptipopt_20190205124041ßÿ²í‹-"TP   4  3.3309485e+06 0.00e+00 1.00e-06  -1.0 6.48e-08    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041ßÿ²í‹-"
+z
+ipoptipopt_20190205124041ßÿ²í‹-"TP   5  2.4820515e+05 0.00e+00 1.04e+00  -2.5 5.74e-02    -  1.00e+00 9.95e-01f  1+
+ipoptipopt_20190205124041ßÿ²í‹-"
+z
+ipoptipopt_20190205124041àÿ²í‹-"TP   6  2.4840495e+05 0.00e+00 2.83e-08  -2.5 8.56e-04    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041àÿ²í‹-"
+z
+ipoptipopt_20190205124041àÿ²í‹-"TP   7  1.7871631e+05 0.00e+00 7.44e-01  -3.8 1.58e-03    -  1.00e+00 8.76e-01f  1+
+ipoptipopt_20190205124041àÿ²í‹-"
+z
+ipoptipopt_20190205124041áÿ²í‹-"TP   8  1.7716012e+05 0.00e+00 1.50e-09  -3.8 1.97e-04    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041áÿ²í‹-"
+z
+ipoptipopt_20190205124041áÿ²í‹-"TP   9  1.7432390e+05 0.00e+00 6.12e-02  -5.7 8.76e-05    -  1.00e+00 8.59e-01f  1+
+ipoptipopt_20190205124041áÿ²í‹-"
+{
+ipoptipopt_20190205124041âÿ²í‹-"UQiter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
+z
+ipoptipopt_20190205124041âÿ²í‹-"TP  10  1.7404409e+05 0.00e+00 2.24e-01  -5.7 1.13e-05    -  1.00e+00 8.67e-01f  1+
+ipoptipopt_20190205124041âÿ²í‹-"
+z
+ipoptipopt_20190205124041âÿ²í‹-"TP  11  1.7401373e+05 0.00e+00 1.85e-11  -5.7 8.51e-07    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041âÿ²í‹-"
+z
+ipoptipopt_20190205124041ãÿ²í‹-"TP  12  1.7398339e+05 0.00e+00 3.28e-03  -8.6 8.43e-07    -  1.00e+00 9.69e-01f  1+
+ipoptipopt_20190205124041ãÿ²í‹-"
+z
+ipoptipopt_20190205124041ãÿ²í‹-"TP  13  1.7398265e+05 0.00e+00 2.68e-14  -8.6 1.65e-08    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041ãÿ²í‹-"
+z
+ipoptipopt_20190205124041äÿ²í‹-"TP  14  1.7398261e+05 0.00e+00 1.01e-15 -11.3 7.41e-10    -  1.00e+00 1.00e+00f  1+
+ipoptipopt_20190205124041äÿ²í‹-"
+H
+ipoptipopt_20190205124041äÿ²í‹-""
+Number of Iterations....: 14
+r
+ipoptipopt_20190205124041äÿ²í‹-"LH
+                                   (scaled)                 (unscaled)
+w
+ipoptipopt_20190205124041äÿ²í‹-"QMObjective...............:   9.8222275777305579e-02    1.7398261006293277e+05
+w
+ipoptipopt_20190205124041äÿ²í‹-"QMDual infeasibility......:   1.0051485875182606e-15    1.7804349713296209e-09
+w
+ipoptipopt_20190205124041äÿ²í‹-"QMConstraint violation....:   0.0000000000000000e+00    0.0000000000000000e+00
+w
+ipoptipopt_20190205124041äÿ²í‹-"QMComplementarity.........:   5.3701591220385493e-12    9.5122444792855147e-06
+x
+ipoptipopt_20190205124041äÿ²í‹-"RNOverall NLP error.......:   5.3701591220385493e-12    9.5122444792855147e-06
+
+e
+ipoptipopt_20190205124041äÿ²í‹-"?;
+Number of objective function evaluations             = 15
+d
+ipoptipopt_20190205124041äÿ²í‹-">:Number of objective gradient evaluations             = 15
+d
+ipoptipopt_20190205124041äÿ²í‹-">:Number of equality constraint evaluations            = 15
+d
+ipoptipopt_20190205124041äÿ²í‹-">:Number of inequality constraint evaluations          = 15
+d
+ipoptipopt_20190205124041äÿ²í‹-">:Number of equality constraint Jacobian evaluations   = 15
+d
+ipoptipopt_20190205124041äÿ²í‹-">:Number of inequality constraint Jacobian evaluations = 15
+d
+ipoptipopt_20190205124041äÿ²í‹-">:Number of Lagrangian Hessian evaluations             = 14
+l
+ipoptipopt_20190205124041åÿ²í‹-"FBTotal CPU secs in IPOPT (w/o function evaluations)   =      0.008
+l
+ipoptipopt_20190205124041åÿ²í‹-"FBTotal CPU secs in NLP function evaluations           =      0.000
+I
+ipoptipopt_20190205124041åÿ²í‹-"#
+EXIT: Optimal Solution Found.
+(
+ipoptipopt_20190205124041åÿ²í‹-:R
+outer_approximation"outer_approximation_20190205124040åÿ²í‹-B
+z_uÆ¬háô<A
+outer_approximation"outer_approximation_20190205124040åÿ²í‹-"=9P_X solution was successful, new z_u = 173982.61006293277
+outer_approximation"outer_approximation_20190205124040åÿ²í‹-"[WIteration Completed: State(iteration=5, z_l=173983.32998164676, z_u=173982.61006293277)D
+outer_approximation"outer_approximation_20190205124040æÿ²í‹-:

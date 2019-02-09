@@ -1,4 +1,5 @@
 #!/bin/bash
 source venv/Scripts/activate
-export FLASK_APP=galini_dashboard/API/server.py
+cd galini_dashboard/API/
+export FLASK_APP=server.py
 flask run

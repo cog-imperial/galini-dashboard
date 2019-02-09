@@ -12,10 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from flask import Blueprint, Response
+from flask import Blueprint, Response, jsonify
 import json
 import os
+import time
 from galini_io.reader import MessageReader
+
+# from google.protobuf.json_format import MessageToJson
 
 static_path = "Static/run_logs"  # TODO: Fix there's probably a better way..
 
@@ -37,7 +40,20 @@ def getRaw(name):
         content = open(static_path + "/" + name + "/messages.bin", "rb")
         msg_reader = MessageReader(content)
         for msg in msg_reader:
-            yield msg.text.content
+            if msg.HasField("text"):
+                yield json.dumps({"text": msg.text.content})
+            #if msg.HasField("solve_start"):
+                #yield json.dumps({"type": "start"})
+            #if msg.HasField("solve_end"):
+                #yield json.dumps({"type": "end"})
+            if msg.HasField("update_variable"):
+                yield json.dumps(
+                    {
+                        "type": "update",
+                        "name": msg.update_variable.name,
+                        "iteration": msg.update_variable.iteration,
+                        "value": msg.update_variable.value,
+                    }
+                )
 
     return Response(stream(), mimetype="text/plain")
-
