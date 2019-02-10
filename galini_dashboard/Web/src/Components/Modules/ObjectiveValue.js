@@ -2,7 +2,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Segment, Header, Icon } from "semantic-ui-react";
-import { XYPlot, LineMarkSeries, XAxis, YAxis } from "react-vis";
+import { XYPlot, LineMarkSeries, XAxis, YAxis, DiscreteColorLegend } from "react-vis";
 import { format } from "d3-format";
 
 const mapStateToProps = state => ({ solverEvents: state.solverEvents, modulesHeight: state.modulesHeight });
@@ -66,6 +66,12 @@ export class ObjectiveValue extends React.Component<Props, State> {
     const size = Math.floor(modulesHeight * 0.9); // To only use 90% of the available height
     return Object.keys(vars).length > 0 ? (
       <XYPlot yDomain={[yMin - yDiff, yMax + yDiff]} height={size} width={size}>
+        <DiscreteColorLegend
+          items={Object.keys(vars)}
+          height={size / 2}
+          width={size / 5}
+          style={{ position: "absolute", top: 0, right: 0 }}
+        />
         <XAxis tickTotal={length} title="Iteration" />
         <YAxis title="Objective Value" tickFormat={tick => format(".2s")(tick)} />
         {series}
