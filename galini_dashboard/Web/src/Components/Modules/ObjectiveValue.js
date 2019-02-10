@@ -1,7 +1,7 @@
 // @flow
 import React from "react";
 import { connect } from "react-redux";
-import { Segment } from "semantic-ui-react";
+import { Segment, Header, Icon } from "semantic-ui-react";
 import { XYPlot, LineMarkSeries, XAxis, YAxis } from "react-vis";
 import { format } from "d3-format";
 
@@ -11,7 +11,7 @@ type Props = { solverEvents: Array, size: number };
 
 type State = { vars: Object, yMin: number, yMax: number };
 
-class ObjectiveValue extends React.Component<Props, State> {
+export class ObjectiveValue extends React.Component<Props, State> {
   state = { vars: {}, yMin: Infinity, yMax: -Infinity };
   componentRef = null;
   constructor(props: Props) {
@@ -54,7 +54,7 @@ class ObjectiveValue extends React.Component<Props, State> {
     }
   }
 
-  renderGraph() {
+  render() {
     const { vars, yMin, yMax } = this.state;
     let length = 0;
     const series = Object.keys(vars).map((val, index) => {
@@ -64,17 +64,21 @@ class ObjectiveValue extends React.Component<Props, State> {
     const yDiff = (yMax - yMin) / 2;
     const { modulesHeight } = this.props;
     const size = Math.floor(modulesHeight * 0.9); // To only use 90% of the available height
-    return (
+    return Object.keys(vars).length > 0 ? (
       <XYPlot yDomain={[yMin - yDiff, yMax + yDiff]} height={size} width={size}>
         <XAxis tickTotal={length} title="Iteration" />
         <YAxis title="Objective Value" tickFormat={tick => format(".2s")(tick)} />
         {series}
       </XYPlot>
+    ) : (
+      <Segment placeholder style={{ height: "100%" }}>
+        <Header icon>
+          No relevant data available yet
+          <div style={{ height: "10px" }} />
+          <Icon loading name="spinner" />
+        </Header>
+      </Segment>
     );
-  }
-
-  render() {
-    return <Segment style={{ height: "100%" }}>{this.renderGraph()}</Segment>;
   }
 }
 

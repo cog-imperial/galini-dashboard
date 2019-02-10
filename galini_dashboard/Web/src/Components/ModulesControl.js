@@ -1,6 +1,6 @@
 // @flow
 import React from "react";
-import { Dropdown, Button } from "semantic-ui-react";
+import { Dropdown, Button, Segment } from "semantic-ui-react";
 import ObjectiveValue from "./Modules/ObjectiveValue";
 
 type State = { modules: Array<React.Component> };
@@ -20,10 +20,10 @@ class ModulesControl extends React.Component<Props, State> {
     const { modules } = this.state;
     return (
       <React.Fragment>
-        <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "row" }}>
+        <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "row", overflow: "auto" }}>
           {modules.map((val, index) => (
             <div style={{ padding: "10px", height: "100%" }} key={index}>
-              {val}
+              <Segment style={{ height: "100%" }}>{val}</Segment>
             </div>
           ))}
         </div>
