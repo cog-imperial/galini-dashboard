@@ -1,9 +1,9 @@
 // @flow
 import store from "../Store/index";
-import { addLog, addSolverLog, clearSolverEvent, addSolverEvent } from "../Actions/index";
-import JSONStreamParser from "./JSONStreamParser";
+import { addLog, addSolverLog, addSolverEvent } from "../Actions/index";
 
 const flaskEndpoint = "http://127.0.0.1:5000";
+let id;
 
 const GET = async (endpoint: string, headers: object = { "Content-type": "application/json" }) => {
   return fetch(flaskEndpoint + endpoint, {
@@ -14,37 +14,34 @@ const GET = async (endpoint: string, headers: object = { "Content-type": "applic
   });
 };
 
-const POST = async (endpoint: string, headers: object = { "Content-type": "application/json" }, body: object) => {
+const POST = async (endpoint: string, body: object, headers: object = { "Content-type": "application/json" }) => {
   return fetch(flaskEndpoint + endpoint, {
     headers,
-    body: JSON.jsonify(body),
+    body: JSON.stringify(body),
     withCredentials: true,
-    method: "GET",
+    method: "POST",
     mode: "cors"
   });
 };
 
-const processLogs = (reader: ReadableStreamDefaultReader, parser: JSONStreamParser) => {
-  reader.read().then(({ done, value }) => {
-    if (!done) {
-      const items = parser.parse(new TextDecoder("utf-8").decode(value));
-      items.forEach((item, val) => {
-        store.dispatch(item.text ? addSolverLog(item.text) : addSolverEvent(item));
-      });
-      return processLogs(reader, parser);
-    }
-  });
+export const fetchText = async (filename: string) => {
+  const text = await POST("/logs/gettext", { id, filename })
+    .then(res => res)
+    .then(res => res.text());
+  store.dispatch(addSolverLog(text));
 };
 
-export const fetchRawLogs = async (name: string) => {
-  store.dispatch(clearSolverEvent());
-  const reader = await GET("/logs/getraw/" + name)
+export const fetchState = async (filename: string) => {
+  const states = await POST("/logs/getstate", { id, filename })
     .then(res => res)
-    .then(res => res.body.getReader());
-  processLogs(reader, new JSONStreamParser());
+    .then(res => res.json());
+  store.dispatch(addSolverEvent(states.map(val => JSON.parse(val))));
 };
 
 export const initialize = async () => {
+  id = await GET("/logs/init")
+    .then(res => res)
+    .then(res => res.text());
   const logList = await GET("/logs/getlist")
     .then(res => res)
     .then(res => res.json());

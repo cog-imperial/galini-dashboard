@@ -12,26 +12,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from flask import Blueprint, Response, jsonify
+from flask import Blueprint, Response, jsonify, request, abort 
 import json
 import os
 import time
 from galini_io.reader import MessageReader
+from galini_dashboard.API.ConnectionManager import ConnectionManager
 
-# from google.protobuf.json_format import MessageToJson
+manager = ConnectionManager("Static/run_logs")
 
 static_path = "Static/run_logs"  # TODO: Fix there's probably a better way..
-
 logs_endpoint = Blueprint("logs_endpoint", __name__, static_folder=static_path)
 
-
-@logs_endpoint.route("/getlist", methods=["GET"])
-def getList():
-    directories = os.listdir(static_path)
-    arr = []
-    for name in directories:
-        arr.append(name)
-    return json.dumps(arr)
+@logs_endpoint.route("/init")
+def get():
+    return manager.establishNewConnection()
 
 
 @logs_endpoint.route("/getraw/<name>", methods=["GET"])
@@ -42,10 +37,6 @@ def getRaw(name):
         for msg in msg_reader:
             if msg.HasField("text"):
                 yield json.dumps({"text": msg.text.content})
-            #if msg.HasField("solve_start"):
-                #yield json.dumps({"type": "start"})
-            #if msg.HasField("solve_end"):
-                #yield json.dumps({"type": "end"})
             if msg.HasField("update_variable"):
                 yield json.dumps(
                     {
@@ -57,3 +48,38 @@ def getRaw(name):
                 )
 
     return Response(stream(), mimetype="text/plain")
+
+
+@logs_endpoint.route("/getlist", methods=["GET"])
+def getList():
+    directories = os.listdir(static_path)
+    arr = []
+    for name in directories:
+        arr.append(name)
+    return json.dumps(arr)
+
+@logs_endpoint.route("/gettext", methods=["POST"])
+def getText():
+    body = request.get_json()
+    con = getConnection(body['id'])
+    filename = body['filename']
+    try:
+        return con.readText(filename)
+    except FileNotFoundError:
+        abort(400) # File not found
+
+@logs_endpoint.route("/getstate", methods=["POST"])
+def getState():
+    body = request.get_json()
+    con = getConnection(body['id'])
+    filename = body['filename']
+    try:
+        return json.dumps(con.readState(filename))
+    except FileNotFoundError:
+        abort(400) # File not found
+        
+def getConnection(uuid):
+    con = manager.getConnection(uuid)
+    if con is None:
+        abort(400) # User id not found
+    return con

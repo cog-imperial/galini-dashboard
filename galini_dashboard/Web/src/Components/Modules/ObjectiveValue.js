@@ -5,9 +5,7 @@ import { Segment } from "semantic-ui-react";
 import { XYPlot, LineMarkSeries, XAxis, YAxis } from "react-vis";
 import { format } from "d3-format";
 
-const mapStateToProps = state => {
-  return { solverEvents: state.solverEvents, modulesHeight: state.modulesHeight };
-};
+const mapStateToProps = state => ({ solverEvents: state.solverEvents, modulesHeight: state.modulesHeight });
 
 type Props = { solverEvents: Array, size: number };
 
@@ -30,13 +28,14 @@ class ObjectiveValue extends React.Component<Props, State> {
     let yMin = this.state.yMin;
     let yMax = this.state.yMax;
     for (let i = startIndex; i < solverEvents.length; i++) {
-      const { name, iteration, value } = solverEvents[i];
-      yMin = Math.min(yMin, value);
-      yMax = Math.max(yMax, value);
-      if (clone[name]) {
-        clone[name].push({ x: iteration, y: value });
-      } else {
-        clone[name] = [{ x: iteration, y: value }];
+      if (solverEvents[i].updateVariable) {
+        const { name, iteration, value } = solverEvents[i].updateVariable;
+        yMin = Math.min(yMin, value);
+        yMax = Math.max(yMax, value);
+        if (!clone[name]) {
+          clone[name] = [];
+        }
+        clone[name].push({ x: iteration ? iteration : 0, y: value });
       }
     }
     return { vars: clone, yMin, yMax };
@@ -60,7 +59,7 @@ class ObjectiveValue extends React.Component<Props, State> {
     let length = 0;
     const series = Object.keys(vars).map((val, index) => {
       length = Math.max(vars[val].length, length);
-      return <LineMarkSeries data={vars[val]} />;
+      return <LineMarkSeries key={index} data={vars[val]} />;
     });
     const yDiff = (yMax - yMin) / 2;
     const { modulesHeight } = this.props;

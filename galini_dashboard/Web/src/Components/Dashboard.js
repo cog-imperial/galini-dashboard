@@ -1,15 +1,13 @@
 // @flow
 import React from "react";
-import { fetchRawLogs } from "../Utils/Network";
+import { fetchRawLogs, fetchState, fetchText } from "../Utils/Network";
 import { Icon, Button, Header, Ref } from "semantic-ui-react";
 import { connect } from "react-redux";
 import Modules from "./ModulesControl";
 import store from "../Store";
-import { setModulesHeight } from "../Actions";
+import { setModulesHeight, clearSolverEvent } from "../Actions";
 
-const mapStateToProps = state => {
-  return { rawLogs: state.rawLogs, modulesHeight: state.modulesHeight };
-};
+const mapStateToProps = state => ({ rawLogs: state.rawLogs, modulesHeight: state.modulesHeight });
 
 type Props = { selected: String, rawLogs: Array, modulesHeight: number };
 
@@ -22,7 +20,9 @@ class Dashboard extends React.Component<Props, State> {
 
   componentDidUpdate(prevProps: Props) {
     if (prevProps.selected !== this.props.selected) {
-      fetchRawLogs(this.props.selected);
+      store.dispatch(clearSolverEvent());
+      fetchState(this.props.selected);
+      fetchText(this.props.selected);
       this.setState({ rawLogsVisibility: 1 });
     }
   }
@@ -36,7 +36,6 @@ class Dashboard extends React.Component<Props, State> {
   }
 
   updateHeight = (rawLogsVisibility: number) => {
-    console.log("Update");
     const totalHeight = this.dashboardRef ? this.dashboardRef.clientHeight : 0;
     const usedHeight = this.headerRef ? this.headerRef.clientHeight : 0;
     const availableHeight = totalHeight - usedHeight;
