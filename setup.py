@@ -52,6 +52,8 @@ setup(
         'Topic :: Scientific/Engineering :: Mathematics',
     ],
     install_requires=[
+        'flask>=1.0',
+        'flask-cors>=3.0',
     ],
     setup_requires=['pytest-runner'],
     tests_require=['pytest', 'pytest-cov', 'pytest-rerunfailures'],
