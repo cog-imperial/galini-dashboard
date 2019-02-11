@@ -12,8 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import os
 from flask import Flask
-from blueprints.logs import logs_endpoint
+from flask_cors import CORS
+from galini_dashboard.API.blueprints.logs import create_logs_blueprint
 
-app = Flask(__name__)
-app.register_blueprint(logs_endpoint, url_prefix="/logs")
+
+def create_app():
+    static_path = os.environ['GALINI_LOGS_DIR']
+    app = Flask(__name__)
+    CORS(app)
+    logs_endpoint = create_logs_blueprint(static_path)
+    app.register_blueprint(logs_endpoint, url_prefix="/logs")
+
+    return app
