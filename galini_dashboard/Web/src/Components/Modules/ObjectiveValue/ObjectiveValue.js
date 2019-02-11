@@ -7,18 +7,17 @@ import { format } from "d3-format";
 
 const mapStateToProps = state => ({ solverEvents: state.solverEvents, modulesHeight: state.modulesHeight });
 
-type Props = { solverEvents: Array, size: number };
+type Props = { solverEvents: Array, modulesHeight: number };
 
 type State = { vars: Object, yMin: number, yMax: number };
 
 export class ObjectiveValue extends React.Component<Props, State> {
   state = { vars: {}, yMin: Infinity, yMax: -Infinity };
-  componentRef = null;
+
   constructor(props: Props) {
     super(props);
     if (props.solverEvents && props.solverEvents.length > 0) {
-      const { vars, yMin, yMax } = this.updateStateData(props.solverEvents, 0);
-      this.state = { vars, yMin, yMax };
+      this.state = this.updateStateData(props.solverEvents, 0);
     }
   }
 
@@ -45,12 +44,7 @@ export class ObjectiveValue extends React.Component<Props, State> {
     const { solverEvents } = this.props;
     const { solverEvents: prevSolverEvents } = prevProps;
     if (prevSolverEvents.length !== solverEvents.length) {
-      if (prevSolverEvents.length < solverEvents.length) {
-        const { vars, yMin, yMax } = this.updateStateData(solverEvents, prevSolverEvents.length);
-        this.setState({ vars, yMin, yMax });
-      } else {
-        this.setState({ vars: {}, yMin: Infinity, yMax: -Infinity });
-      }
+      this.setState(this.updateStateData(solverEvents, prevSolverEvents.length));
     }
   }
 
