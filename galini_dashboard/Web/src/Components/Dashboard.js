@@ -1,6 +1,6 @@
 // @flow
 import React from "react";
-import { fetchRawLogs, fetchState, fetchText } from "../Utils/Network";
+import { fetchState, fetchText } from "../Utils/Network";
 import { Icon, Button, Header, Ref } from "semantic-ui-react";
 import { connect } from "react-redux";
 import Modules from "./ModulesControl";

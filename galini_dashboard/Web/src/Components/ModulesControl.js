@@ -1,7 +1,8 @@
 // @flow
 import React from "react";
 import { Dropdown, Button, Segment } from "semantic-ui-react";
-import ObjectiveValue from "./Modules/ObjectiveValue";
+import ObjectiveValue from "./Modules/ObjectiveValue/ObjectiveValue";
+import SolverRuntimes from "./Modules/SolverRuntimes/SolverRuntimes";
 
 type State = { modules: Array<React.Component> };
 
@@ -52,7 +53,8 @@ const renderModule = (key: number) => {
   switch (key) {
     case 1:
       return <ObjectiveValue />;
-    //case 2: return <BranchingTree/>
+    case 2:
+      return <SolverRuntimes />;
     default:
       return null;
   }
@@ -60,7 +62,7 @@ const renderModule = (key: number) => {
 
 const ModulesMap = [
   { key: 1, text: "Objective Value over Time", value: 1 },
-  { key: 2, text: "Branch and Bound Tree", value: 2 }
+  { key: 2, text: "Solver runtimes", value: 2 }
 ];
 
 export default ModulesControl;
