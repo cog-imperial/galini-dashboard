@@ -4,7 +4,6 @@ import Dashboard from "./Components/Dashboard";
 import { initialize } from "./Utils/Network";
 import { Menu, Header, Grid, Icon, Label } from "semantic-ui-react";
 import store from "./Store/index";
-import { addLog } from "./Actions/index";
 import { connect } from "react-redux";
 
 const mapStateToProps = state => {
@@ -12,7 +11,6 @@ const mapStateToProps = state => {
 };
 
 window.store = store;
-window.addLog = addLog;
 
 type Props = { logsList: Array };
 

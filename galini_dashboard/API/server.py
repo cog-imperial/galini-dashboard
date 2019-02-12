@@ -18,6 +18,8 @@ from flask_cors import CORS
 from galini_dashboard.API.blueprints.logs import create_logs_blueprint
 
 
+os.environ["GALINI_LOGS_DIR"] = "Static/run_logs"
+
 def create_app():
     static_path = os.environ['GALINI_LOGS_DIR']
     app = Flask(__name__)

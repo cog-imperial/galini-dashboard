@@ -4,10 +4,8 @@ import { createStore } from "redux";
 import { actionTypes } from "../Actions/index";
 
 const reducer = (state = { logsList: [], rawLogs: [], solverEvents: [], modulesHeight: 0 }, action) => {
-  if (action.type === actionTypes.ADD_LOG) {
-    return Object.assign({}, state, {
-      logsList: state.logsList.concat(action.payload)
-    });
+  if (action.type === actionTypes.SET_LOGS_LIST) {
+    return { ...state, logsList: action.payload };
   }
   if (action.type === actionTypes.ADD_SOLVER_LOG) {
     return Object.assign({}, state, {

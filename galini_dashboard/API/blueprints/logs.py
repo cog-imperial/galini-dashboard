@@ -12,14 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from flask import Blueprint, Response, jsonify, request, abort
+from flask import Blueprint, Response, request, abort
 import json
 import os
 import time
 from galini_io.reader import MessageReader
 from galini_dashboard.API.ConnectionManager import ConnectionManager
-
-# static_path = "Static/run_logs"  # TODO: Fix there's probably a better way..
 
 def create_logs_blueprint(static_path):
     manager = ConnectionManager(static_path)

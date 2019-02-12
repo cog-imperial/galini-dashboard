@@ -21,4 +21,5 @@ os.system("activate")
 os.system("pip install flask")
 os.system("pip install galini-io")
 os.system("pip install -e .")
+os.system("pip install flask_cors")
 

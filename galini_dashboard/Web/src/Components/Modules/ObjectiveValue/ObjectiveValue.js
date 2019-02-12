@@ -1,9 +1,9 @@
 // @flow
 import React from "react";
 import { connect } from "react-redux";
-import { Segment, Header, Icon } from "semantic-ui-react";
 import { XYPlot, LineMarkSeries, XAxis, YAxis, DiscreteColorLegend } from "react-vis";
 import { format } from "d3-format";
+import Placeholder from "../Placeholder";
 
 const mapStateToProps = state => ({ solverEvents: state.solverEvents, modulesHeight: state.modulesHeight });
 
@@ -71,13 +71,7 @@ export class ObjectiveValue extends React.Component<Props, State> {
         {series}
       </XYPlot>
     ) : (
-      <Segment placeholder style={{ height: "100%" }}>
-        <Header icon>
-          No relevant data available yet
-          <div style={{ height: "10px" }} />
-          <Icon loading name="spinner" />
-        </Header>
-      </Segment>
+      <Placeholder />
     );
   }
 }

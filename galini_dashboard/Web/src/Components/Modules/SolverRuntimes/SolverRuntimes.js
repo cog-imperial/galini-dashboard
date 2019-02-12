@@ -2,9 +2,22 @@
 import React from "react";
 import { connect } from "react-redux";
 import RuntimesGraphEntry from "./RuntimesGraphEntry";
+import Placeholder from "../Placeholder";
+import { DISCRETE_COLOR_RANGE } from "react-vis/dist/theme";
+import moment from "moment";
 
-const mapStateToProps = state => ({ solverEvents: state.solverEvents, modulesHeight: state.modulesHeight });
-const Colours = ["Red", "Blue", "Green", "Yellow"];
+const mapStateToProps = state => ({ solverEvents: state.solverEvents });
+
+export const formatDuration = (ms: number) => {
+  const duration = moment.utc(ms);
+  if (ms < 1000) {
+    return `${ms} ms`;
+  } else {
+    return ms > 10000 ? duration.format("m[m] s[s]") : duration.format("s.SSS[s]");
+  }
+};
+
+const TotalWidthPx = 500;
 
 type Props = { solverEvents: Array, modulesHeight: number };
 
@@ -27,11 +40,21 @@ export class SolverRuntimes extends React.Component<Props, State> {
     for (let i = startIndex; i < solverEvents.length; i++) {
       if (solverEvents[i].solveStart || solverEvents[i].solveEnd) {
         const { timestamp, solver } = solverEvents[i];
-        const isStart = !!solverEvents[i].solveStart;
+        const realTime = timestamp - timeStart;
         if (!clone[solver]) {
-          clone[solver] = [];
+          clone[solver] = { total: 0, data: [{ start: realTime, timestamp }] };
+        } else {
+          const { data } = clone[solver];
+          const length = data.length;
+          const { start, duration } = data[length - 1];
+          if (duration) {
+            data.push({ start: realTime, timestamp });
+          } else {
+            const duration = realTime - start;
+            data[length - 1] = { ...data[length - 1], duration };
+            clone[solver].total += duration;
+          }
         }
-        clone[solver].push({ time: timestamp - timeStart, isStart });
       }
     }
     const timeRange = solverEvents[solverEvents.length - 1].timestamp - timeStart;
@@ -46,19 +69,65 @@ export class SolverRuntimes extends React.Component<Props, State> {
     }
   }
 
+  renderAxis() {
+    const { timeRange } = this.state;
+    return (
+      <div style={{ width: TotalWidthPx, height: "20px", display: "flex", flexDirection: "column", paddingTop: "5px" }}>
+        <svg width="85%" height="2px">
+          <line x1={0} y1={0} x2={TotalWidthPx * 0.85} y2={0} style={{ stroke: "black", strokeWidth: "2px" }} />
+        </svg>
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "row",
+            // Font taken from React-Vis for consistency
+            fontSize: "11px",
+            fontFamily: "Lato,'Helvetica Neue',Arial,Helvetica,sans-serif"
+          }}
+        >
+          <div
+            style={{
+              width: "85%",
+
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between"
+            }}
+          >
+            <span>0</span>
+            <span>Time Elapsed</span>
+            <span>{formatDuration(timeRange)}</span>
+          </div>
+          {<div style={{ width: "15%", textAlign: "end" }}>Run time</div>}
+        </div>
+      </div>
+    );
+  }
+
   render() {
     const { solvers, timeRange } = this.state;
-    const { modulesHeight } = this.props;
-    const graphRows = Object.keys(solvers).map((val, index) => (
-      <RuntimesGraphEntry
-        key={index}
-        data={solvers[val]}
-        timeRange={timeRange}
-        width={Math.floor(modulesHeight * 0.9)}
-        color={Colours[index]}
-      />
-    ));
-    return <div style={{ width: `${modulesHeight}px` }}>{graphRows}</div>;
+    const graphRows = Object.keys(solvers)
+      .sort((a, b) => solvers[b].total - solvers[a].total)
+      .map((val, index) => (
+        <RuntimesGraphEntry
+          key={index}
+          solver={val}
+          data={solvers[val].data}
+          total={solvers[val].total}
+          timeRange={timeRange}
+          width={TotalWidthPx}
+          color={DISCRETE_COLOR_RANGE[index]}
+        />
+      ));
+    return graphRows.length > 0 ? (
+      <div style={{ width: TotalWidthPx, height: "100%", display: "flex", flexDirection: "column-reverse" }}>
+        {this.renderAxis()}
+        {graphRows}
+      </div>
+    ) : (
+      <Placeholder />
+    );
   }
 }
 

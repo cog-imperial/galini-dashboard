@@ -1,6 +1,6 @@
 // @flow
 import store from "../Store/index";
-import { addLog, addSolverLog, addSolverEvent } from "../Actions/index";
+import { addSolverLog, addSolverEvent, setLogsList } from "../Actions/index";
 
 const flaskEndpoint = "http://127.0.0.1:5000";
 let id;
@@ -38,12 +38,20 @@ export const fetchState = async (filename: string) => {
   store.dispatch(addSolverEvent(states.map(val => JSON.parse(val))));
 };
 
+const getLogsList = async () => {
+  const logList = await GET("/logs/getlist")
+    .then(res => res)
+    .then(res => res.json());
+  store.dispatch(setLogsList(logList));
+};
+
 export const initialize = async () => {
   id = await GET("/logs/init")
     .then(res => res)
     .then(res => res.text());
-  const logList = await GET("/logs/getlist")
-    .then(res => res)
-    .then(res => res.json());
-  store.dispatch(addLog(logList));
+  getLogsList();
+  // Update logs list every 30 seconds
+  setInterval(async () => {
+    getLogsList();
+  }, 30000);
 };

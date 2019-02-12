@@ -1,13 +1,13 @@
 export const actionTypes = {
-  ADD_LOG: "ADD_LOG",
+  SET_LOGS_LIST: "SET_LOGS_LIST",
   ADD_SOLVER_LOG: "ADD_SOLVER_LOG",
   ADD_SOLVER_EVENT: "ADD_SOLVER_EVENT",
   CLEAR_SOLVER_EVENT: "CLEAR_SOLVER_EVENT",
   SET_MODULES_HEIGHT: "SET_MODULES_HEIGHT"
 };
 
-export const addLog = payload => {
-  return { type: actionTypes.ADD_LOG, payload };
+export const setLogsList = payload => {
+  return { type: actionTypes.SET_LOGS_LIST, payload };
 };
 
 export const addSolverEvent = payload => {
