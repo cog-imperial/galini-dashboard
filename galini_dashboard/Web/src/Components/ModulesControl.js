@@ -90,11 +90,8 @@ const renderModule = (key: number) => {
 
 const ModulesMap = [
   { key: 1, text: "Objective Value over Time", value: 1 },
-<<<<<<< HEAD
-  { key: 2, text: "Solver Runtimes", value: 2 }
-=======
   { key: 2, text: "Solver runtimes", value: 2 }
->>>>>>> f73ff2c8629de0eb44d3220c63d3ec80929083ee
+
 ];
 
 export default ModulesControl;

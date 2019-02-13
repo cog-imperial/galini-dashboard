@@ -17,8 +17,6 @@ from flask import Flask
 from flask_cors import CORS
 from galini_dashboard.API.blueprints.logs import create_logs_blueprint
 
-# Temporary - TODO: allow user defined directory
-os.environ["GALINI_LOGS_DIR"] = "Static/run_logs"
 
 def create_app():
     static_path = os.environ['GALINI_LOGS_DIR']
