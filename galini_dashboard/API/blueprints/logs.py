@@ -27,28 +27,6 @@ def create_logs_blueprint(static_path):
     def get():
         return manager.establishNewConnection()
 
-
-    @logs_endpoint.route("/getraw/<name>", methods=["GET"])
-    def getRaw(name):
-        def stream():
-            content = open(static_path + "/" + name + "/messages.bin", "rb")
-            msg_reader = MessageReader(content)
-            for msg in msg_reader:
-                if msg.HasField("text"):
-                    yield json.dumps({"text": msg.text.content})
-                if msg.HasField("update_variable"):
-                    yield json.dumps(
-                        {
-                            "type": "update",
-                            "name": msg.update_variable.name,
-                            "iteration": msg.update_variable.iteration,
-                            "value": msg.update_variable.value,
-                        }
-                    )
-
-        return Response(stream(), mimetype="text/plain")
-
-
     @logs_endpoint.route("/getlist", methods=["GET"])
     def getList():
         directories = os.listdir(static_path)
