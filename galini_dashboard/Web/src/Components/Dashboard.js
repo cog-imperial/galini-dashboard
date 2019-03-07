@@ -17,12 +17,15 @@ class Dashboard extends React.Component<Props, State> {
   state = { rawLogsVisibility: 1 };
   dashboardRef = null;
   headerRef = null;
+  fetchStateInterval = null;
 
   componentDidUpdate(prevProps: Props) {
     if (prevProps.selected !== this.props.selected) {
       store.dispatch(clearSolverEvent());
+      clearInterval(this.fetchStateInterval);
       fetchState(this.props.selected);
       fetchText(this.props.selected);
+      this.fetchStateInterval = setInterval(() => fetchState(this.props.selected), 5000);
       this.setState({ rawLogsVisibility: 1 });
     }
   }
@@ -107,7 +110,7 @@ class Dashboard extends React.Component<Props, State> {
   };
 
   renderRawLogs = () => {
-    const { rawLogs } = this.props;
+    const { rawLogs, selected } = this.props;
     const { rawLogsVisibility, rawLogsHeight } = this.state;
     const usedHeight = this.headerRef ? this.headerRef.clientHeight : 0;
     return rawLogs && rawLogs.length > 0 ? (
@@ -123,6 +126,12 @@ class Dashboard extends React.Component<Props, State> {
             fontFamily: "monospace",
             display: rawLogsVisibility === 0 ? "none" : "block",
             height: `${rawLogsHeight}px`
+          }}
+          onScroll={event => {
+            const { scrollTop, clientHeight, scrollHeight } = event.nativeEvent.srcElement;
+            if (scrollTop + clientHeight >= scrollHeight) {
+              fetchText(selected);
+            }
           }}
         >
           {rawLogs.join("")}

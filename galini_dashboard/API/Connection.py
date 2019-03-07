@@ -15,6 +15,8 @@
 import os
 from galini_io.reader import MessageReader
 from google.protobuf.json_format import MessageToJson
+import h5py
+import json
 
 class Connection:
 
@@ -42,17 +44,32 @@ class Connection:
         text = []
         reader = MessageReader(self.textContent)
         msg = reader.read_next()
-        while msg is not None:
+        while msg is not None and len(text) < self.textReadLimit:
             if msg.HasField("text"):
                 text.append(msg.text.content)
             msg = reader.read_next()
         return ''.join(text)
 
+    def _openH5Data(self, fileName, data):
+        if data is None:
+            data = h5py.File(os.path.join(self.staticPath, fileName, "data.hdf5"), "r")
+        return data
+
     def readState(self, fileName):
         self.stateContent = self._getContent(fileName, self.stateContent)
         jsonObjects = []
         reader = MessageReader(self.stateContent)
+        h5data = None
         for msg in reader:
-            if msg.HasField("solve_start") or msg.HasField("solve_end") or msg.HasField("update_variable"):
-                jsonObjects.append(MessageToJson(msg))
+            if not msg.HasField("text"):
+                msg_json = MessageToJson(msg)
+                if msg.HasField("tensor"):
+                    h5data = self._openH5Data(fileName, h5data)
+                    data = h5data[msg.tensor.group_]
+                    json_obj = json.loads(msg_json)
+                    json_obj["hdf5"] = list(data[msg.tensor.dataset])
+                    msg_json = json.dumps(json_obj)
+                jsonObjects.append(msg_json)
+        if h5data is not None:
+            h5data.close()
         return jsonObjects

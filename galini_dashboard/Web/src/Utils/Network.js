@@ -24,6 +24,13 @@ const POST = async (endpoint: string, body: object, headers: object = { "Content
   });
 };
 
+const getLogsList = async () => {
+  const logList = await GET("/logs/getlist")
+    .then(res => res)
+    .then(res => res.json());
+  store.dispatch(setLogsList(logList));
+};
+
 export const fetchText = async (filename: string) => {
   const text = await POST("/logs/gettext", { id, filename })
     .then(res => res)
@@ -36,13 +43,6 @@ export const fetchState = async (filename: string) => {
     .then(res => res)
     .then(res => res.json());
   store.dispatch(addSolverEvent(states.map(val => JSON.parse(val))));
-};
-
-const getLogsList = async () => {
-  const logList = await GET("/logs/getlist")
-    .then(res => res)
-    .then(res => res.json());
-  store.dispatch(setLogsList(logList));
 };
 
 export const initialize = async () => {

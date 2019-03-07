@@ -3,6 +3,7 @@ import React from "react";
 import { Dropdown, Button, Segment, Icon } from "semantic-ui-react";
 import ObjectiveValue from "./Modules/ObjectiveValue/ObjectiveValue";
 import SolverRuntimes from "./Modules/SolverRuntimes/SolverRuntimes";
+import BranchAndBoundTree from "./Modules/BranchAndBoundTree/BranchAndBoundTree";
 
 type State = { modules: Array<React.Component>, hideButton: boolean };
 
@@ -16,6 +17,23 @@ class ModulesControl extends React.Component<Props, State> {
       this.setState({ modules: [] });
     }
   }
+
+  addToModuleList = (component: Object) => {
+    this.setState({ modules: [...this.state.modules, component] });
+  };
+
+  renderModule = (key: number) => {
+    switch (key) {
+      case 1:
+        return <ObjectiveValue />;
+      case 2:
+        return <SolverRuntimes />;
+      case 3:
+        return <BranchAndBoundTree addToModuleList={this.addToModuleList} />;
+      default:
+        return null;
+    }
+  };
 
   render() {
     const { modules, hideButton } = this.state;
@@ -52,7 +70,7 @@ class ModulesControl extends React.Component<Props, State> {
             icon="plus"
             floating
             button
-            direction="left"
+            direction="right"
             className="icon"
             style={{ position: "absolute", top: 10, right: 10 }}
           >
@@ -65,7 +83,7 @@ class ModulesControl extends React.Component<Props, State> {
                   selected={false}
                   active={false}
                   onClick={() => {
-                    this.setState({ modules: [...modules, renderModule(val.value)] });
+                    this.addToModuleList(this.renderModule(val.value));
                   }}
                 />
               ))}
@@ -77,21 +95,10 @@ class ModulesControl extends React.Component<Props, State> {
   }
 }
 
-const renderModule = (key: number) => {
-  switch (key) {
-    case 1:
-      return <ObjectiveValue />;
-    case 2:
-      return <SolverRuntimes />;
-    default:
-      return null;
-  }
-};
-
 const ModulesMap = [
   { key: 1, text: "Objective Value over Time", value: 1 },
-  { key: 2, text: "Solver runtimes", value: 2 }
-
+  { key: 2, text: "Solver runtimes", value: 2 },
+  { key: 3, text: "Branch and Bound Tree", value: 3 }
 ];
 
 export default ModulesControl;

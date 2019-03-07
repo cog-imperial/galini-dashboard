@@ -17,13 +17,13 @@ type Props = { logsList: Array };
 type State = { selected: string, logsList: Array };
 
 export class App extends React.Component<Props, State> {
-  state = {};
+  state = { showSideBar: true };
   componentDidMount() {
     initialize();
   }
 
   renderSideBar() {
-    const { selected } = this.state;
+    const { selected, showSideBar } = this.state;
     const { logsList } = this.props;
     const items =
       logsList && logsList.length > 0
@@ -33,20 +33,37 @@ export class App extends React.Component<Props, State> {
             </Menu.Item>
           ))
         : [<Menu.Header key={0}>No logs yet</Menu.Header>];
-    return logsList ? (
+    return showSideBar ? (
       <React.Fragment>
         <Header inverted style={{ paddingTop: "1rem" }}>
-          Run Logs
+          <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
+            Run Logs
+            <Icon
+              name="arrow alternate circle left outline"
+              size="large"
+              style={{ cursor: "pointer" }}
+              onClick={() => this.setState({ showSideBar: false })}
+            />
+          </div>
         </Header>
         <Menu inverted vertical fluid secondary>
           {items}
         </Menu>
       </React.Fragment>
-    ) : null;
+    ) : (
+      <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-around", paddingTop: 10 }}>
+        <Icon
+          name="list"
+          size="big"
+          style={{ cursor: "pointer" }}
+          onClick={() => this.setState({ showSideBar: true })}
+        />
+      </div>
+    );
   }
 
   render() {
-    const { selected } = this.state;
+    const { selected, showSideBar } = this.state;
     return (
       <Grid padded>
         <Grid.Row color="teal" style={{ height: "8vh" }} verticalAlign="middle">
@@ -70,10 +87,10 @@ export class App extends React.Component<Props, State> {
           </Grid.Column>
         </Grid.Row>
         <Grid.Row style={{ height: "92vh", overflow: "hidden", padding: 0 }}>
-          <Grid.Column width={3} color="black">
+          <Grid.Column width={showSideBar ? 3 : 1} color="black">
             {this.renderSideBar()}
           </Grid.Column>
-          <Grid.Column width={13} style={{ padding: 0 }}>
+          <Grid.Column width={showSideBar ? 13 : 15} style={{ padding: 0 }}>
             <Dashboard selected={selected} />
           </Grid.Column>
         </Grid.Row>

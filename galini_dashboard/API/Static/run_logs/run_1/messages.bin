@@ -1,1307 +1,0 @@
-„
-outer_approximation#outer_approximation_20181218_111657¢ó¡ˆü,"A=
-This is GALINI outer_approximation.
-
-Version: 0.1.0
-        x
-outer_approximation#outer_approximation_20181218_111657¢ó¡ˆü,"51
-Number of variables: 4
-Number of constraints: 7
-±
-ipoptipopt_20181218_111657¨ó¡ˆü,"‰„
-******************************************************************************
-This program contains Ipopt, a library for large-scale nonlinear optimization.
- Ipopt is released as open source code under the Eclipse Public License (EPL).
-         For more information visit http://projects.coin-or.org/Ipopt
-******************************************************************************
-
-k
-ipoptipopt_20181218_111657¨ó¡ˆü,"D@This is Ipopt version 3.12.9, running with linear solver mumps.
-y
-ipoptipopt_20181218_111657¨ó¡ˆü,"RNNOTE: Other linear solvers might be more efficient (see Ipopt documentation).
-,
-ipoptipopt_20181218_111657¨ó¡ˆü,"
-g
-ipoptipopt_20181218_111657©ó¡ˆü,*@
-runout/data.hdf5$ipopt_20181218_111657/0/ipopt/boundsx_l"g
-ipoptipopt_20181218_111657ªó¡ˆü,*@
-runout/data.hdf5$ipopt_20181218_111657/0/ipopt/boundsx_u"g
-ipoptipopt_20181218_111657«ó¡ˆü,*@
-runout/data.hdf5$ipopt_20181218_111657/0/ipopt/boundsg_l"g
-ipoptipopt_20181218_111657¬ó¡ˆü,*@
-runout/data.hdf5$ipopt_20181218_111657/0/ipopt/boundsg_u"p
-ipoptipopt_20181218_111657­ó¡ˆü,*I
-runout/data.hdf5-ipopt_20181218_111657/0/ipopt/jac_g_structurerow"p
-ipoptipopt_20181218_111657®ó¡ˆü,*I
-runout/data.hdf5-ipopt_20181218_111657/0/ipopt/jac_g_structurecol"o
-ipoptipopt_20181218_111657®ó¡ˆü,*H
-runout/data.hdf5,ipopt_20181218_111657/0/ipopt/hess_structurerow"
-o
-ipoptipopt_20181218_111657¯ó¡ˆü,*H
-runout/data.hdf5,ipopt_20181218_111657/0/ipopt/hess_structurecol"
-k
-ipoptipopt_20181218_111657¯ó¡ˆü,"D@Number of nonzeros in equality constraint Jacobian...:        0
-k
-ipoptipopt_20181218_111657¯ó¡ˆü,"D@Number of nonzeros in inequality constraint Jacobian.:       28
-l
-ipoptipopt_20181218_111657¯ó¡ˆü,"EANumber of nonzeros in Lagrangian Hessian.............:       10
-
-k
-ipoptipopt_20181218_111657±ó¡ˆü,*D
-runout/data.hdf5ipopt_20181218_111657/1/ipoptstarting_point"c
-ipoptipopt_20181218_111657²ó¡ˆü,*<
-runout/data.hdf5ipopt_20181218_111657/2/ipoptgrad_f"e
-ipoptipopt_20181218_111657²ó¡ˆü,*>
-runout/data.hdf5ipopt_20181218_111657/2/ipoptjacobian"k
-ipoptipopt_20181218_111657³ó¡ˆü,*D
-runout/data.hdf5ipopt_20181218_111657/3/ipoptstarting_point"^
-ipoptipopt_20181218_111657´ó¡ˆü,*7
-runout/data.hdf5ipopt_20181218_111657/4/ipoptg"e
-ipoptipopt_20181218_111657´ó¡ˆü,*>
-runout/data.hdf5ipopt_20181218_111657/4/ipoptjacobian"c
-ipoptipopt_20181218_111657µó¡ˆü,*<
-runout/data.hdf5ipopt_20181218_111657/4/ipoptgrad_f"k
-ipoptipopt_20181218_111657ºó¡ˆü,"D@Total number of variables............................:        4
-k
-ipoptipopt_20181218_111657ºó¡ˆü,"D@                     variables with only lower bounds:        0
-k
-ipoptipopt_20181218_111657ºó¡ˆü,"D@                variables with lower and upper bounds:        4
-k
-ipoptipopt_20181218_111657ºó¡ˆü,"D@                     variables with only upper bounds:        0
-k
-ipoptipopt_20181218_111657ºó¡ˆü,"D@Total number of equality constraints.................:        0
-k
-ipoptipopt_20181218_111657ºó¡ˆü,"D@Total number of inequality constraints...............:        7
-k
-ipoptipopt_20181218_111657ºó¡ˆü,"D@        inequality constraints with only lower bounds:        4
-k
-ipoptipopt_20181218_111657ºó¡ˆü,"D@   inequality constraints with lower and upper bounds:        0
-l
-ipoptipopt_20181218_111657»ó¡ˆü,"EA        inequality constraints with only upper bounds:        3
-
-[
-ipoptipopt_20181218_111657»ó¡ˆü,*4
-runout/data.hdf5ipopt_20181218_111657/4/ipoptf|
-ipoptipopt_20181218_111657»ó¡ˆü,"UQiter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
-{
-ipoptipopt_20181218_111657»ó¡ˆü,"TP   0  2.0199980e-02 3.95e+00 1.20e+00  -1.0 0.00e+00    -  0.00e+00 0.00e+00   0,
-ipoptipopt_20181218_111657»ó¡ˆü,"
-^
-ipoptipopt_20181218_111657¼ó¡ˆü,*7
-runout/data.hdf5ipopt_20181218_111657/5/ipoptg"[
-ipoptipopt_20181218_111657½ó¡ˆü,*4
-runout/data.hdf5ipopt_20181218_111657/5/ipoptfc
-ipoptipopt_20181218_111657½ó¡ˆü,*<
-runout/data.hdf5ipopt_20181218_111657/5/ipoptgrad_f"e
-ipoptipopt_20181218_111657½ó¡ˆü,*>
-runout/data.hdf5ipopt_20181218_111657/5/ipoptjacobian"{
-ipoptipopt_20181218_111657¾ó¡ˆü,"TP   1  5.0674019e-02 3.80e+00 2.09e+00  -1.0 1.57e+00    -  1.28e-02 3.85e-02h  1,
-ipoptipopt_20181218_111657¾ó¡ˆü,"
-^
-ipoptipopt_20181218_111657¾ó¡ˆü,*7
-runout/data.hdf5ipopt_20181218_111657/6/ipoptg"[
-ipoptipopt_20181218_111657¿ó¡ˆü,*4
-runout/data.hdf5ipopt_20181218_111657/6/ipoptfc
-ipoptipopt_20181218_111657¿ó¡ˆü,*<
-runout/data.hdf5ipopt_20181218_111657/6/ipoptgrad_f"e
-ipoptipopt_20181218_111657¿ó¡ˆü,*>
-runout/data.hdf5ipopt_20181218_111657/6/ipoptjacobian"{
-ipoptipopt_20181218_111657Àó¡ˆü,"TP   2  7.0659217e-01 2.30e+00 9.62e+00  -1.0 1.51e+00    -  5.04e-02 4.20e-01f  1,
-ipoptipopt_20181218_111657Àó¡ˆü,"
-^
-ipoptipopt_20181218_111657Àó¡ˆü,*7
-runout/data.hdf5ipopt_20181218_111657/7/ipoptg"[
-ipoptipopt_20181218_111657Áó¡ˆü,*4
-runout/data.hdf5ipopt_20181218_111657/7/ipoptfc
-ipoptipopt_20181218_111657Áó¡ˆü,*<
-runout/data.hdf5ipopt_20181218_111657/7/ipoptgrad_f"e
-ipoptipopt_20181218_111657Âó¡ˆü,*>
-runout/data.hdf5ipopt_20181218_111657/7/ipoptjacobian"{
-ipoptipopt_20181218_111657Âó¡ˆü,"TP   3  2.5288343e+00 3.11e-01 1.28e+00  -1.0 1.02e+00    -  5.21e-01 1.00e+00h  1,
-ipoptipopt_20181218_111657Âó¡ˆü,"
-^
-ipoptipopt_20181218_111657Âó¡ˆü,*7
-runout/data.hdf5ipopt_20181218_111657/8/ipoptg"[
-ipoptipopt_20181218_111657Ãó¡ˆü,*4
-runout/data.hdf5ipopt_20181218_111657/8/ipoptfc
-ipoptipopt_20181218_111657Ãó¡ˆü,*<
-runout/data.hdf5ipopt_20181218_111657/8/ipoptgrad_f"e
-ipoptipopt_20181218_111657Ãó¡ˆü,*>
-runout/data.hdf5ipopt_20181218_111657/8/ipoptjacobian"{
-ipoptipopt_20181218_111657Äó¡ˆü,"TP   4  3.1417210e+00 0.00e+00 6.88e-01  -1.0 5.68e-01    -  7.92e-01 1.00e+00h  1,
-ipoptipopt_20181218_111657Äó¡ˆü,"
-^
-ipoptipopt_20181218_111657Äó¡ˆü,*7
-runout/data.hdf5ipopt_20181218_111657/9/ipoptg"[
-ipoptipopt_20181218_111657Åó¡ˆü,*4
-runout/data.hdf5ipopt_20181218_111657/9/ipoptfc
-ipoptipopt_20181218_111657Åó¡ˆü,*<
-runout/data.hdf5ipopt_20181218_111657/9/ipoptgrad_f"e
-ipoptipopt_20181218_111657Åó¡ˆü,*>
-runout/data.hdf5ipopt_20181218_111657/9/ipoptjacobian"{
-ipoptipopt_20181218_111657Åó¡ˆü,"TP   5  2.8724973e+00 3.81e-03 2.76e-01  -1.7 4.72e-01    -  9.29e-01 7.04e-01f  1,
-ipoptipopt_20181218_111657Æó¡ˆü,"
-_
-ipoptipopt_20181218_111657Æó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/10/ipoptg"\
-ipoptipopt_20181218_111657Æó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/10/ipoptfd
-ipoptipopt_20181218_111657Çó¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/10/ipoptgrad_f"f
-ipoptipopt_20181218_111657Çó¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/10/ipoptjacobian"{
-ipoptipopt_20181218_111657Çó¡ˆü,"TP   6  2.8881017e+00 0.00e+00 1.19e-02  -1.7 2.73e-02    -  1.00e+00 1.00e+00f  1,
-ipoptipopt_20181218_111657Çó¡ˆü,"
-_
-ipoptipopt_20181218_111657Èó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/11/ipoptg"\
-ipoptipopt_20181218_111657Èó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/11/ipoptfd
-ipoptipopt_20181218_111657Éó¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/11/ipoptgrad_f"f
-ipoptipopt_20181218_111657Éó¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/11/ipoptjacobian"{
-ipoptipopt_20181218_111657Éó¡ˆü,"TP   7  2.8469578e+00 7.17e-04 1.23e-01  -3.8 1.36e-01    -  9.35e-01 8.98e-01f  1,
-ipoptipopt_20181218_111657Éó¡ˆü,"
-_
-ipoptipopt_20181218_111657Êó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/12/ipoptg"\
-ipoptipopt_20181218_111657Êó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/12/ipoptfd
-ipoptipopt_20181218_111657Êó¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/12/ipoptgrad_f"f
-ipoptipopt_20181218_111657Ëó¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/12/ipoptjacobian"{
-ipoptipopt_20181218_111657Ëó¡ˆü,"TP   8  2.8437504e+00 1.62e-04 5.50e-02  -3.8 6.48e-02    -  8.09e-01 1.00e+00h  1,
-ipoptipopt_20181218_111657Ëó¡ˆü,"
-_
-ipoptipopt_20181218_111657Ëó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/13/ipoptg"\
-ipoptipopt_20181218_111657Ìó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/13/ipoptfd
-ipoptipopt_20181218_111657Ìó¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/13/ipoptgrad_f"f
-ipoptipopt_20181218_111657Íó¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/13/ipoptjacobian"{
-ipoptipopt_20181218_111657Íó¡ˆü,"TP   9  2.8436544e+00 9.39e-05 4.71e-02  -3.8 3.75e-02    -  1.00e+00 1.00e+00h  1,
-ipoptipopt_20181218_111657Íó¡ˆü,"
-_
-ipoptipopt_20181218_111657Íó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/14/ipoptg"\
-ipoptipopt_20181218_111657Îó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/14/ipoptfd
-ipoptipopt_20181218_111657Îó¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/14/ipoptgrad_f"f
-ipoptipopt_20181218_111657Îó¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/14/ipoptjacobian"|
-ipoptipopt_20181218_111657Îó¡ˆü,"UQiter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
-{
-ipoptipopt_20181218_111657Îó¡ˆü,"TP  10  2.8436864e+00 1.57e-04 5.45e-02  -3.8 4.39e-02    -  1.00e+00 1.00e+00h  1,
-ipoptipopt_20181218_111657Ïó¡ˆü,"
-_
-ipoptipopt_20181218_111657Ïó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/15/ipoptg"\
-ipoptipopt_20181218_111657Ïó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/15/ipoptf_
-ipoptipopt_20181218_111657Ðó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/16/ipoptg"\
-ipoptipopt_20181218_111657Ðó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/16/ipoptfd
-ipoptipopt_20181218_111657Ñó¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/16/ipoptgrad_f"f
-ipoptipopt_20181218_111657Ñó¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/16/ipoptjacobian"{
-ipoptipopt_20181218_111657Ñó¡ˆü,"TP  11  2.8441639e+00 0.00e+00 6.28e-02  -3.8 5.09e-02    -  1.00e+00 1.00e+00H  1,
-ipoptipopt_20181218_111657Ñó¡ˆü,"
-_
-ipoptipopt_20181218_111657Òó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/17/ipoptg"\
-ipoptipopt_20181218_111657Òó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/17/ipoptf_
-ipoptipopt_20181218_111657Òó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/18/ipoptg"\
-ipoptipopt_20181218_111657Óó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/18/ipoptf_
-ipoptipopt_20181218_111657Óó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/19/ipoptg"\
-ipoptipopt_20181218_111657Ôó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/19/ipoptf_
-ipoptipopt_20181218_111657Ôó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/20/ipoptg"\
-ipoptipopt_20181218_111657Ôó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/20/ipoptf_
-ipoptipopt_20181218_111657Õó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/21/ipoptg"\
-ipoptipopt_20181218_111657Õó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/21/ipoptf_
-ipoptipopt_20181218_111657Õó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/22/ipoptg"\
-ipoptipopt_20181218_111657Öó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/22/ipoptfd
-ipoptipopt_20181218_111657Öó¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/22/ipoptgrad_f"f
-ipoptipopt_20181218_111657Öó¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/22/ipoptjacobian"{
-ipoptipopt_20181218_111657×ó¡ˆü,"TP  12  2.8434882e+00 8.87e-06 3.11e-02  -3.8 5.79e-02    -  1.00e+00 5.00e-01f  2,
-ipoptipopt_20181218_111657×ó¡ˆü,"
-_
-ipoptipopt_20181218_111657×ó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/23/ipoptg"\
-ipoptipopt_20181218_111657Øó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/23/ipoptfd
-ipoptipopt_20181218_111657Øó¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/23/ipoptgrad_f"f
-ipoptipopt_20181218_111657Øó¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/23/ipoptjacobian"{
-ipoptipopt_20181218_111657Øó¡ˆü,"TP  13  2.8436470e+00 0.00e+00 3.47e-03  -3.8 2.79e-03    -  1.00e+00 1.00e+00h  1,
-ipoptipopt_20181218_111657Øó¡ˆü,"
-_
-ipoptipopt_20181218_111657Ùó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/24/ipoptg"\
-ipoptipopt_20181218_111657Ùó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/24/ipoptf_
-ipoptipopt_20181218_111657Úó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/25/ipoptg"\
-ipoptipopt_20181218_111657Úó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/25/ipoptfd
-ipoptipopt_20181218_111657Úó¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/25/ipoptgrad_f"f
-ipoptipopt_20181218_111657Ûó¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/25/ipoptjacobian"{
-ipoptipopt_20181218_111657Ûó¡ˆü,"TP  14  2.8436525e+00 0.00e+00 4.03e-03  -3.8 3.30e-03    -  1.00e+00 1.00e+00H  1,
-ipoptipopt_20181218_111657Ûó¡ˆü,"
-_
-ipoptipopt_20181218_111657Üó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/26/ipoptg"\
-ipoptipopt_20181218_111657Üó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/26/ipoptf_
-ipoptipopt_20181218_111657Üó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/27/ipoptg"\
-ipoptipopt_20181218_111657Ýó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/27/ipoptf_
-ipoptipopt_20181218_111657Ýó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/28/ipoptg"\
-ipoptipopt_20181218_111657Ýó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/28/ipoptf_
-ipoptipopt_20181218_111657Þó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/29/ipoptg"\
-ipoptipopt_20181218_111657Þó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/29/ipoptf_
-ipoptipopt_20181218_111657ßó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/30/ipoptg"\
-ipoptipopt_20181218_111657ßó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/30/ipoptf_
-ipoptipopt_20181218_111657ßó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/31/ipoptg"\
-ipoptipopt_20181218_111657àó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/31/ipoptfd
-ipoptipopt_20181218_111657àó¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/31/ipoptgrad_f"f
-ipoptipopt_20181218_111657àó¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/31/ipoptjacobian"{
-ipoptipopt_20181218_111657áó¡ˆü,"TP  15  2.8436478e+00 0.00e+00 2.00e-03  -3.8 3.68e-03    -  1.00e+00 5.00e-01h  2,
-ipoptipopt_20181218_111657áó¡ˆü,"
-_
-ipoptipopt_20181218_111657áó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/32/ipoptg"\
-ipoptipopt_20181218_111657âó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/32/ipoptfd
-ipoptipopt_20181218_111657âó¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/32/ipoptgrad_f"f
-ipoptipopt_20181218_111657âó¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/32/ipoptjacobian"{
-ipoptipopt_20181218_111657âó¡ˆü,"TP  16  2.8436488e+00 0.00e+00 3.74e-04  -3.8 3.65e-04    -  1.00e+00 1.00e+00h  1,
-ipoptipopt_20181218_111657âó¡ˆü,"
-_
-ipoptipopt_20181218_111657ãó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/33/ipoptg"\
-ipoptipopt_20181218_111657ãó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/33/ipoptfd
-ipoptipopt_20181218_111657äó¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/33/ipoptgrad_f"f
-ipoptipopt_20181218_111657äó¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/33/ipoptjacobian"{
-ipoptipopt_20181218_111657äó¡ˆü,"TP  17  2.8433514e+00 0.00e+00 2.23e-03  -5.7 1.74e-03    -  1.00e+00 1.00e+00f  1,
-ipoptipopt_20181218_111657äó¡ˆü,"
-_
-ipoptipopt_20181218_111657åó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/34/ipoptg"\
-ipoptipopt_20181218_111657åó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/34/ipoptfd
-ipoptipopt_20181218_111657åó¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/34/ipoptgrad_f"f
-ipoptipopt_20181218_111657æó¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/34/ipoptjacobian"{
-ipoptipopt_20181218_111657æó¡ˆü,"TP  18  2.8433514e+00 0.00e+00 2.58e-03  -5.7 2.06e-03    -  1.00e+00 1.00e+00h  1,
-ipoptipopt_20181218_111657æó¡ˆü,"
-_
-ipoptipopt_20181218_111657çó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/35/ipoptg"\
-ipoptipopt_20181218_111657çó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/35/ipoptf_
-ipoptipopt_20181218_111657çó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/36/ipoptg"\
-ipoptipopt_20181218_111657èó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/36/ipoptfd
-ipoptipopt_20181218_111657èó¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/36/ipoptgrad_f"f
-ipoptipopt_20181218_111657èó¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/36/ipoptjacobian"{
-ipoptipopt_20181218_111657éó¡ˆü,"TP  19  2.8433525e+00 0.00e+00 3.00e-03  -5.7 2.40e-03    -  1.00e+00 1.00e+00H  1,
-ipoptipopt_20181218_111657éó¡ˆü,"
-_
-ipoptipopt_20181218_111657éó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/37/ipoptg"\
-ipoptipopt_20181218_111657éó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/37/ipoptf_
-ipoptipopt_20181218_111657êó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/38/ipoptg"\
-ipoptipopt_20181218_111657êó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/38/ipoptf_
-ipoptipopt_20181218_111657ëó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/39/ipoptg"\
-ipoptipopt_20181218_111657ëó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/39/ipoptf_
-ipoptipopt_20181218_111657ìó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/40/ipoptg"\
-ipoptipopt_20181218_111657ìó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/40/ipoptf_
-ipoptipopt_20181218_111657ìó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/41/ipoptg"\
-ipoptipopt_20181218_111657íó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/41/ipoptfd
-ipoptipopt_20181218_111657íó¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/41/ipoptgrad_f"f
-ipoptipopt_20181218_111657íó¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/41/ipoptjacobian"|
-ipoptipopt_20181218_111657íó¡ˆü,"UQiter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
-{
-ipoptipopt_20181218_111657íó¡ˆü,"TP  20  2.8433509e+00 0.00e+00 1.50e-03  -5.7 2.80e-03    -  1.00e+00 5.00e-01f  2,
-ipoptipopt_20181218_111657íó¡ˆü,"
-_
-ipoptipopt_20181218_111657îó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/42/ipoptg"\
-ipoptipopt_20181218_111657îó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/42/ipoptfd
-ipoptipopt_20181218_111657ïó¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/42/ipoptgrad_f"f
-ipoptipopt_20181218_111657ïó¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/42/ipoptjacobian"{
-ipoptipopt_20181218_111657ïó¡ˆü,"TP  21  2.8433513e+00 0.00e+00 2.83e-04  -5.7 2.26e-04    -  1.00e+00 1.00e+00h  1,
-ipoptipopt_20181218_111657ïó¡ˆü,"
-_
-ipoptipopt_20181218_111657ðó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/43/ipoptg"\
-ipoptipopt_20181218_111657ðó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/43/ipoptf_
-ipoptipopt_20181218_111657ñó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/44/ipoptg"\
-ipoptipopt_20181218_111657ñó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/44/ipoptfd
-ipoptipopt_20181218_111657ñó¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/44/ipoptgrad_f"f
-ipoptipopt_20181218_111657òó¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/44/ipoptjacobian"{
-ipoptipopt_20181218_111657òó¡ˆü,"TP  22  2.8433513e+00 0.00e+00 3.30e-04  -5.7 2.65e-04    -  1.00e+00 1.00e+00H  1,
-ipoptipopt_20181218_111657òó¡ˆü,"
-_
-ipoptipopt_20181218_111657òó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/45/ipoptg"\
-ipoptipopt_20181218_111657óó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/45/ipoptf_
-ipoptipopt_20181218_111657óó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/46/ipoptg"\
-ipoptipopt_20181218_111657óó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/46/ipoptf_
-ipoptipopt_20181218_111657ôó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/47/ipoptg"\
-ipoptipopt_20181218_111657ôó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/47/ipoptf_
-ipoptipopt_20181218_111657õó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/48/ipoptg"\
-ipoptipopt_20181218_111657õó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/48/ipoptfd
-ipoptipopt_20181218_111657õó¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/48/ipoptgrad_f"f
-ipoptipopt_20181218_111657öó¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/48/ipoptjacobian"{
-ipoptipopt_20181218_111657öó¡ˆü,"TP  23  2.8433513e+00 0.00e+00 1.65e-04  -5.7 3.07e-04    -  1.00e+00 5.00e-01f  2,
-ipoptipopt_20181218_111657öó¡ˆü,"
-_
-ipoptipopt_20181218_111657öó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/49/ipoptg"\
-ipoptipopt_20181218_111657÷ó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/49/ipoptfd
-ipoptipopt_20181218_111657÷ó¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/49/ipoptgrad_f"f
-ipoptipopt_20181218_111657÷ó¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/49/ipoptjacobian"{
-ipoptipopt_20181218_111657÷ó¡ˆü,"TP  24  2.8433513e+00 0.00e+00 3.17e-05  -5.7 2.61e-05    -  1.00e+00 1.00e+00h  1,
-ipoptipopt_20181218_111657øó¡ˆü,"
-_
-ipoptipopt_20181218_111657øó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/50/ipoptg"\
-ipoptipopt_20181218_111657øó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/50/ipoptf_
-ipoptipopt_20181218_111657ùó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/51/ipoptg"\
-ipoptipopt_20181218_111657ùó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/51/ipoptfd
-ipoptipopt_20181218_111657úó¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/51/ipoptgrad_f"f
-ipoptipopt_20181218_111657úó¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/51/ipoptjacobian"{
-ipoptipopt_20181218_111657úó¡ˆü,"TP  25  2.8433513e+00 0.00e+00 3.70e-05  -5.7 2.88e-05    -  1.00e+00 1.00e+00H  1,
-ipoptipopt_20181218_111657úó¡ˆü,"
-_
-ipoptipopt_20181218_111657ûó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/52/ipoptg"\
-ipoptipopt_20181218_111657ûó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/52/ipoptf_
-ipoptipopt_20181218_111657ûó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/53/ipoptg"\
-ipoptipopt_20181218_111657üó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/53/ipoptfd
-ipoptipopt_20181218_111657üó¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/53/ipoptgrad_f"f
-ipoptipopt_20181218_111657üó¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/53/ipoptjacobian"{
-ipoptipopt_20181218_111657üó¡ˆü,"TP  26  2.8433513e+00 0.00e+00 4.30e-05  -5.7 3.52e-05    -  1.00e+00 1.00e+00H  1,
-ipoptipopt_20181218_111657ýó¡ˆü,"
-_
-ipoptipopt_20181218_111657ýó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/54/ipoptg"\
-ipoptipopt_20181218_111657ýó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/54/ipoptf_
-ipoptipopt_20181218_111657þó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/55/ipoptg"\
-ipoptipopt_20181218_111657þó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/55/ipoptf_
-ipoptipopt_20181218_111657ÿó¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/56/ipoptg"\
-ipoptipopt_20181218_111657ÿó¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/56/ipoptfd
-ipoptipopt_20181218_111657ÿó¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/56/ipoptgrad_f"f
-ipoptipopt_20181218_111657€ô¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/56/ipoptjacobian"{
-ipoptipopt_20181218_111657€ô¡ˆü,"TP  27  2.8433513e+00 0.00e+00 5.01e-05  -5.7 3.93e-05    -  1.00e+00 1.00e+00H  1,
-ipoptipopt_20181218_111657€ô¡ˆü,"
-_
-ipoptipopt_20181218_111657€ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/57/ipoptg"\
-ipoptipopt_20181218_111657ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/57/ipoptf_
-ipoptipopt_20181218_111657ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/58/ipoptg"\
-ipoptipopt_20181218_111657ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/58/ipoptf_
-ipoptipopt_20181218_111657‚ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/59/ipoptg"\
-ipoptipopt_20181218_111657‚ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/59/ipoptfd
-ipoptipopt_20181218_111657ƒô¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/59/ipoptgrad_f"f
-ipoptipopt_20181218_111657ƒô¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/59/ipoptjacobian"{
-ipoptipopt_20181218_111657ƒô¡ˆü,"TP  28  2.8433513e+00 0.00e+00 5.84e-05  -5.7 4.74e-05    -  1.00e+00 1.00e+00H  1,
-ipoptipopt_20181218_111657ƒô¡ˆü,"
-_
-ipoptipopt_20181218_111657„ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/60/ipoptg"\
-ipoptipopt_20181218_111657„ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/60/ipoptf_
-ipoptipopt_20181218_111657„ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/61/ipoptg"\
-ipoptipopt_20181218_111657…ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/61/ipoptf_
-ipoptipopt_20181218_111657…ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/62/ipoptg"\
-ipoptipopt_20181218_111657…ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/62/ipoptf_
-ipoptipopt_20181218_111657†ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/63/ipoptg"\
-ipoptipopt_20181218_111657†ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/63/ipoptf_
-ipoptipopt_20181218_111657‡ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/64/ipoptg"\
-ipoptipopt_20181218_111657‡ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/64/ipoptfd
-ipoptipopt_20181218_111657‡ô¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/64/ipoptgrad_f"f
-ipoptipopt_20181218_111657ˆô¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/64/ipoptjacobian"{
-ipoptipopt_20181218_111657ˆô¡ˆü,"TP  29  2.8433513e+00 0.00e+00 2.92e-05  -5.7 5.36e-05    -  1.00e+00 5.00e-01h  2,
-ipoptipopt_20181218_111657ˆô¡ˆü,"
-_
-ipoptipopt_20181218_111657ˆô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/65/ipoptg"\
-ipoptipopt_20181218_111657‰ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/65/ipoptfd
-ipoptipopt_20181218_111657‰ô¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/65/ipoptgrad_f"f
-ipoptipopt_20181218_111657‰ô¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/65/ipoptjacobian"|
-ipoptipopt_20181218_111657Šô¡ˆü,"UQiter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
-{
-ipoptipopt_20181218_111657Šô¡ˆü,"TP  30  2.8433513e+00 0.00e+00 5.61e-06  -5.7 5.22e-06    -  1.00e+00 1.00e+00h  1,
-ipoptipopt_20181218_111657Šô¡ˆü,"
-_
-ipoptipopt_20181218_111657Šô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/66/ipoptg"\
-ipoptipopt_20181218_111657Šô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/66/ipoptfd
-ipoptipopt_20181218_111657‹ô¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/66/ipoptgrad_f"f
-ipoptipopt_20181218_111657‹ô¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/66/ipoptjacobian"{
-ipoptipopt_20181218_111657‹ô¡ˆü,"TP  31  2.8433476e+00 0.00e+00 2.89e-05  -8.0 2.23e-05    -  1.00e+00 1.00e+00f  1,
-ipoptipopt_20181218_111657‹ô¡ˆü,"
-_
-ipoptipopt_20181218_111657Œô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/67/ipoptg"\
-ipoptipopt_20181218_111657Œô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/67/ipoptfd
-ipoptipopt_20181218_111657ô¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/67/ipoptgrad_f"f
-ipoptipopt_20181218_111657ô¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/67/ipoptjacobian"{
-ipoptipopt_20181218_111657ô¡ˆü,"TP  32  2.8433476e+00 0.00e+00 3.37e-05  -8.0 2.69e-05    -  1.00e+00 1.00e+00h  1,
-ipoptipopt_20181218_111657ô¡ˆü,"
-_
-ipoptipopt_20181218_111657Žô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/68/ipoptg"\
-ipoptipopt_20181218_111657Žô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/68/ipoptf_
-ipoptipopt_20181218_111657ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/69/ipoptg"\
-ipoptipopt_20181218_111657ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/69/ipoptfd
-ipoptipopt_20181218_111657ô¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/69/ipoptgrad_f"f
-ipoptipopt_20181218_111657ô¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/69/ipoptjacobian"{
-ipoptipopt_20181218_111657ô¡ˆü,"TP  33  2.8433476e+00 0.00e+00 3.93e-05  -8.0 3.14e-05    -  1.00e+00 1.00e+00H  1,
-ipoptipopt_20181218_111657ô¡ˆü,"
-_
-ipoptipopt_20181218_111657ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/70/ipoptg"\
-ipoptipopt_20181218_111657‘ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/70/ipoptf_
-ipoptipopt_20181218_111657‘ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/71/ipoptg"\
-ipoptipopt_20181218_111657‘ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/71/ipoptf_
-ipoptipopt_20181218_111657’ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/72/ipoptg"\
-ipoptipopt_20181218_111657’ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/72/ipoptf_
-ipoptipopt_20181218_111657“ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/73/ipoptg"\
-ipoptipopt_20181218_111657“ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/73/ipoptfd
-ipoptipopt_20181218_111657“ô¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/73/ipoptgrad_f"f
-ipoptipopt_20181218_111657”ô¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/73/ipoptjacobian"{
-ipoptipopt_20181218_111657”ô¡ˆü,"TP  34  2.8433476e+00 0.00e+00 4.57e-05  -8.0 3.66e-05    -  1.00e+00 1.00e+00H  1,
-ipoptipopt_20181218_111657”ô¡ˆü,"
-_
-ipoptipopt_20181218_111657”ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/74/ipoptg"\
-ipoptipopt_20181218_111657•ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/74/ipoptf_
-ipoptipopt_20181218_111657•ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/75/ipoptg"\
-ipoptipopt_20181218_111657•ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/75/ipoptf_
-ipoptipopt_20181218_111657–ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/76/ipoptg"\
-ipoptipopt_20181218_111657–ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/76/ipoptf_
-ipoptipopt_20181218_111657—ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/77/ipoptg"\
-ipoptipopt_20181218_111657—ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/77/ipoptfd
-ipoptipopt_20181218_111657—ô¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/77/ipoptgrad_f"f
-ipoptipopt_20181218_111657˜ô¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/77/ipoptjacobian"{
-ipoptipopt_20181218_111657˜ô¡ˆü,"TP  35  2.8433476e+00 0.00e+00 5.33e-05  -8.0 4.26e-05    -  1.00e+00 1.00e+00H  1,
-ipoptipopt_20181218_111657˜ô¡ˆü,"
-_
-ipoptipopt_20181218_111657˜ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/78/ipoptg"\
-ipoptipopt_20181218_111657™ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/78/ipoptf_
-ipoptipopt_20181218_111657™ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/79/ipoptg"\
-ipoptipopt_20181218_111657™ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/79/ipoptf_
-ipoptipopt_20181218_111657šô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/80/ipoptg"\
-ipoptipopt_20181218_111657šô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/80/ipoptf_
-ipoptipopt_20181218_111657›ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/81/ipoptg"\
-ipoptipopt_20181218_111657›ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/81/ipoptf_
-ipoptipopt_20181218_111657›ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/82/ipoptg"\
-ipoptipopt_20181218_111657œô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/82/ipoptfd
-ipoptipopt_20181218_111657œô¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/82/ipoptgrad_f"f
-ipoptipopt_20181218_111657œô¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/82/ipoptjacobian"{
-ipoptipopt_20181218_111657œô¡ˆü,"TP  36  2.8433476e+00 0.00e+00 6.20e-05  -8.0 4.96e-05    -  1.00e+00 1.00e+00H  1,
-ipoptipopt_20181218_111657ô¡ˆü,"
-_
-ipoptipopt_20181218_111657ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/83/ipoptg"\
-ipoptipopt_20181218_111657ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/83/ipoptf_
-ipoptipopt_20181218_111657žô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/84/ipoptg"\
-ipoptipopt_20181218_111657žô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/84/ipoptf_
-ipoptipopt_20181218_111657Ÿô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/85/ipoptg"\
-ipoptipopt_20181218_111657Ÿô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/85/ipoptf_
-ipoptipopt_20181218_111657Ÿô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/86/ipoptg"\
-ipoptipopt_20181218_111657 ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/86/ipoptfd
-ipoptipopt_20181218_111657 ô¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/86/ipoptgrad_f"f
-ipoptipopt_20181218_111657 ô¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/86/ipoptjacobian"{
-ipoptipopt_20181218_111657 ô¡ˆü,"TP  37  2.8433476e+00 0.00e+00 3.10e-05  -8.0 5.78e-05    -  1.00e+00 5.00e-01h  2,
-ipoptipopt_20181218_111657¡ô¡ˆü,"
-_
-ipoptipopt_20181218_111657¡ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/87/ipoptg"\
-ipoptipopt_20181218_111657¡ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/87/ipoptfd
-ipoptipopt_20181218_111657¢ô¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/87/ipoptgrad_f"f
-ipoptipopt_20181218_111657¢ô¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/87/ipoptjacobian"{
-ipoptipopt_20181218_111657¢ô¡ˆü,"TP  38  2.8433476e+00 0.00e+00 5.96e-06  -8.0 4.77e-06    -  1.00e+00 1.00e+00h  1,
-ipoptipopt_20181218_111657¢ô¡ˆü,"
-_
-ipoptipopt_20181218_111657£ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/88/ipoptg"\
-ipoptipopt_20181218_111657£ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/88/ipoptf_
-ipoptipopt_20181218_111657¤ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/89/ipoptg"\
-ipoptipopt_20181218_111657¤ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/89/ipoptfd
-ipoptipopt_20181218_111657¤ô¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/89/ipoptgrad_f"f
-ipoptipopt_20181218_111657¥ô¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/89/ipoptjacobian"{
-ipoptipopt_20181218_111657¥ô¡ˆü,"TP  39  2.8433476e+00 0.00e+00 6.94e-06  -8.0 5.55e-06    -  1.00e+00 1.00e+00H  1,
-ipoptipopt_20181218_111657¥ô¡ˆü,"
-_
-ipoptipopt_20181218_111657¥ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/90/ipoptg"\
-ipoptipopt_20181218_111657¦ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/90/ipoptf_
-ipoptipopt_20181218_111657¦ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/91/ipoptg"\
-ipoptipopt_20181218_111657¦ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/91/ipoptf_
-ipoptipopt_20181218_111657§ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/92/ipoptg"\
-ipoptipopt_20181218_111657§ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/92/ipoptfd
-ipoptipopt_20181218_111657¨ô¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/92/ipoptgrad_f"f
-ipoptipopt_20181218_111657¨ô¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/92/ipoptjacobian"|
-ipoptipopt_20181218_111657¨ô¡ˆü,"UQiter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
-{
-ipoptipopt_20181218_111657¨ô¡ˆü,"TP  40  2.8433476e+00 0.00e+00 8.09e-06  -8.0 6.47e-06    -  1.00e+00 1.00e+00H  1,
-ipoptipopt_20181218_111657¨ô¡ˆü,"
-_
-ipoptipopt_20181218_111657©ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/93/ipoptg"\
-ipoptipopt_20181218_111657©ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/93/ipoptf_
-ipoptipopt_20181218_111657©ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/94/ipoptg"\
-ipoptipopt_20181218_111657ªô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/94/ipoptfd
-ipoptipopt_20181218_111657ªô¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/94/ipoptgrad_f"f
-ipoptipopt_20181218_111657ªô¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/94/ipoptjacobian"{
-ipoptipopt_20181218_111657«ô¡ˆü,"TP  41  2.8433476e+00 0.00e+00 9.42e-06  -8.0 7.53e-06    -  1.00e+00 1.00e+00H  1,
-ipoptipopt_20181218_111657«ô¡ˆü,"
-_
-ipoptipopt_20181218_111657«ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/95/ipoptg"\
-ipoptipopt_20181218_111657¬ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/95/ipoptf_
-ipoptipopt_20181218_111657¬ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/96/ipoptg"\
-ipoptipopt_20181218_111657¬ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/96/ipoptf_
-ipoptipopt_20181218_111657­ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/97/ipoptg"\
-ipoptipopt_20181218_111657­ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/97/ipoptf_
-ipoptipopt_20181218_111657­ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/98/ipoptg"\
-ipoptipopt_20181218_111657®ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/98/ipoptfd
-ipoptipopt_20181218_111657®ô¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/98/ipoptgrad_f"f
-ipoptipopt_20181218_111657®ô¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/98/ipoptjacobian"{
-ipoptipopt_20181218_111657¯ô¡ˆü,"TP  42  2.8433476e+00 0.00e+00 4.71e-06  -8.0 8.78e-06    -  1.00e+00 5.00e-01h  2,
-ipoptipopt_20181218_111657¯ô¡ˆü,"
-_
-ipoptipopt_20181218_111657¯ô¡ˆü,*8
-runout/data.hdf5ipopt_20181218_111657/99/ipoptg"\
-ipoptipopt_20181218_111657°ô¡ˆü,*5
-runout/data.hdf5ipopt_20181218_111657/99/ipoptfd
-ipoptipopt_20181218_111657°ô¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/99/ipoptgrad_f"f
-ipoptipopt_20181218_111657°ô¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/99/ipoptjacobian"{
-ipoptipopt_20181218_111657°ô¡ˆü,"TP  43  2.8433476e+00 0.00e+00 9.05e-07  -8.0 7.20e-07    -  1.00e+00 1.00e+00h  1,
-ipoptipopt_20181218_111657°ô¡ˆü,"
-`
-ipoptipopt_20181218_111657±ô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/100/ipoptg"]
-ipoptipopt_20181218_111657±ô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/100/ipoptfe
-ipoptipopt_20181218_111657²ô¡ˆü,*>
-runout/data.hdf5ipopt_20181218_111657/100/ipoptgrad_f"g
-ipoptipopt_20181218_111657²ô¡ˆü,*@
-runout/data.hdf5ipopt_20181218_111657/100/ipoptjacobian"{
-ipoptipopt_20181218_111657²ô¡ˆü,"TP  44  2.8433476e+00 0.00e+00 1.05e-06  -8.0 8.46e-07    -  1.00e+00 1.00e+00h  1,
-ipoptipopt_20181218_111657²ô¡ˆü,"
-`
-ipoptipopt_20181218_111657³ô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/101/ipoptg"]
-ipoptipopt_20181218_111657³ô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/101/ipoptf`
-ipoptipopt_20181218_111657³ô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/102/ipoptg"]
-ipoptipopt_20181218_111657´ô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/102/ipoptfe
-ipoptipopt_20181218_111657´ô¡ˆü,*>
-runout/data.hdf5ipopt_20181218_111657/102/ipoptgrad_f"g
-ipoptipopt_20181218_111657µô¡ˆü,*@
-runout/data.hdf5ipopt_20181218_111657/102/ipoptjacobian"{
-ipoptipopt_20181218_111657µô¡ˆü,"TP  45  2.8433476e+00 0.00e+00 1.23e-06  -8.0 9.78e-07    -  1.00e+00 1.00e+00H  1,
-ipoptipopt_20181218_111657µô¡ˆü,"
-`
-ipoptipopt_20181218_111657µô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/103/ipoptg"]
-ipoptipopt_20181218_111657¶ô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/103/ipoptf`
-ipoptipopt_20181218_111657¶ô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/104/ipoptg"]
-ipoptipopt_20181218_111657¶ô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/104/ipoptf`
-ipoptipopt_20181218_111657·ô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/105/ipoptg"]
-ipoptipopt_20181218_111657·ô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/105/ipoptfe
-ipoptipopt_20181218_111657·ô¡ˆü,*>
-runout/data.hdf5ipopt_20181218_111657/105/ipoptgrad_f"g
-ipoptipopt_20181218_111657¸ô¡ˆü,*@
-runout/data.hdf5ipopt_20181218_111657/105/ipoptjacobian"{
-ipoptipopt_20181218_111657¸ô¡ˆü,"TP  46  2.8433476e+00 0.00e+00 1.43e-06  -8.0 1.15e-06    -  1.00e+00 1.00e+00H  1,
-ipoptipopt_20181218_111657¸ô¡ˆü,"
-`
-ipoptipopt_20181218_111657¹ô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/106/ipoptg"]
-ipoptipopt_20181218_111657¹ô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/106/ipoptf`
-ipoptipopt_20181218_111657¹ô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/107/ipoptg"]
-ipoptipopt_20181218_111657ºô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/107/ipoptf`
-ipoptipopt_20181218_111657ºô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/108/ipoptg"]
-ipoptipopt_20181218_111657ºô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/108/ipoptfe
-ipoptipopt_20181218_111657»ô¡ˆü,*>
-runout/data.hdf5ipopt_20181218_111657/108/ipoptgrad_f"g
-ipoptipopt_20181218_111657»ô¡ˆü,*@
-runout/data.hdf5ipopt_20181218_111657/108/ipoptjacobian"{
-ipoptipopt_20181218_111657»ô¡ˆü,"TP  47  2.8433476e+00 0.00e+00 1.67e-06  -8.0 1.33e-06    -  1.00e+00 1.00e+00H  1,
-ipoptipopt_20181218_111657»ô¡ˆü,"
-`
-ipoptipopt_20181218_111657¼ô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/109/ipoptg"]
-ipoptipopt_20181218_111657¼ô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/109/ipoptf`
-ipoptipopt_20181218_111657½ô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/110/ipoptg"]
-ipoptipopt_20181218_111657½ô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/110/ipoptfe
-ipoptipopt_20181218_111657½ô¡ˆü,*>
-runout/data.hdf5ipopt_20181218_111657/110/ipoptgrad_f"g
-ipoptipopt_20181218_111657¾ô¡ˆü,*@
-runout/data.hdf5ipopt_20181218_111657/110/ipoptjacobian"{
-ipoptipopt_20181218_111657¾ô¡ˆü,"TP  48  2.8433476e+00 0.00e+00 1.94e-06  -8.0 1.55e-06    -  1.00e+00 1.00e+00H  1,
-ipoptipopt_20181218_111657¾ô¡ˆü,"
-`
-ipoptipopt_20181218_111657¾ô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/111/ipoptg"]
-ipoptipopt_20181218_111657¿ô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/111/ipoptf`
-ipoptipopt_20181218_111657¿ô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/112/ipoptg"]
-ipoptipopt_20181218_111657¿ô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/112/ipoptf`
-ipoptipopt_20181218_111657Àô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/113/ipoptg"]
-ipoptipopt_20181218_111657Àô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/113/ipoptf`
-ipoptipopt_20181218_111657Áô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/114/ipoptg"]
-ipoptipopt_20181218_111657Áô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/114/ipoptf`
-ipoptipopt_20181218_111657Áô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/115/ipoptg"]
-ipoptipopt_20181218_111657Âô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/115/ipoptf`
-ipoptipopt_20181218_111657Âô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/116/ipoptg"]
-ipoptipopt_20181218_111657Âô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/116/ipoptfe
-ipoptipopt_20181218_111657Ãô¡ˆü,*>
-runout/data.hdf5ipopt_20181218_111657/116/ipoptgrad_f"g
-ipoptipopt_20181218_111657Ãô¡ˆü,*@
-runout/data.hdf5ipopt_20181218_111657/116/ipoptjacobian"{
-ipoptipopt_20181218_111657Ãô¡ˆü,"TP  49  2.8433476e+00 0.00e+00 9.70e-07  -8.0 1.80e-06    -  1.00e+00 5.00e-01h  2,
-ipoptipopt_20181218_111657Ãô¡ˆü,"
-`
-ipoptipopt_20181218_111657Äô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/117/ipoptg"]
-ipoptipopt_20181218_111657Äô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/117/ipoptfe
-ipoptipopt_20181218_111657Åô¡ˆü,*>
-runout/data.hdf5ipopt_20181218_111657/117/ipoptgrad_f"g
-ipoptipopt_20181218_111657Åô¡ˆü,*@
-runout/data.hdf5ipopt_20181218_111657/117/ipoptjacobian"|
-ipoptipopt_20181218_111657Åô¡ˆü,"UQiter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
-{
-ipoptipopt_20181218_111657Åô¡ˆü,"TP  50  2.8433476e+00 0.00e+00 1.86e-07  -8.0 1.53e-07    -  1.00e+00 1.00e+00h  1,
-ipoptipopt_20181218_111657Åô¡ˆü,"
-`
-ipoptipopt_20181218_111657Æô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/118/ipoptg"]
-ipoptipopt_20181218_111657Æô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/118/ipoptfe
-ipoptipopt_20181218_111657Æô¡ˆü,*>
-runout/data.hdf5ipopt_20181218_111657/118/ipoptgrad_f"g
-ipoptipopt_20181218_111657Çô¡ˆü,*@
-runout/data.hdf5ipopt_20181218_111657/118/ipoptjacobian"{
-ipoptipopt_20181218_111657Çô¡ˆü,"TP  51  2.8433476e+00 0.00e+00 2.17e-07  -8.0 1.70e-07    -  1.00e+00 1.00e+00h  1,
-ipoptipopt_20181218_111657Çô¡ˆü,"
-`
-ipoptipopt_20181218_111657Çô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/119/ipoptg"]
-ipoptipopt_20181218_111657Èô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/119/ipoptf`
-ipoptipopt_20181218_111657Èô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/120/ipoptg"]
-ipoptipopt_20181218_111657Èô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/120/ipoptfe
-ipoptipopt_20181218_111657Éô¡ˆü,*>
-runout/data.hdf5ipopt_20181218_111657/120/ipoptgrad_f"g
-ipoptipopt_20181218_111657Éô¡ˆü,*@
-runout/data.hdf5ipopt_20181218_111657/120/ipoptjacobian"{
-ipoptipopt_20181218_111657Éô¡ˆü,"TP  52  2.8433476e+00 0.00e+00 2.53e-07  -8.0 2.06e-07    -  1.00e+00 1.00e+00H  1,
-ipoptipopt_20181218_111657Éô¡ˆü,"
-`
-ipoptipopt_20181218_111657Êô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/121/ipoptg"]
-ipoptipopt_20181218_111657Êô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/121/ipoptf`
-ipoptipopt_20181218_111657Ëô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/122/ipoptg"]
-ipoptipopt_20181218_111657Ëô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/122/ipoptfe
-ipoptipopt_20181218_111657Ëô¡ˆü,*>
-runout/data.hdf5ipopt_20181218_111657/122/ipoptgrad_f"g
-ipoptipopt_20181218_111657Ìô¡ˆü,*@
-runout/data.hdf5ipopt_20181218_111657/122/ipoptjacobian"{
-ipoptipopt_20181218_111657Ìô¡ˆü,"TP  53  2.8433476e+00 0.00e+00 2.95e-07  -8.0 2.32e-07    -  1.00e+00 1.00e+00H  1,
-ipoptipopt_20181218_111657Ìô¡ˆü,"
-`
-ipoptipopt_20181218_111657Íô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/123/ipoptg"]
-ipoptipopt_20181218_111657Íô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/123/ipoptf`
-ipoptipopt_20181218_111657Íô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/124/ipoptg"]
-ipoptipopt_20181218_111657Îô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/124/ipoptfe
-ipoptipopt_20181218_111657Îô¡ˆü,*>
-runout/data.hdf5ipopt_20181218_111657/124/ipoptgrad_f"g
-ipoptipopt_20181218_111657Îô¡ˆü,*@
-runout/data.hdf5ipopt_20181218_111657/124/ipoptjacobian"{
-ipoptipopt_20181218_111657Îô¡ˆü,"TP  54  2.8433476e+00 0.00e+00 3.43e-07  -8.0 2.78e-07    -  1.00e+00 1.00e+00H  1,
-ipoptipopt_20181218_111657Îô¡ˆü,"
-`
-ipoptipopt_20181218_111657Ïô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/125/ipoptg"]
-ipoptipopt_20181218_111657Ïô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/125/ipoptf`
-ipoptipopt_20181218_111657Ðô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/126/ipoptg"]
-ipoptipopt_20181218_111657Ðô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/126/ipoptf`
-ipoptipopt_20181218_111657Ñô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/127/ipoptg"]
-ipoptipopt_20181218_111657Ñô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/127/ipoptf`
-ipoptipopt_20181218_111657Ñô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/128/ipoptg"]
-ipoptipopt_20181218_111657Òô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/128/ipoptfe
-ipoptipopt_20181218_111657Òô¡ˆü,*>
-runout/data.hdf5ipopt_20181218_111657/128/ipoptgrad_f"g
-ipoptipopt_20181218_111657Òô¡ˆü,*@
-runout/data.hdf5ipopt_20181218_111657/128/ipoptjacobian"{
-ipoptipopt_20181218_111657Òô¡ˆü,"TP  55  2.8433476e+00 0.00e+00 1.72e-07  -8.0 3.16e-07    -  1.00e+00 5.00e-01h  2,
-ipoptipopt_20181218_111657Òô¡ˆü,"
-`
-ipoptipopt_20181218_111657Óô¡ˆü,*9
-runout/data.hdf5ipopt_20181218_111657/129/ipoptg"]
-ipoptipopt_20181218_111657Óô¡ˆü,*6
-runout/data.hdf5ipopt_20181218_111657/129/ipoptfe
-ipoptipopt_20181218_111657Ôô¡ˆü,*>
-runout/data.hdf5ipopt_20181218_111657/129/ipoptgrad_f"g
-ipoptipopt_20181218_111657Ôô¡ˆü,*@
-runout/data.hdf5ipopt_20181218_111657/129/ipoptjacobian"{
-ipoptipopt_20181218_111657Ôô¡ˆü,"TP  56  2.8433476e+00 0.00e+00 3.29e-08  -8.0 3.00e-08    -  1.00e+00 1.00e+00h  1,
-ipoptipopt_20181218_111657Ôô¡ˆü,"
-I
-ipoptipopt_20181218_111657Ôô¡ˆü,""
-Number of Iterations....: 56
-s
-ipoptipopt_20181218_111657Ôô¡ˆü,"LH
-                                   (scaled)                 (unscaled)
-x
-ipoptipopt_20181218_111657Ôô¡ˆü,"QMObjective...............:   2.8433476172556493e+00    2.8433476172556493e+00
-x
-ipoptipopt_20181218_111657Ôô¡ˆü,"QMDual infeasibility......:   3.2948353641022267e-08    3.2948353641022267e-08
-x
-ipoptipopt_20181218_111657Ôô¡ˆü,"QMConstraint violation....:   0.0000000000000000e+00    0.0000000000000000e+00
-x
-ipoptipopt_20181218_111657Ôô¡ˆü,"QMComplementarity.........:   9.0909090909090925e-09    9.0909090909090925e-09
-y
-ipoptipopt_20181218_111657Ôô¡ˆü,"RNOverall NLP error.......:   3.2948353641022267e-08    3.2948353641022267e-08
-
-g
-ipoptipopt_20181218_111657Õô¡ˆü,"@<
-Number of objective function evaluations             = 126
-e
-ipoptipopt_20181218_111657Õô¡ˆü,">:Number of objective gradient evaluations             = 57
-d
-ipoptipopt_20181218_111657Õô¡ˆü,"=9Number of equality constraint evaluations            = 0
-f
-ipoptipopt_20181218_111657Õô¡ˆü,"?;Number of inequality constraint evaluations          = 126
-d
-ipoptipopt_20181218_111657Õô¡ˆü,"=9Number of equality constraint Jacobian evaluations   = 0
-e
-ipoptipopt_20181218_111657Õô¡ˆü,">:Number of inequality constraint Jacobian evaluations = 57
-e
-ipoptipopt_20181218_111657Õô¡ˆü,">:Number of Lagrangian Hessian evaluations             = 56
-m
-ipoptipopt_20181218_111657Õô¡ˆü,"FBTotal CPU secs in IPOPT (w/o function evaluations)   =      0.028
-m
-ipoptipopt_20181218_111657Õô¡ˆü,"FBTotal CPU secs in NLP function evaluations           =      0.128
-J
-ipoptipopt_20181218_111657Õô¡ˆü,"#
-EXIT: Optimal Solution Found.
-i
-ipoptipopt_20181218_111657Õô¡ˆü,*B
-runout/data.hdf5(ipopt_20181218_111657/129/ipopt/solutionx"k
-ipoptipopt_20181218_111657Öô¡ˆü,*D
-runout/data.hdf5(ipopt_20181218_111657/129/ipopt/solutionz_l"k
-ipoptipopt_20181218_111657Öô¡ˆü,*D
-runout/data.hdf5(ipopt_20181218_111657/129/ipopt/solutionz_u"i
-ipoptipopt_20181218_111657Öô¡ˆü,*B
-runout/data.hdf5(ipopt_20181218_111657/129/ipopt/solutiong"n
-ipoptipopt_20181218_111657×ô¡ˆü,*G
-runout/data.hdf5(ipopt_20181218_111657/129/ipopt/solutionlambda"n
-ipoptipopt_20181218_111657×ô¡ˆü,*G
-runout/data.hdf5(ipopt_20181218_111657/129/ipopt/solution	obj_valued
-outer_approximation#outer_approximation_20181218_111657×ô¡ˆü,"!	 iter 	 z_l 	 z_u 	 epsilon
-˜
-outer_approximation#outer_approximation_20181218_111657×ô¡ˆü,*U
-runout/data.hdf59outer_approximation_20181218_111657/outer_approximation/1x_k"k
-ipoptipopt_20181218_111657‚õ¡ˆü,"D@This is Ipopt version 3.12.9, running with linear solver mumps.
-y
-ipoptipopt_20181218_111657ƒõ¡ˆü,"RNNOTE: Other linear solvers might be more efficient (see Ipopt documentation).
-,
-ipoptipopt_20181218_111657ƒõ¡ˆü,"
-k
-ipoptipopt_20181218_111657…õ¡ˆü,"D@Number of nonzeros in equality constraint Jacobian...:        0
-k
-ipoptipopt_20181218_111657…õ¡ˆü,"D@Number of nonzeros in inequality constraint Jacobian.:       14
-l
-ipoptipopt_20181218_111657…õ¡ˆü,"EANumber of nonzeros in Lagrangian Hessian.............:        3
-
-k
-ipoptipopt_20181218_111657‡õ¡ˆü,"D@Total number of variables............................:        2
-k
-ipoptipopt_20181218_111657‡õ¡ˆü,"D@                     variables with only lower bounds:        0
-k
-ipoptipopt_20181218_111657‡õ¡ˆü,"D@                variables with lower and upper bounds:        2
-k
-ipoptipopt_20181218_111657‡õ¡ˆü,"D@                     variables with only upper bounds:        0
-k
-ipoptipopt_20181218_111657‡õ¡ˆü,"D@Total number of equality constraints.................:        0
-k
-ipoptipopt_20181218_111657‡õ¡ˆü,"D@Total number of inequality constraints...............:        7
-k
-ipoptipopt_20181218_111657‡õ¡ˆü,"D@        inequality constraints with only lower bounds:        4
-k
-ipoptipopt_20181218_111657‡õ¡ˆü,"D@   inequality constraints with lower and upper bounds:        0
-l
-ipoptipopt_20181218_111657‡õ¡ˆü,"EA        inequality constraints with only upper bounds:        3
-
-|
-ipoptipopt_20181218_111657ˆõ¡ˆü,"UQiter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
-{
-ipoptipopt_20181218_111657ˆõ¡ˆü,"TP   0  1.0002000e+00 3.95e+00 1.30e+00  -1.0 0.00e+00    -  0.00e+00 0.00e+00   0,
-ipoptipopt_20181218_111657ˆõ¡ˆü,"
-{
-ipoptipopt_20181218_111657‰õ¡ˆü,"TP   1  1.0010843e+00 3.88e+00 1.18e+00  -1.0 1.30e+00    -  1.42e-02 2.02e-02h  1,
-ipoptipopt_20181218_111657‰õ¡ˆü,"
-{
-ipoptipopt_20181218_111657Šõ¡ˆü,"TP   2  1.0040045e+00 3.78e+00 1.15e+00  -1.0 1.78e+00    -  2.50e-02 2.43e-02f  1,
-ipoptipopt_20181218_111657Šõ¡ˆü,"
-{
-ipoptipopt_20181218_111657‹õ¡ˆü,"TP   3  1.0127936e+00 3.61e+00 1.73e+01  -1.0 1.90e+00    -  7.02e-03 3.72e-02f  1,
-ipoptipopt_20181218_111657‹õ¡ˆü,"
-{
-ipoptipopt_20181218_111657Œõ¡ˆü,"TP   4  3.0486549e+00 0.00e+00 1.60e+01  -1.0 1.88e+00    -  3.07e-01 9.90e-01h  1,
-ipoptipopt_20181218_111657Œõ¡ˆü,"
-{
-ipoptipopt_20181218_111657Œõ¡ˆü,"TP   5  4.1160379e+00 0.00e+00 1.07e+01  -1.0 4.51e-01    -  1.00e+00 9.90e-01h  1,
-ipoptipopt_20181218_111657õ¡ˆü,"
-{
-ipoptipopt_20181218_111657õ¡ˆü,"TP   6  3.6496796e+00 0.00e+00 5.32e-03  -1.0 3.80e-01    -  1.00e+00 1.00e+00h  1,
-ipoptipopt_20181218_111657õ¡ˆü,"
-{
-ipoptipopt_20181218_111657Žõ¡ˆü,"TP   7  3.1015821e+00 0.00e+00 2.48e+03  -2.5 3.94e-01    -  9.61e-01 9.46e-01f  1,
-ipoptipopt_20181218_111657Žõ¡ˆü,"
-{
-ipoptipopt_20181218_111657õ¡ˆü,"TP   8  3.0100205e+00 0.00e+00 2.60e-03  -2.5 1.24e-01    -  1.00e+00 1.00e+00h  1,
-ipoptipopt_20181218_111657õ¡ˆü,"
-{
-ipoptipopt_20181218_111657õ¡ˆü,"TP   9  3.0004292e+00 0.00e+00 2.75e-03  -3.8 1.03e-02    -  1.00e+00 1.00e+00h  1,
-ipoptipopt_20181218_111657õ¡ˆü,"
-|
-ipoptipopt_20181218_111657‘õ¡ˆü,"UQiter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
-{
-ipoptipopt_20181218_111657‘õ¡ˆü,"TP  10  3.0000057e+00 0.00e+00 1.64e-04  -5.7 3.53e-04    -  1.00e+00 1.00e+00h  1,
-ipoptipopt_20181218_111657‘õ¡ˆü,"
-d
-ipoptipopt_20181218_111657’õ¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/15/ipoptgrad_f"f
-ipoptipopt_20181218_111657“õ¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/15/ipoptjacobian"{
-ipoptipopt_20181218_111657“õ¡ˆü,"TP  11  3.0000055e+00 0.00e+00 1.58e-07  -5.7 1.12e-07    -  1.00e+00 1.00e+00h  1,
-ipoptipopt_20181218_111657“õ¡ˆü,"
-{
-ipoptipopt_20181218_111657”õ¡ˆü,"TP  12  3.0000000e+00 0.00e+00 2.35e-06  -8.0 4.33e-06    -  1.00e+00 1.00e+00f  1,
-ipoptipopt_20181218_111657”õ¡ˆü,"
-d
-ipoptipopt_20181218_111657•õ¡ˆü,*=
-runout/data.hdf5ipopt_20181218_111657/17/ipoptgrad_f"f
-ipoptipopt_20181218_111657•õ¡ˆü,*?
-runout/data.hdf5ipopt_20181218_111657/17/ipoptjacobian"{
-ipoptipopt_20181218_111657•õ¡ˆü,"TP  13  3.0000000e+00 0.00e+00 1.72e-09  -8.0 5.88e-09    -  1.00e+00 1.00e+00h  1,
-ipoptipopt_20181218_111657•õ¡ˆü,"
-I
-ipoptipopt_20181218_111657•õ¡ˆü,""
-Number of Iterations....: 13
-s
-ipoptipopt_20181218_111657•õ¡ˆü,"LH
-                                   (scaled)                 (unscaled)
-x
-ipoptipopt_20181218_111657•õ¡ˆü,"QMObjective...............:   3.0000000019733140e+00    3.0000000019733140e+00
-x
-ipoptipopt_20181218_111657•õ¡ˆü,"QMDual infeasibility......:   1.7233195335049371e-09    1.7233195335049371e-09
-x
-ipoptipopt_20181218_111657•õ¡ˆü,"QMConstraint violation....:   0.0000000000000000e+00    0.0000000000000000e+00
-x
-ipoptipopt_20181218_111657•õ¡ˆü,"QMComplementarity.........:   1.0946181937153738e-08    1.0946181937153738e-08
-y
-ipoptipopt_20181218_111657•õ¡ˆü,"RNOverall NLP error.......:   1.0946181937153738e-08    1.0946181937153738e-08
-
-f
-ipoptipopt_20181218_111657•õ¡ˆü,"?;
-Number of objective function evaluations             = 14
-e
-ipoptipopt_20181218_111657•õ¡ˆü,">:Number of objective gradient evaluations             = 14
-d
-ipoptipopt_20181218_111657•õ¡ˆü,"=9Number of equality constraint evaluations            = 0
-e
-ipoptipopt_20181218_111657•õ¡ˆü,">:Number of inequality constraint evaluations          = 14
-d
-ipoptipopt_20181218_111657•õ¡ˆü,"=9Number of equality constraint Jacobian evaluations   = 0
-e
-ipoptipopt_20181218_111657–õ¡ˆü,">:Number of inequality constraint Jacobian evaluations = 14
-e
-ipoptipopt_20181218_111657–õ¡ˆü,">:Number of Lagrangian Hessian evaluations             = 13
-m
-ipoptipopt_20181218_111657–õ¡ˆü,"FBTotal CPU secs in IPOPT (w/o function evaluations)   =      0.008
-m
-ipoptipopt_20181218_111657–õ¡ˆü,"FBTotal CPU secs in NLP function evaluations           =      0.008
-J
-ipoptipopt_20181218_111657–õ¡ˆü,"#
-EXIT: Optimal Solution Found.
-h
-ipoptipopt_20181218_111657–õ¡ˆü,*A
-runout/data.hdf5'ipopt_20181218_111657/17/ipopt/solutionx"j
-ipoptipopt_20181218_111657–õ¡ˆü,*C
-runout/data.hdf5'ipopt_20181218_111657/17/ipopt/solutionz_l"j
-ipoptipopt_20181218_111657—õ¡ˆü,*C
-runout/data.hdf5'ipopt_20181218_111657/17/ipopt/solutionz_u"h
-ipoptipopt_20181218_111657—õ¡ˆü,*A
-runout/data.hdf5'ipopt_20181218_111657/17/ipopt/solutiong"m
-ipoptipopt_20181218_111657—õ¡ˆü,*F
-runout/data.hdf5'ipopt_20181218_111657/17/ipopt/solutionlambda"m
-ipoptipopt_20181218_111657˜õ¡ˆü,*F
-runout/data.hdf5'ipopt_20181218_111657/17/ipopt/solution	obj_value
-outer_approximation#outer_approximation_20181218_111657˜õ¡ˆü,">:	 1 	 2.8812664 	 3.000000001973314 	 0.11873360197331406
-˜
-outer_approximation#outer_approximation_20181218_111657˜õ¡ˆü,*U
-runout/data.hdf59outer_approximation_20181218_111657/outer_approximation/2x_k"k
-ipoptipopt_20181218_111657¢õ¡ˆü,"D@This is Ipopt version 3.12.9, running with linear solver mumps.
-y
-ipoptipopt_20181218_111657£õ¡ˆü,"RNNOTE: Other linear solvers might be more efficient (see Ipopt documentation).
-,
-ipoptipopt_20181218_111657£õ¡ˆü,"
-k
-ipoptipopt_20181218_111657¤õ¡ˆü,"D@Number of nonzeros in equality constraint Jacobian...:        0
-k
-ipoptipopt_20181218_111657¤õ¡ˆü,"D@Number of nonzeros in inequality constraint Jacobian.:       14
-l
-ipoptipopt_20181218_111657¤õ¡ˆü,"EANumber of nonzeros in Lagrangian Hessian.............:        3
-
-k
-ipoptipopt_20181218_111657¦õ¡ˆü,"D@Total number of variables............................:        2
-k
-ipoptipopt_20181218_111657¦õ¡ˆü,"D@                     variables with only lower bounds:        0
-k
-ipoptipopt_20181218_111657¦õ¡ˆü,"D@                variables with lower and upper bounds:        2
-k
-ipoptipopt_20181218_111657¦õ¡ˆü,"D@                     variables with only upper bounds:        0
-k
-ipoptipopt_20181218_111657¦õ¡ˆü,"D@Total number of equality constraints.................:        0
-k
-ipoptipopt_20181218_111657¦õ¡ˆü,"D@Total number of inequality constraints...............:        7
-k
-ipoptipopt_20181218_111657¦õ¡ˆü,"D@        inequality constraints with only lower bounds:        4
-k
-ipoptipopt_20181218_111657¦õ¡ˆü,"D@   inequality constraints with lower and upper bounds:        0
-l
-ipoptipopt_20181218_111657¦õ¡ˆü,"EA        inequality constraints with only upper bounds:        3
-
-|
-ipoptipopt_20181218_111657¦õ¡ˆü,"UQiter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
-{
-ipoptipopt_20181218_111657¦õ¡ˆü,"TP   0  1.0002000e+00 3.95e+00 1.30e+00  -1.0 0.00e+00    -  0.00e+00 0.00e+00   0,
-ipoptipopt_20181218_111657¦õ¡ˆü,"
-{
-ipoptipopt_20181218_111657§õ¡ˆü,"TP   1  1.0010843e+00 3.88e+00 1.18e+00  -1.0 1.30e+00    -  1.42e-02 2.02e-02h  1,
-ipoptipopt_20181218_111657§õ¡ˆü,"
-{
-ipoptipopt_20181218_111657¨õ¡ˆü,"TP   2  1.0040045e+00 3.78e+00 1.15e+00  -1.0 1.78e+00    -  2.50e-02 2.43e-02f  1,
-ipoptipopt_20181218_111657¨õ¡ˆü,"
-{
-ipoptipopt_20181218_111657©õ¡ˆü,"TP   3  1.0127936e+00 3.61e+00 1.73e+01  -1.0 1.90e+00    -  7.02e-03 3.72e-02f  1,
-ipoptipopt_20181218_111657©õ¡ˆü,"
-{
-ipoptipopt_20181218_111657ªõ¡ˆü,"TP   4  3.0486549e+00 0.00e+00 1.60e+01  -1.0 1.88e+00    -  3.07e-01 9.90e-01h  1,
-ipoptipopt_20181218_111657ªõ¡ˆü,"
-{
-ipoptipopt_20181218_111657«õ¡ˆü,"TP   5  4.1160379e+00 0.00e+00 1.07e+01  -1.0 4.51e-01    -  1.00e+00 9.90e-01h  1,
-ipoptipopt_20181218_111657«õ¡ˆü,"
-{
-ipoptipopt_20181218_111657¬õ¡ˆü,"TP   6  3.6496796e+00 0.00e+00 5.32e-03  -1.0 3.80e-01    -  1.00e+00 1.00e+00h  1,
-ipoptipopt_20181218_111657¬õ¡ˆü,"
-{
-ipoptipopt_20181218_111657­õ¡ˆü,"TP   7  3.1015821e+00 0.00e+00 2.48e+03  -2.5 3.94e-01    -  9.61e-01 9.46e-01f  1,
-ipoptipopt_20181218_111657­õ¡ˆü,"
-{
-ipoptipopt_20181218_111657®õ¡ˆü,"TP   8  3.0100205e+00 0.00e+00 2.60e-03  -2.5 1.24e-01    -  1.00e+00 1.00e+00h  1,
-ipoptipopt_20181218_111657®õ¡ˆü,"
-{
-ipoptipopt_20181218_111657¯õ¡ˆü,"TP   9  3.0004292e+00 0.00e+00 2.75e-03  -3.8 1.03e-02    -  1.00e+00 1.00e+00h  1,
-ipoptipopt_20181218_111657¯õ¡ˆü,"
-|
-ipoptipopt_20181218_111657°õ¡ˆü,"UQiter    objective    inf_pr   inf_du lg(mu)  ||d||  lg(rg) alpha_du alpha_pr  ls
-{
-ipoptipopt_20181218_111657°õ¡ˆü,"TP  10  3.0000057e+00 0.00e+00 1.64e-04  -5.7 3.53e-04    -  1.00e+00 1.00e+00h  1,
-ipoptipopt_20181218_111657°õ¡ˆü,"
-{
-ipoptipopt_20181218_111657±õ¡ˆü,"TP  11  3.0000055e+00 0.00e+00 1.58e-07  -5.7 1.12e-07    -  1.00e+00 1.00e+00h  1,
-ipoptipopt_20181218_111657±õ¡ˆü,"
-{
-ipoptipopt_20181218_111657²õ¡ˆü,"TP  12  3.0000000e+00 0.00e+00 2.35e-06  -8.0 4.33e-06    -  1.00e+00 1.00e+00f  1,
-ipoptipopt_20181218_111657²õ¡ˆü,"
-{
-ipoptipopt_20181218_111657²õ¡ˆü,"TP  13  3.0000000e+00 0.00e+00 1.72e-09  -8.0 5.88e-09    -  1.00e+00 1.00e+00h  1,
-ipoptipopt_20181218_111657³õ¡ˆü,"
-I
-ipoptipopt_20181218_111657³õ¡ˆü,""
-Number of Iterations....: 13
-s
-ipoptipopt_20181218_111657³õ¡ˆü,"LH
-                                   (scaled)                 (unscaled)
-x
-ipoptipopt_20181218_111657³õ¡ˆü,"QMObjective...............:   3.0000000019733140e+00    3.0000000019733140e+00
-x
-ipoptipopt_20181218_111657³õ¡ˆü,"QMDual infeasibility......:   1.7233195335049371e-09    1.7233195335049371e-09
-x
-ipoptipopt_20181218_111657³õ¡ˆü,"QMConstraint violation....:   0.0000000000000000e+00    0.0000000000000000e+00
-x
-ipoptipopt_20181218_111657³õ¡ˆü,"QMComplementarity.........:   1.0946181937153738e-08    1.0946181937153738e-08
-y
-ipoptipopt_20181218_111657³õ¡ˆü,"RNOverall NLP error.......:   1.0946181937153738e-08    1.0946181937153738e-08
-
-f
-ipoptipopt_20181218_111657³õ¡ˆü,"?;
-Number of objective function evaluations             = 14
-e
-ipoptipopt_20181218_111657³õ¡ˆü,">:Number of objective gradient evaluations             = 14
-d
-ipoptipopt_20181218_111657³õ¡ˆü,"=9Number of equality constraint evaluations            = 0
-e
-ipoptipopt_20181218_111657³õ¡ˆü,">:Number of inequality constraint evaluations          = 14
-d
-ipoptipopt_20181218_111657³õ¡ˆü,"=9Number of equality constraint Jacobian evaluations   = 0
-e
-ipoptipopt_20181218_111657³õ¡ˆü,">:Number of inequality constraint Jacobian evaluations = 14
-e
-ipoptipopt_20181218_111657³õ¡ˆü,">:Number of Lagrangian Hessian evaluations             = 13
-m
-ipoptipopt_20181218_111657³õ¡ˆü,"FBTotal CPU secs in IPOPT (w/o function evaluations)   =      0.008
-m
-ipoptipopt_20181218_111657³õ¡ˆü,"FBTotal CPU secs in NLP function evaluations           =      0.008
-J
-ipoptipopt_20181218_111657³õ¡ˆü,"#
-EXIT: Optimal Solution Found.
-}
-outer_approximation#outer_approximation_20181218_111657´õ¡ˆü,":6	 2 	 3.0 	 3.000000001973314 	 1.973313956682432e-09
-^
-outer_approximation#outer_approximation_20181218_111657´õ¡ˆü,"Number of iterations: 3
