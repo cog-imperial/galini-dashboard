@@ -98,7 +98,7 @@ class Dashboard extends React.Component<Props, State> {
                 this.setState({ rawLogsVisibility: rawLogsVisibility + 1 }, this.updateHeight(rawLogsVisibility + 1))
               }
             >
-              <Icon name="plus" />
+              <Icon name="expand" />
             </Button>
           </Button.Group>
           <div style={{ flexGrow: "2", display: "flex", flexDirection: "column", justifyContent: "space-around" }}>

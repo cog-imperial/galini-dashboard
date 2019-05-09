@@ -66,9 +66,11 @@ class Connection:
                 if msg.HasField("tensor"):
                     h5data = self._openH5Data(fileName, h5data)
                     data = h5data[msg.tensor.group_]
-                    json_obj = json.loads(msg_json)
-                    json_obj["hdf5"] = list(data[msg.tensor.dataset])
-                    msg_json = json.dumps(json_obj)
+                    extractedData = data[msg.tensor.dataset]
+                    if not len(extractedData.shape) == 0:
+                        json_obj = json.loads(msg_json)
+                        json_obj["hdf5"] = list(extractedData)
+                        msg_json = json.dumps(json_obj)
                 jsonObjects.append(msg_json)
         if h5data is not None:
             h5data.close()

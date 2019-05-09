@@ -32,7 +32,12 @@ export class App extends React.Component<Props, State> {
               {val}
             </Menu.Item>
           ))
-        : [<Menu.Header key={0}>No logs yet</Menu.Header>];
+        : [
+            <Menu.Header key={0}>No logs yet</Menu.Header>,
+            <Menu.Header key={1}>
+              Did you set the environmental variable "GALINI_LOGS_DIR" to the correct directory?
+            </Menu.Header>
+          ];
     return showSideBar ? (
       <React.Fragment>
         <Header inverted style={{ paddingTop: "1rem" }}>

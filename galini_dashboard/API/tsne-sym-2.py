@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+## second attempt - describing each node as an n-dimensional array of upper-lower bound for each variable
+## output - clustering are of nodes from the same 'depth' ????
+
 import os
 from collections import Counter
 from itertools import takewhile
@@ -20,8 +23,8 @@ from google.protobuf.json_format import MessageToJson
 import h5py
 import json
 
-class Node:
 
+class Node:
     def __init__(self, pos):
         self.pos = pos
         self.lower = None
@@ -45,21 +48,23 @@ class Node:
         assert len(self.lower) == len(self.upper)
         self.counts = Counter(self.getBounds())
         self.freq = [0] * len(self.lower)
-      #  print(self.counts)
+        #  print(self.counts)
         for (val, count) in self.counts.most_common():
             self.freq[count - 1] += 1
-      #  print(self.freq)
         self.freq = "-".join(str(x) for x in self.freq)
 
     def getValues(self):
-        return np.append(self.lower, self.upper)
+        return np.array(self.upper) - np.array(self.lower)
 
     def __str__(self):
         return self.pos + "\n" + str(self.lower) + "\n" + str(self.upper) + "\n"
 
+
 def findSymmetry(nodes):
     bounds = list(map(lambda x: x.getBounds(), nodes))
-    matches = [all(bound[i] == bounds[0][i] for bound in bounds) for i in range(len(bounds[0]))]
+    matches = [
+        all(bound[i] == bounds[0][i] for bound in bounds) for i in range(len(bounds[0]))
+    ]
     possibilities = []
     for i in range(len(matches)):
         if not matches[i]:
@@ -67,6 +72,7 @@ def findSymmetry(nodes):
     print(matches)
     for row in zip(*possibilities):
         print(row)
+
 
 dic = dict()
 filename = "pointpack04"
@@ -80,11 +86,11 @@ for msg in reader:
         data = h5data[msg.tensor.group_]
         json_obj = json.loads(msg_json)
         d = list(data[msg.tensor.dataset])
-        pos = json_obj['tensor']['group'].split('/')[-1]
-        ds = json_obj['tensor']['dataset']
+        pos = json_obj["tensor"]["group"].split("/")[-1]
+        ds = json_obj["tensor"]["dataset"]
         if not ds == "solution":
-            if not pos in dic: 
-               # print(pos)
+            if not pos in dic:
+                # print(pos)
                 dic[pos] = Node(pos)
             if ds == "lower_bounds":
                 dic[pos].setLower(d)
@@ -93,37 +99,65 @@ for msg in reader:
 h5data.close()
 f.close()
 
-dic contains a map from position -> node object
+import numpy as np
+from tsne import tsne
+import matplotlib.pyplot as plt
 
-m = dict()
+
+arr = None
+labels = []
+
 
 for key, value in dic.items():
-    value.calculateCounts()
-    (counts, freq) = value.getCountsFreq()
-    if not freq in m:
-        m[freq] = []
-    m[freq].append(value)
+    ar = np.array([value.getValues()])
+    if arr is None:
+        arr = ar
+    else:
+        arr = np.append(arr, ar, axis=0)
+    labels.append(key)
 
-# freq = histogram in string form
-# m = map from freq to a list of nodes with matching freq 
+Y = tsne(arr, 2, 9, 5)  # preplexity low = something, high (>20) = evenly distributed
 
-# now it finds 
+fig, ax = plt.subplots()
+sc = plt.scatter(Y[:, 0], Y[:, 1], 20)
+c = np.random.randint(1, 5, size=Y.shape[0])
+cmap = plt.cm.RdYlGn
+norm = plt.Normalize(1, 4)
+annot = ax.annotate(
+    "",
+    xy=(0, 0),
+    xytext=(20, 20),
+    textcoords="offset points",
+    bbox=dict(boxstyle="round", fc="w"),
+    arrowprops=dict(arrowstyle="->"),
+)
+annot.set_visible(False)
 
-for key, value in m.items():
-    # value is a list of nodes
-    if len(value) > 1:
-        eq = Counter([str(x.getCountsFreq()[0].most_common()) for x in value]).most_common()
-        # eq contains all the different permutations of the lower,upper bound pairs
-        commons = [x[0] for x in list(takewhile(lambda x : x[1] > 1, eq))]
-        # commons finds all that have value > 1, meaning is symmetry
-        matches = dict()
-        for s in commons:
-            matches[s] = []
-            for v in value:
-                if str(v.getCountsFreq()[0].most_common()) == s:
-                    matches[s].append(v)
-        for k, v in matches.items():
-            findSymmetry(v)
-            print("\n\n")
-            for va in v:
-                print(va)
+
+def update_annot(ind):
+
+    pos = sc.get_offsets()[ind["ind"][0]]
+    annot.xy = pos
+    text = "{}".format(" ".join(labels[n] for n in ind["ind"]))
+    annot.set_text(text)
+    annot.get_bbox_patch().set_facecolor(cmap(norm(c[ind["ind"][0]])))
+    annot.get_bbox_patch().set_alpha(0.4)
+
+
+def hover(event):
+    vis = annot.get_visible()
+    if event.inaxes == ax:
+        cont, ind = sc.contains(event)
+        if cont:
+            update_annot(ind)
+            annot.set_visible(True)
+            fig.canvas.draw_idle()
+        else:
+            if vis:
+                annot.set_visible(False)
+                fig.canvas.draw_idle()
+
+
+fig.canvas.mpl_connect("motion_notify_event", hover)
+
+plt.show()

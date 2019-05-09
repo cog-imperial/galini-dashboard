@@ -12,6 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+## First attempt - simple attempt describing each node as an 2n-dimensional array of upper/lower bounds for each variable
+## Not really successful - clustering nodes are with siblings and parent-child relationships
+
+
 import os
 from collections import Counter
 from itertools import takewhile
@@ -19,6 +23,7 @@ from galini_io.reader import MessageReader
 from google.protobuf.json_format import MessageToJson
 import h5py
 import json
+
 
 class Node:
 
@@ -93,37 +98,57 @@ for msg in reader:
 h5data.close()
 f.close()
 
-dic contains a map from position -> node object
+import numpy as np
+from tsne import tsne
+import matplotlib.pyplot as plt
 
-m = dict()
+
+arr = None
+labels = []
+
 
 for key, value in dic.items():
-    value.calculateCounts()
-    (counts, freq) = value.getCountsFreq()
-    if not freq in m:
-        m[freq] = []
-    m[freq].append(value)
+    ar = np.array([value.getValues()])
+    if arr is None:
+        arr = ar
+    else: 
+        arr = np.append(arr, ar, axis=0)
+    labels.append(key)
 
-# freq = histogram in string form
-# m = map from freq to a list of nodes with matching freq 
+Y = tsne(arr, 2, 18, 5) # preplexity low = something, high (>20) = evenly distributed
 
-# now it finds 
+fig,ax = plt.subplots()
+sc = plt.scatter(Y[:, 0], Y[:, 1], 20)
+c = np.random.randint(1,5,size=Y.shape[0])
+cmap = plt.cm.RdYlGn
+norm = plt.Normalize(1,4)
+annot = ax.annotate("", xy=(0,0), xytext=(20,20),textcoords="offset points",
+                    bbox=dict(boxstyle="round", fc="w"),
+                    arrowprops=dict(arrowstyle="->"))
+annot.set_visible(False)
 
-for key, value in m.items():
-    # value is a list of nodes
-    if len(value) > 1:
-        eq = Counter([str(x.getCountsFreq()[0].most_common()) for x in value]).most_common()
-        # eq contains all the different permutations of the lower,upper bound pairs
-        commons = [x[0] for x in list(takewhile(lambda x : x[1] > 1, eq))]
-        # commons finds all that have value > 1, meaning is symmetry
-        matches = dict()
-        for s in commons:
-            matches[s] = []
-            for v in value:
-                if str(v.getCountsFreq()[0].most_common()) == s:
-                    matches[s].append(v)
-        for k, v in matches.items():
-            findSymmetry(v)
-            print("\n\n")
-            for va in v:
-                print(va)
+def update_annot(ind):
+
+    pos = sc.get_offsets()[ind["ind"][0]]
+    annot.xy = pos
+    text = "{}".format(" ".join(labels[n] for n in ind["ind"]))
+    annot.set_text(text)
+    annot.get_bbox_patch().set_facecolor(cmap(norm(c[ind["ind"][0]])))
+    annot.get_bbox_patch().set_alpha(0.4)
+
+def hover(event):
+    vis = annot.get_visible()
+    if event.inaxes == ax:
+        cont, ind = sc.contains(event)
+        if cont:
+            update_annot(ind)
+            annot.set_visible(True)
+            fig.canvas.draw_idle()
+        else:
+            if vis:
+                annot.set_visible(False)
+                fig.canvas.draw_idle()
+
+fig.canvas.mpl_connect("motion_notify_event", hover)
+
+plt.show()

@@ -34,7 +34,7 @@ export class ObjectiveValue extends React.Component<Props, State> {
         if (!clone[name]) {
           clone[name] = [];
         }
-        clone[name].push({ x: iteration ? iteration : 0, y: value });
+        clone[name].push({ x: iteration || 0, y: value });
       }
     }
     return { vars: clone, yMin, yMax };

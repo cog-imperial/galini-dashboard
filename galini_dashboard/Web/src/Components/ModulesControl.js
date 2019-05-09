@@ -22,8 +22,8 @@ class ModulesControl extends React.Component<Props, State> {
     this.setState({ modules: [...this.state.modules, component] });
   };
 
-  renderModule = (key: number) => {
-    switch (key) {
+  renderModule = (value: number) => {
+    switch (value) {
       case 1:
         return <ObjectiveValue />;
       case 2:
@@ -75,9 +75,9 @@ class ModulesControl extends React.Component<Props, State> {
             style={{ position: "absolute", top: 10, right: 10 }}
           >
             <Dropdown.Menu>
-              {ModulesMap.map(val => (
+              {ModulesMap.map((val, index) => (
                 <Dropdown.Item
-                  key={val.key}
+                  key={index}
                   value={val.value}
                   text={val.text}
                   selected={false}
@@ -96,9 +96,9 @@ class ModulesControl extends React.Component<Props, State> {
 }
 
 const ModulesMap = [
-  { key: 1, text: "Objective Value over Time", value: 1 },
-  { key: 2, text: "Solver runtimes", value: 2 },
-  { key: 3, text: "Branch and Bound Tree", value: 3 }
+  { text: "Objective Value over Time", value: 1 },
+  { text: "Solver runtimes", value: 2 },
+  { text: "Branch and Bound Tree", value: 3 }
 ];
 
 export default ModulesControl;
