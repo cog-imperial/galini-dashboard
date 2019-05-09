@@ -38,7 +38,7 @@ export class BranchAndBoundTree extends React.Component<Props, State> {
       } else if (curr.pruneBabNode) {
         const { coordinate } = curr.pruneBabNode;
         pruneNode(treeClone, coordinate);
-      } else if (curr.tensor && curr.hdf5) {
+      } else if (curr.tensor && curr.hdf5 && treeClone.length > 0) {
         const {
           hdf5,
           tensor: { dataset, group }

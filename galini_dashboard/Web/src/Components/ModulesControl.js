@@ -22,8 +22,8 @@ class ModulesControl extends React.Component<Props, State> {
     this.setState({ modules: [...this.state.modules, component] });
   };
 
-  renderModule = (key: number) => {
-    switch (key) {
+  renderModule = (value: number) => {
+    switch (value) {
       case 1:
         return <ObjectiveValue />;
       case 2:
