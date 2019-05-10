@@ -2,7 +2,7 @@
 import React from "react";
 import { formatName } from "./Utils";
 
-type Props = { nodeData: Object };
+type Props = { nodeData: Object, hidden: boolean };
 
 type State = { selected: boolean };
 
@@ -10,7 +10,10 @@ class NodeLabel extends React.Component<Props, State> {
   state = { selected: false };
 
   render() {
-    const { nodeData } = this.props;
+    const { nodeData, hidden } = this.props;
+    if (hidden) {
+      return <div width={0} height={0} />;
+    }
     const { selected } = this.state;
     const {
       name,
