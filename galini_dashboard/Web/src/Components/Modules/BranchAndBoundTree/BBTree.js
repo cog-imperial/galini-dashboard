@@ -17,20 +17,22 @@ type Props = {
 };
 
 type State = {
+  processedTreeData: Object,
   selectedNode: {
     tensorMessage: Object,
     position: Array
-  }
+  },
+  zoomedOut: boolean
 };
 
 class BBTree extends React.Component<Props, State> {
-  state = { treeData: {}, treeSize: {}, selectedNode: { tensorMessage: {}, position: [] } };
+  state = { processedTreeData: {}, selectedNode: { tensorMessage: {}, position: [] }, zoomedOut: false };
 
   constructor(props: Props) {
     super(props);
-    let { treeData, treeSize } = this.cloneTree([0]);
-    treeData = addAttributeToNodes(treeData[0], { setTensorMessage: this.setTensorMessage });
-    this.state = { ...this.state, treeData, treeSize };
+    const { treeData } = this.cloneTree([0]);
+    const processedTreeData = addAttributeToNodes(treeData[0], { setTensorMessage: this.setTensorMessage });
+    this.state = { ...this.state, processedTreeData };
   }
 
   cloneTree = (position: Array) => {
@@ -52,6 +54,18 @@ class BBTree extends React.Component<Props, State> {
 
   setTensorMessage = (tensorMessage: Object, position: Array) => {
     this.setState({ selectedNode: { tensorMessage, position } });
+  };
+
+  updateTreeState = (e: Object) => {
+    const { zoom } = e;
+    const { zoomedOut } = this.state;
+    if (zoom < 1) {
+      if (zoomedOut && zoom > 0.5) {
+        this.setState({ zoomedOut: false });
+      } else if (!zoomedOut && zoom < 0.5) {
+        this.setState({ zoomedOut: true });
+      }
+    }
   };
 
   renderTensorMessage() {
@@ -131,20 +145,29 @@ class BBTree extends React.Component<Props, State> {
   };
 
   render() {
-    const { width, height } = this.props;
-    const { treeData, treeSize } = this.state;
+    const { width, height, treeSize } = this.props;
+    const { zoomedOut, processedTreeData } = this.state;
+    const labelProps = zoomedOut
+      ? {
+          separation: { siblings: 0.5, nonSiblings: 0.7 },
+          nodeLabelComponent: { render: <NodeLabel hidden /> }
+        }
+      : {
+          separation: { siblings: 1, nonSiblings: 1 },
+          nodeLabelComponent: { render: <NodeLabel />, foreignObjectWrapper: { y: -20, x: 15 } }
+        };
     return (
       <div style={{ width, height, margin: "-1rem" }}>
         <div style={{ position: "absolute", top: 2, left: 2 }}>{this.renderTensorMessage()}</div>
         <Tree
-          data={treeData}
+          {...labelProps}
+          allowForeignObjects
+          data={processedTreeData}
           orientation="vertical"
           collapsible
-          separation={{ siblings: 1, nonSiblings: 1 }}
-          allowForeignObjects
-          nodeLabelComponent={{ render: <NodeLabel />, foreignObjectWrapper: { y: -20, x: 15 } }}
           // Reduce lag for big tree
           transitionDuration={treeSize > 100 ? 0 : 500}
+          onUpdate={e => this.updateTreeState(e)}
         />
       </div>
     );
