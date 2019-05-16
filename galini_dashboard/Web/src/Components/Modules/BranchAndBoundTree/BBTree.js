@@ -1,7 +1,7 @@
 // @flow
 import React from "react";
 import Tree from "react-d3-tree";
-import { Table, Button } from "semantic-ui-react";
+import { Table, Button, Icon } from "semantic-ui-react";
 import { format } from "d3-format";
 import NodeLabel from "./NodeLabel";
 import { findNode, addAttributeToNodes } from "./Utils";
@@ -52,7 +52,7 @@ class BBTree extends React.Component<Props, State> {
     return count;
   };
 
-  setTensorMessage = (tensorMessage: Object, position: Array) => {
+  setTensorMessage = (tensorMessage: Object = {}, position: Array = []) => {
     this.setState({ selectedNode: { tensorMessage, position } });
   };
 
@@ -78,10 +78,20 @@ class BBTree extends React.Component<Props, State> {
     const { addToModuleList, allowOpen } = this.props;
     const maxLength = Math.max(lower_bounds.length, upper_bounds.length, solution.length);
     return maxLength > 0 ? (
-      <Table definition>
+      <Table>
         <Table.Header>
           <Table.Row>
-            <Table.HeaderCell />
+            <Table.HeaderCell>
+              <Button
+                icon
+                color="red"
+                onClick={() => {
+                  this.setTensorMessage();
+                }}
+              >
+                <Icon fitted name="window close outline" />
+              </Button>
+            </Table.HeaderCell>
             {[...Array(maxLength).keys()].map(v => (
               <Table.HeaderCell>
                 x<sub>{v}</sub>
@@ -119,9 +129,10 @@ class BBTree extends React.Component<Props, State> {
                     const { treeData, treeSize } = this.cloneTree(position);
                     addToModuleList(this.renderTree(treeData, treeSize));
                   }}
-                >
-                  Open as root
-                </Button>
+                  content="Open as root"
+                  icon="right arrow"
+                  labelPosition="right"
+                />
               </Table.Cell>
             </Table.Row>
           </Table.Footer>
@@ -146,7 +157,7 @@ class BBTree extends React.Component<Props, State> {
 
   render() {
     const { width, height, treeSize } = this.props;
-    const { zoomedOut, processedTreeData } = this.state;
+    const { zoomedOut, processedTreeData, selectedNode } = this.state;
     const labelProps = zoomedOut
       ? {
           separation: { siblings: 0.5, nonSiblings: 0.7 },
@@ -154,7 +165,10 @@ class BBTree extends React.Component<Props, State> {
         }
       : {
           separation: { siblings: 1, nonSiblings: 1 },
-          nodeLabelComponent: { render: <NodeLabel />, foreignObjectWrapper: { y: -20, x: 15 } }
+          nodeLabelComponent: {
+            render: <NodeLabel selectedNode={selectedNode && selectedNode.position} />,
+            foreignObjectWrapper: { y: -30, x: 15 }
+          }
         };
     return (
       <div style={{ width, height, margin: "-1rem" }}>

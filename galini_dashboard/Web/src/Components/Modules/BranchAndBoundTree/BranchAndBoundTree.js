@@ -66,7 +66,7 @@ export class BranchAndBoundTree extends React.Component<Props, State> {
     return (
       /* Magic Number: 20 is used to fill height to segment - TODO: Replace with proper CSS */
       <BBTree
-        width={modulesHeight * 1.5}
+        width={modulesHeight * 1.4}
         height={modulesHeight - 20}
         treeData={treeData}
         treeSize={treeSize}
