@@ -13,7 +13,7 @@
 # limitations under the License.
 
 ## First attempt - simple attempt describing each node as an 2n-dimensional array of upper/lower bounds for each variable
-## Not really successful - clustering nodes are with siblings and parent-child relationships
+## Not really successful - clustering nodes are siblings and parent-child relationships
 
 
 import os
@@ -26,7 +26,6 @@ import json
 
 
 class Node:
-
     def __init__(self, pos):
         self.pos = pos
         self.lower = None
@@ -50,10 +49,10 @@ class Node:
         assert len(self.lower) == len(self.upper)
         self.counts = Counter(self.getBounds())
         self.freq = [0] * len(self.lower)
-      #  print(self.counts)
+        #  print(self.counts)
         for (val, count) in self.counts.most_common():
             self.freq[count - 1] += 1
-      #  print(self.freq)
+        #  print(self.freq)
         self.freq = "-".join(str(x) for x in self.freq)
 
     def getValues(self):
@@ -62,9 +61,12 @@ class Node:
     def __str__(self):
         return self.pos + "\n" + str(self.lower) + "\n" + str(self.upper) + "\n"
 
+
 def findSymmetry(nodes):
     bounds = list(map(lambda x: x.getBounds(), nodes))
-    matches = [all(bound[i] == bounds[0][i] for bound in bounds) for i in range(len(bounds[0]))]
+    matches = [
+        all(bound[i] == bounds[0][i] for bound in bounds) for i in range(len(bounds[0]))
+    ]
     possibilities = []
     for i in range(len(matches)):
         if not matches[i]:
@@ -72,6 +74,7 @@ def findSymmetry(nodes):
     print(matches)
     for row in zip(*possibilities):
         print(row)
+
 
 dic = dict()
 filename = "pointpack04"
@@ -85,11 +88,11 @@ for msg in reader:
         data = h5data[msg.tensor.group_]
         json_obj = json.loads(msg_json)
         d = list(data[msg.tensor.dataset])
-        pos = json_obj['tensor']['group'].split('/')[-1]
-        ds = json_obj['tensor']['dataset']
+        pos = json_obj["tensor"]["group"].split("/")[-1]
+        ds = json_obj["tensor"]["dataset"]
         if not ds == "solution":
-            if not pos in dic: 
-               # print(pos)
+            if not pos in dic:
+                # print(pos)
                 dic[pos] = Node(pos)
             if ds == "lower_bounds":
                 dic[pos].setLower(d)
@@ -111,21 +114,27 @@ for key, value in dic.items():
     ar = np.array([value.getValues()])
     if arr is None:
         arr = ar
-    else: 
+    else:
         arr = np.append(arr, ar, axis=0)
     labels.append(key)
 
-Y = tsne(arr, 2, 18, 5) # preplexity low = something, high (>20) = evenly distributed
+Y = tsne(arr, 2, 18, 5)  # preplexity low = something, high (>20) = evenly distributed
 
-fig,ax = plt.subplots()
+fig, ax = plt.subplots()
 sc = plt.scatter(Y[:, 0], Y[:, 1], 20)
-c = np.random.randint(1,5,size=Y.shape[0])
+c = np.random.randint(1, 5, size=Y.shape[0])
 cmap = plt.cm.RdYlGn
-norm = plt.Normalize(1,4)
-annot = ax.annotate("", xy=(0,0), xytext=(20,20),textcoords="offset points",
-                    bbox=dict(boxstyle="round", fc="w"),
-                    arrowprops=dict(arrowstyle="->"))
+norm = plt.Normalize(1, 4)
+annot = ax.annotate(
+    "",
+    xy=(0, 0),
+    xytext=(20, 20),
+    textcoords="offset points",
+    bbox=dict(boxstyle="round", fc="w"),
+    arrowprops=dict(arrowstyle="->"),
+)
 annot.set_visible(False)
+
 
 def update_annot(ind):
 
@@ -135,6 +144,7 @@ def update_annot(ind):
     annot.set_text(text)
     annot.get_bbox_patch().set_facecolor(cmap(norm(c[ind["ind"][0]])))
     annot.get_bbox_patch().set_alpha(0.4)
+
 
 def hover(event):
     vis = annot.get_visible()
@@ -148,6 +158,7 @@ def hover(event):
             if vis:
                 annot.set_visible(False)
                 fig.canvas.draw_idle()
+
 
 fig.canvas.mpl_connect("motion_notify_event", hover)
 

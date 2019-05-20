@@ -104,7 +104,7 @@ for key, value in dic.items():
         arr = np.append(arr, ar, axis=0)
     labels.append(key)
 
-Y = tsne(arr, 2, 27, 5)  # preplexity low = something, high (>20) = evenly distributed
+Y = tsne(arr, 2, 27, 4)  # preplexity low = something, high (>20) = evenly distributed
 
 fig, ax = plt.subplots()
 sc = plt.scatter(Y[:, 0], Y[:, 1], 20)
