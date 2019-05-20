@@ -93,7 +93,7 @@ for msg in reader:
 h5data.close()
 f.close()
 
-dic contains a map from position -> node object
+#dic contains a map from position -> node object
 
 m = dict()
 
