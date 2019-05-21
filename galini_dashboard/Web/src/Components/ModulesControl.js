@@ -75,15 +75,15 @@ class ModulesControl extends React.Component<Props, State> {
             style={{ position: "absolute", top: 10, right: 10 }}
           >
             <Dropdown.Menu>
-              {ModulesMap.map(val => (
+              {ModulesMap.map(item => (
                 <Dropdown.Item
-                  key={val.key}
-                  value={val.value}
-                  text={val.text}
+                  key={item.value}
+                  value={item.value}
+                  text={item.text}
                   selected={false}
                   active={false}
                   onClick={() => {
-                    this.addToModuleList(this.renderModule(val.value));
+                    this.addToModuleList(this.renderModule(item.value));
                   }}
                 />
               ))}
@@ -96,9 +96,9 @@ class ModulesControl extends React.Component<Props, State> {
 }
 
 const ModulesMap = [
-  { key: 1, text: "Objective Value over Time", value: 1 },
-  { key: 2, text: "Solver runtimes", value: 2 },
-  { key: 3, text: "Branch and Bound Tree", value: 3 }
+  { text: "Objective Value over Time", value: 1 },
+  { text: "Solver runtimes", value: 2 },
+  { text: "Branch and Bound Tree", value: 3 }
 ];
 
 export default ModulesControl;
