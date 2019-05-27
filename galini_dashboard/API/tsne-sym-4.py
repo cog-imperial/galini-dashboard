@@ -12,8 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-## First attempt - simple attempt describing each node as an 2n-dimensional array of upper/lower bounds for each variable
-## Not really successful - clustering nodes are siblings and parent-child relationships
+## First attempt - node is represented by 3n - solution/upper/lower
 
 
 import os
@@ -30,36 +29,21 @@ class Node:
         self.pos = pos
         self.lower = None
         self.upper = None
+        self.solution = None
         self.counts = None
         self.freq = None
 
     def setLower(self, lower):
         self.lower = lower
 
+    def setSolution(self, solution):
+        self.solution = solution
+
     def setUpper(self, upper):
         self.upper = upper
 
-    def getBounds(self):
-        return list(zip(self.lower, self.upper))
-
-    def getCountsFreq(self):
-        return (self.counts, self.freq)
-
-    def calculateCounts(self):
-        assert len(self.lower) == len(self.upper)
-        self.counts = Counter(self.getBounds())
-        self.freq = [0] * len(self.lower)
-        #  print(self.counts)
-        for (val, count) in self.counts.most_common():
-            self.freq[count - 1] += 1
-        #  print(self.freq)
-        self.freq = "-".join(str(x) for x in self.freq)
-
     def getValues(self):
-        return np.append(self.lower, self.upper)
-
-    def __str__(self):
-        return self.pos + "\n" + str(self.lower) + "\n" + str(self.upper) + "\n"
+        return np.array(self.solution)
 
 
 def findSymmetry(nodes):
@@ -90,14 +74,12 @@ for msg in reader:
         d = list(data[msg.tensor.dataset])
         pos = json_obj["tensor"]["group"].split("/")[-1]
         ds = json_obj["tensor"]["dataset"]
-        if not ds == "solution":
-            if not pos in dic:
-                # print(pos)
-                dic[pos] = Node(pos)
-            if ds == "lower_bounds":
-                dic[pos].setLower(d)
-            elif ds == "upper_bounds":
-                dic[pos].setUpper(d)
+        if not pos in dic:
+            # print(pos)
+            dic[pos] = Node(pos)
+        if ds == "solution":
+            dic[pos].setSolution(d)
+
 h5data.close()
 f.close()
 
@@ -105,8 +87,10 @@ import numpy as np
 from tsne import tsne
 import matplotlib.pyplot as plt
 
+
 arr = None
 labels = []
+
 
 for key, value in dic.items():
     ar = np.array([value.getValues()])
@@ -116,7 +100,7 @@ for key, value in dic.items():
         arr = np.append(arr, ar, axis=0)
     labels.append(key)
 
-Y = tsne(arr, 2, 18, 20)  # preplexity low = something, high (>20) = evenly distributed
+Y = tsne(arr, 2, 9, 4)  # preplexity low = something, high (>20) = evenly distributed
 
 fig, ax = plt.subplots()
 sc = plt.scatter(Y[:, 0], Y[:, 1], 20)
