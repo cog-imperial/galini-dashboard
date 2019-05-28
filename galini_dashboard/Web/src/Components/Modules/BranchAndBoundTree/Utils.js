@@ -42,6 +42,7 @@ export const formatName = (name: Object) => {
 
 export const addTensorMessage = (tree: Array, position: Array, dataset: string, data: Array) => {
   const { parent, node } = findNode(tree, position);
+  if (!parent || !node) return;
   parent.children[position[position.length - 1]] = {
     ...node,
     attributes: {

@@ -16,6 +16,7 @@ import os
 from galini_io.reader import MessageReader
 from google.protobuf.json_format import MessageToJson
 import h5py
+import numpy as np
 import json
 
 class Connection:
@@ -46,7 +47,10 @@ class Connection:
         msg = reader.read_next()
         while msg is not None and len(text) < self.textReadLimit:
             if msg.HasField("text"):
-                text.append(msg.text.content)
+                content = msg.text.content
+                if content[-1] != '\n':
+                    content += '\n'
+                text.append(content)
             msg = reader.read_next()
         return ''.join(text)
 
@@ -67,7 +71,9 @@ class Connection:
                     h5data = self._openH5Data(fileName, h5data)
                     data = h5data[msg.tensor.group_]
                     json_obj = json.loads(msg_json)
-                    json_obj["hdf5"] = list(data[msg.tensor.dataset])
+                    tensor = np.copy(data[msg.tensor.dataset])
+                    tensor[np.isinf(tensor)] = np.sign(tensor[np.isinf(tensor)]) * 2e10
+                    json_obj["hdf5"] = list(tensor)
                     msg_json = json.dumps(json_obj)
                 jsonObjects.append(msg_json)
         if h5data is not None:
