@@ -17,6 +17,9 @@ const reducer = (state = { logsList: [], rawLogs: [], solverEvents: [], modulesH
       solverEvents: state.solverEvents.concat(action.payload)
     });
   }
+  if (action.type === actionTypes.ADD_SOLVER_SYMMETRY) {
+    return { ...state, symmetry: action.payload };
+  }
   if (action.type === actionTypes.CLEAR_SOLVER_EVENT) {
     return { logsList: state.logsList, rawLogs: [], solverEvents: [] };
   }

@@ -69,23 +69,21 @@ for key, value in pos_to_node.items():
     counter_to_pos[counter].append(key)
 
 
-def generateMap(pair, perm):
-    s = "-".join(pair)
-    arr = "-".join(
-        [
-            str(i) + "." + ",".join(perm[i])
-            for i in range(len(perm))
-            if perm[i] is not None
-        ]
-    )
-    if arr == "":
-        return s
-    return "-".join([s, arr])
+def generateJSON(pair, perm):
+    return {"src": pair[0], "dst": pair[1], "variations": perm}
+
+
+def findValidSymmetryPermutations(perm):
+    allPerms = []
+    for x in itertools.product(*perm):
+        if len(x) == len(set(x)):
+            allPerms.append(list([int(a) for a in x]))
+    return allPerms
 
 
 def calculatePermutation(nodes):
     arr = []
-    for pair in itertools.combinations(nodes, r=2):
+    for pair in itertools.permutations(nodes, r=2):
         src = pos_to_node[pair[0]].getSolution(dec)
         dst = pos_to_node[pair[1]].getSolution(dec)
         assert len(src) == len(dst)
@@ -96,9 +94,11 @@ def calculatePermutation(nodes):
                 perm[i] = [
                     str(j) for j in range(len(src)) if diff[j] and dst[j] == src[i]
                 ]
-        arr.append(generateMap(pair, perm))
-    print(arr)
-    print("--------------------------------")
+        validPerms = findValidSymmetryPermutations([x for x in perm if x is not None])
+        permIndexes = [i for i in range(len(diff)) if diff[i]]
+        fullPerms = [list(zip(permIndexes, x)) for x in validPerms]
+        arr.append(generateJSON(pair, fullPerms))
+    return arr
 
 
 # For each node, remove its children from the same list
@@ -115,8 +115,14 @@ def eliminateChildren(nodes):
     return nodes
 
 
+jsonRes = []
 for key, value in counter_to_pos.items():
     nodes = eliminateChildren(value)
     if len(nodes) > 1:
-        calculatePermutation(nodes)
+        jsonRes.append(calculatePermutation(nodes))
+
+print(jsonRes)
+
+# with open("symm.json", "w+") as out:
+#     json.dump(jsonRes, out)
 

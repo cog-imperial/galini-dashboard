@@ -55,6 +55,7 @@ export class ObjectiveValue extends React.Component<Props, State> {
       length = Math.max(vars[val].length, length);
       return <LineMarkSeries key={index} data={vars[val]} />;
     });
+    length = Math.min(length, 20); // Capped at 20 items on the x-axis
     const yDiff = (yMax - yMin) / 2;
     const { modulesHeight } = this.props;
     const size = Math.floor(modulesHeight * 0.9); // To only use 90% of the available height

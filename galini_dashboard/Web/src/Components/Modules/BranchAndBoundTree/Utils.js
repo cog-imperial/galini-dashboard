@@ -1,10 +1,11 @@
 // @flow
+import _ from "underscore";
 
 export const addAttributeToNodes = (node: Object, additionalAttr: Object) => {
   if (node) {
     node = {
       ...node,
-      children: node.children.map(v => addAttributeToNodes(v, additionalAttr)),
+      children: node.children.filter(x => !!x).map(v => addAttributeToNodes(v, additionalAttr)),
       attributes: {
         ...node.attributes,
         ...additionalAttr
@@ -14,15 +15,19 @@ export const addAttributeToNodes = (node: Object, additionalAttr: Object) => {
   return node;
 };
 
-export const findNode = (tree: Array, position: Array) => {
-  let node = tree[position[0]];
-  if (position.length === 1) {
+export const findNode = (tree: Array, position: Array, depth: Number = 0) => {
+  let pos = _.clone(position);
+  if (depth > 0) {
+    pos = [0].concat(position.slice(depth + 1));
+  }
+  let node = tree[pos[0]];
+  if (pos.length === 1) {
     return { parent: null, node: node };
   }
-  for (let i = 1; i < position.length - 1; i++) {
-    node = node.children[position[i]];
+  for (let i = 1; i < pos.length - 1; i++) {
+    node = node.children[pos[i]];
   }
-  return { parent: node, node: node.children[position[position.length - 1]] };
+  return { parent: node, node: node.children[pos[pos.length - 1]] };
 };
 
 export const pruneNode = (tree: Array, position: Array) => {

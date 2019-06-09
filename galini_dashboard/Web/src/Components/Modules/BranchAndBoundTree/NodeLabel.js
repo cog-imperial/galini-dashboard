@@ -12,19 +12,34 @@ class NodeLabel extends React.Component<Props, State> {
 
   render() {
     const { nodeData, hidden, selectedNode } = this.props;
-    if (hidden) {
-      return <div width={0} height={0} />;
-    }
     const { selected } = this.state;
     const {
       name,
-      attributes: { upperBound, lowerBound, pruned, lower_bounds, solution, upper_bounds, setTensorMessage, position }
+      attributes: {
+        upperBound,
+        lowerBound,
+        pruned,
+        lower_bounds,
+        solution,
+        upper_bounds,
+        setTensorMessage,
+        position,
+        symmetryGroup
+      }
     } = nodeData;
+    const defaultBackground = symmetryGroup ? symmetryGroup.color : "white";
+    if (hidden) {
+      return symmetryGroup ? (
+        <div style={{ width: "35px", height: "35px", backgroundColor: symmetryGroup.color, borderRadius: "5px" }} />
+      ) : (
+        <div />
+      );
+    }
     const obj = formatName({ variableName: "z", lowerBound, upperBound });
     return (
       <div
         onClick={e => {
-          setTensorMessage({ lower_bounds, upper_bounds, solution, name }, position);
+          setTensorMessage({ lower_bounds, upper_bounds, solution, name }, position, symmetryGroup);
           e.stopPropagation();
         }}
         onMouseOver={() => this.setState({ selected: true })}
@@ -34,7 +49,7 @@ class NodeLabel extends React.Component<Props, State> {
           flexDirection: "column",
           justifyContent: "center",
           textDecoration: pruned ? "line-through" : "initial",
-          backgroundColor: selected ? "rgba(220,220,220,1)" : "rgba(0,0,0,0)",
+          backgroundColor: selected ? "rgb(220,220,220)" : defaultBackground,
           borderRadius: "2px",
           padding: 5,
           borderStyle: _.isEqual(selectedNode, position) ? "dashed" : "none"
