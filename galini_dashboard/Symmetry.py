@@ -126,14 +126,17 @@ def findSymmetry(filename):
         if len(nodes) > 1:
             jsonRes.append(calculatePermutation(nodes, pos_to_node, dec))
 
-    with open("symmetry.json", "w+") as out:
-        json.dump(jsonRes, out)
+    f = open(os.path.join(filename, "symmetry.json"), "w")
+    json.dump(jsonRes, f)
+    f.close()
 
 
 if __name__ == "__main__":
     p = os.environ["GALINI_LOGS_DIR"]
+    logging.basicConfig(level=logging.INFO)
     for filename in os.listdir(p):
         try:
             findSymmetry(os.path.join(p, filename))
+            logging.info("File: %s completed" % filename)
         except:
             logging.error("File: %s is corrupted" % filename)
