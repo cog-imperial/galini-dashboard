@@ -5,6 +5,9 @@ import { Table, Button, Icon } from "semantic-ui-react";
 import { format } from "d3-format";
 import NodeLabel from "./NodeLabel";
 import { findNode, addAttributeToNodes } from "./Utils";
+import _ from "underscore";
+import SymmetryVis from "./SymmetryVis";
+import randomColor from "randomcolor";
 
 type Props = {
   treeData: Array,
@@ -13,7 +16,8 @@ type Props = {
     height: number,
     width: number
   },
-  addToModuleList: Object => void
+  addToModuleList: Object => void,
+  symmetry: Array
 };
 
 type State = {
@@ -26,19 +30,26 @@ type State = {
 };
 
 class BBTree extends React.Component<Props, State> {
-  state = { processedTreeData: {}, selectedNode: { tensorMessage: {}, position: [] }, zoomedOut: false };
+  state = {
+    processedTreeData: {},
+    selectedNode: { tensorMessage: {}, position: [] },
+    zoomedOut: false
+  };
 
   constructor(props: Props) {
     super(props);
-    const { treeData } = this.cloneTree([0]);
-    const processedTreeData = addAttributeToNodes(treeData[0], { setTensorMessage: this.setTensorMessage });
+    const { treeData } = this.cloneTree([0], props.treeData);
+    const processedTreeData = addAttributeToNodes(treeData[0], {
+      setTensorMessage: this.setTensorMessage
+    });
     this.state = { ...this.state, processedTreeData };
   }
 
-  cloneTree = (position: Array) => {
-    const { treeData } = this.props;
+  cloneTree = (position: Array, data: Object) => {
+    const { processedTreeData } = this.state;
+    const treeData = data || [processedTreeData];
     const { node } = findNode(treeData, position);
-    const childClone = JSON.parse(JSON.stringify(node)); // This doesn't clone function pointers correctly
+    const childClone = _.clone(node);
     return { treeData: [childClone], treeSize: this.countNodes(childClone) };
   };
 
@@ -52,8 +63,8 @@ class BBTree extends React.Component<Props, State> {
     return count;
   };
 
-  setTensorMessage = (tensorMessage: Object = {}, position: Array = []) => {
-    this.setState({ selectedNode: { tensorMessage, position } });
+  setTensorMessage = (tensorMessage: Object = {}, position: Array = [], symmetryGroup: Ojbect) => {
+    this.setState({ selectedNode: { tensorMessage, position, symmetryGroup } });
   };
 
   updateTreeState = (e: Object) => {
@@ -72,7 +83,8 @@ class BBTree extends React.Component<Props, State> {
     const {
       selectedNode: {
         tensorMessage: { lower_bounds = [], upper_bounds = [], solution = [] },
-        position
+        position,
+        symmetryGroup
       }
     } = this.state;
     const { addToModuleList, allowOpen } = this.props;
@@ -89,7 +101,7 @@ class BBTree extends React.Component<Props, State> {
                   this.setTensorMessage();
                 }}
               >
-                <Icon fitted name="window close outline" />
+                <Icon fitted name="close" />
               </Button>
             </Table.HeaderCell>
             {[...Array(maxLength).keys()].map(v => (
@@ -119,20 +131,33 @@ class BBTree extends React.Component<Props, State> {
             ))}
           </Table.Row>
         </Table.Body>
-        {allowOpen ? (
+        {allowOpen || symmetryGroup ? (
           <Table.Footer>
             <Table.Row>
               <Table.Cell colSpan={maxLength + 1}>
-                <Button
-                  floated="right"
-                  onClick={() => {
-                    const { treeData, treeSize } = this.cloneTree(position);
-                    addToModuleList(this.renderTree(treeData, treeSize));
-                  }}
-                  content="Open as root"
-                  icon="right arrow"
-                  labelPosition="right"
-                />
+                {symmetryGroup ? (
+                  <React.Fragment>
+                    <Button
+                      content="Show Symmetry"
+                      icon="idea"
+                      labelPosition="left"
+                      onClick={() => addToModuleList(this.renderSymmetryVis(symmetryGroup))}
+                    />
+                    <h4 style={{ display: "inline-block", margin: 0 }}>{`Position: ${position.join("_")}`}</h4>
+                  </React.Fragment>
+                ) : null}
+                {allowOpen ? (
+                  <Button
+                    floated="right"
+                    onClick={() => {
+                      const { treeData, treeSize } = this.cloneTree(position);
+                      addToModuleList(this.renderTree(treeData, treeSize, position.length - 1));
+                    }}
+                    content="Open as root"
+                    icon="right arrow"
+                    labelPosition="right"
+                  />
+                ) : null}
               </Table.Cell>
             </Table.Row>
           </Table.Footer>
@@ -141,8 +166,22 @@ class BBTree extends React.Component<Props, State> {
     ) : null;
   }
 
-  renderTree = (treeData: Array, treeSize: number) => {
-    const { width, height, addToModuleList } = this.props;
+  renderSymmetryVis = (symmetryGroup: Object) => {
+    const { height, symmetry, depth } = this.props;
+    const { processedTreeData } = this.state;
+    return (
+      <SymmetryVis
+        height={height}
+        treeData={processedTreeData}
+        symmetryData={symmetry[symmetryGroup.group]}
+        color={symmetryGroup.color}
+        depth={depth || 0}
+      />
+    );
+  };
+
+  renderTree = (treeData: Array, treeSize: number, depth: number = 0) => {
+    const { width, height, addToModuleList, symmetry } = this.props;
     return (
       <BBTree
         width={width}
@@ -151,6 +190,8 @@ class BBTree extends React.Component<Props, State> {
         treeSize={treeSize}
         addToModuleList={addToModuleList}
         allowOpen={false}
+        symmetry={symmetry}
+        depth={depth}
       />
     );
   };
@@ -160,8 +201,9 @@ class BBTree extends React.Component<Props, State> {
     const { zoomedOut, processedTreeData, selectedNode } = this.state;
     const labelProps = zoomedOut
       ? {
+          // Reduce separation to bring the nodes closer, and hide label
           separation: { siblings: 0.5, nonSiblings: 0.7 },
-          nodeLabelComponent: { render: <NodeLabel hidden /> }
+          nodeLabelComponent: { render: <NodeLabel hidden />, foreignObjectWrapper: { y: -17.5, x: -17.5 } }
         }
       : {
           separation: { siblings: 1, nonSiblings: 1 },

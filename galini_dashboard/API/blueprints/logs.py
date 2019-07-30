@@ -19,6 +19,7 @@ import time
 from galini_io.reader import MessageReader
 from galini_dashboard.API.ConnectionManager import ConnectionManager
 
+
 def create_logs_blueprint(static_path):
     manager = ConnectionManager(static_path)
     logs_endpoint = Blueprint("logs_endpoint", __name__, static_folder=static_path)
@@ -38,27 +39,38 @@ def create_logs_blueprint(static_path):
     @logs_endpoint.route("/gettext", methods=["POST"])
     def getText():
         body = request.get_json()
-        con = getConnection(body['id'])
-        filename = body['filename']
+        con = getConnection(body["id"])
+        filename = body["filename"]
         try:
             return con.readText(filename)
         except FileNotFoundError:
-            abort(400) # File not found
+            abort(400)  # File not found
 
     @logs_endpoint.route("/getstate", methods=["POST"])
     def getState():
         body = request.get_json()
-        con = getConnection(body['id'])
-        filename = body['filename']
+        con = getConnection(body["id"])
+        filename = body["filename"]
         try:
             return json.dumps(con.readState(filename))
         except FileNotFoundError:
-            abort(400) # File not found
+            abort(400)  # File not found
+
+    @logs_endpoint.route("/getSymmetry", methods=["POST"])
+    def getSymmetry():
+        body = request.get_json()
+        con = getConnection(body["id"])
+        filename = body["filename"]
+        try:
+            f = open(os.path.join(static_path, filename, "symmetry.json"), "r")
+            return json.dumps(json.load(f))
+        except FileNotFoundError:
+            return json.dumps([])
 
     def getConnection(uuid):
         con = manager.getConnection(uuid)
         if con is None:
-            abort(400) # User id not found
+            abort(400)  # User id not found
         return con
 
     return logs_endpoint

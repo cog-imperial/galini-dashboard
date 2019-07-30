@@ -1,9 +1,9 @@
 // @flow
 import React from "react";
-import { fetchState, fetchText } from "../Utils/Network";
+import { fetchState, fetchText, fetchSymmetry } from "../Utils/Network";
 import { Icon, Button, Header, Ref } from "semantic-ui-react";
 import { connect } from "react-redux";
-import Modules from "./ModulesControl";
+import ModulesControl from "./ModulesControl";
 import store from "../Store";
 import { setModulesHeight, clearSolverEvent } from "../Actions";
 
@@ -25,8 +25,9 @@ class Dashboard extends React.Component<Props, State> {
       clearInterval(this.fetchStateInterval);
       fetchState(this.props.selected);
       fetchText(this.props.selected);
+      fetchSymmetry(this.props.selected);
       this.fetchStateInterval = setInterval(() => fetchState(this.props.selected), 5000);
-      this.setState({ rawLogsVisibility: 1 });
+      this.setState({ rawLogsVisibility: 0 });
     }
   }
 
@@ -52,8 +53,13 @@ class Dashboard extends React.Component<Props, State> {
     const { modulesHeight } = this.props;
     const { selected } = this.props;
     return (
-      <div style={{ display: rawLogsVisibility === 2 ? "none" : "block", height: `${modulesHeight}px` }}>
-        <Modules selected={selected} />
+      <div
+        style={{
+          display: rawLogsVisibility === 2 ? "none" : "block",
+          height: `${modulesHeight}px`
+        }}
+      >
+        <ModulesControl selected={selected} />
       </div>
     );
   };

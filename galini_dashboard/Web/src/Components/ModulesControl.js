@@ -22,8 +22,8 @@ class ModulesControl extends React.Component<Props, State> {
     this.setState({ modules: [...this.state.modules, component] });
   };
 
-  renderModule = (key: number) => {
-    switch (key) {
+  renderModule = (value: number) => {
+    switch (value) {
       case 1:
         return <ObjectiveValue />;
       case 2:
@@ -39,7 +39,10 @@ class ModulesControl extends React.Component<Props, State> {
     const { modules, hideButton } = this.state;
     return (
       <React.Fragment>
-        <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "row", overflow: "auto" }}>
+        <div
+          style={{ width: "100%", height: "100%", display: "flex", flexDirection: "row", overflow: "auto hidden" }}
+          id="modules-dashboard"
+        >
           {modules.map((val, index) => (
             <div style={{ padding: "10px", height: "100%" }} key={index}>
               <Segment style={{ height: "100%", position: "relative" }}>

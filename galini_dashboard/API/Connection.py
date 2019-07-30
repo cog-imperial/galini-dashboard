@@ -19,9 +19,9 @@ import h5py
 import numpy as np
 import json
 
-class Connection:
 
-    def __init__(self, staticPath, textReadLimit = 100):
+class Connection:
+    def __init__(self, staticPath, textReadLimit=100):
         self.staticPath = staticPath
         self.textReadLimit = textReadLimit
         self.textContent = None
@@ -48,11 +48,11 @@ class Connection:
         while msg is not None and len(text) < self.textReadLimit:
             if msg.HasField("text"):
                 content = msg.text.content
-                if content[-1] != '\n':
-                    content += '\n'
+                if content[-1] != "\n":
+                    content += "\n"
                 text.append(content)
             msg = reader.read_next()
-        return ''.join(text)
+        return "".join(text)
 
     def _openH5Data(self, fileName, data):
         if data is None:

@@ -1,6 +1,6 @@
 // @flow
 import store from "../Store/index";
-import { addSolverLog, addSolverEvent, setLogsList } from "../Actions/index";
+import { addSolverLog, addSolverEvent, setLogsList, addSolverSymmetry } from "../Actions/index";
 
 const flaskEndpoint = "http://127.0.0.1:5000";
 let id;
@@ -43,6 +43,13 @@ export const fetchState = async (filename: string) => {
     .then(res => res)
     .then(res => res.json());
   store.dispatch(addSolverEvent(states.map(val => JSON.parse(val))));
+};
+
+export const fetchSymmetry = async (filename: string) => {
+  const sym = await POST("/logs/getSymmetry", { id, filename })
+    .then(res => res)
+    .then(res => res.json());
+  store.dispatch(addSolverSymmetry(sym));
 };
 
 export const initialize = async () => {

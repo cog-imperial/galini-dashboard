@@ -3,7 +3,8 @@ export const actionTypes = {
   ADD_SOLVER_LOG: "ADD_SOLVER_LOG",
   ADD_SOLVER_EVENT: "ADD_SOLVER_EVENT",
   CLEAR_SOLVER_EVENT: "CLEAR_SOLVER_EVENT",
-  SET_MODULES_HEIGHT: "SET_MODULES_HEIGHT"
+  SET_MODULES_HEIGHT: "SET_MODULES_HEIGHT",
+  ADD_SOLVER_SYMMETRY: "ADD_SOLVER_SYMMETRY"
 };
 
 export const setLogsList = payload => {
@@ -16,6 +17,10 @@ export const addSolverEvent = payload => {
 
 export const addSolverLog = payload => {
   return { type: actionTypes.ADD_SOLVER_LOG, payload };
+};
+
+export const addSolverSymmetry = payload => {
+  return { type: actionTypes.ADD_SOLVER_SYMMETRY, payload };
 };
 
 export const clearSolverEvent = () => {
