@@ -9,6 +9,7 @@ import _ from "underscore";
 import SymmetryVis from "./SymmetryVis";
 import randomColor from "randomcolor";
 
+
 type Props = {
   treeData: Array,
   treeSize: number,
@@ -104,8 +105,8 @@ class BBTree extends React.Component<Props, State> {
                 <Icon fitted name="close" />
               </Button>
             </Table.HeaderCell>
-            {[...Array(maxLength).keys()].map(v => (
-              <Table.HeaderCell>
+            {[...Array(maxLength).keys()].map((v, i) => (
+              <Table.HeaderCell key={i}>
                 x<sub>{v}</sub>
               </Table.HeaderCell>
             ))}
@@ -114,20 +115,20 @@ class BBTree extends React.Component<Props, State> {
         <Table.Body>
           <Table.Row>
             <Table.Cell>Solutions</Table.Cell>
-            {solution.map(v => (
-              <Table.Cell>{format(".2")(v)}</Table.Cell>
+            {solution.map((v, i) => (
+              <Table.Cell key={i}>{format(".2")(v)}</Table.Cell>
             ))}
           </Table.Row>
           <Table.Row>
             <Table.Cell>Lower Bound</Table.Cell>
-            {lower_bounds.map(v => (
-              <Table.Cell>{format(".2")(v)}</Table.Cell>
+            {lower_bounds.map((v, i) => (
+              <Table.Cell key={i}>{format(".2")(v)}</Table.Cell>
             ))}
           </Table.Row>
           <Table.Row>
             <Table.Cell>Upper Bound</Table.Cell>
-            {upper_bounds.map(v => (
-              <Table.Cell>{format(".2")(v)}</Table.Cell>
+            {upper_bounds.map((v, i) => (
+              <Table.Cell key={i}>{format(".2")(v)}</Table.Cell>
             ))}
           </Table.Row>
         </Table.Body>
