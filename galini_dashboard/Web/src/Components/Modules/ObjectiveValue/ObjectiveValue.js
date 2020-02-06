@@ -22,19 +22,21 @@ export class ObjectiveValue extends React.Component<Props, State> {
   }
 
   updateStateData = (solverEvents: Array, startIndex: number) => {
-    const { vars } = this.state;
-    let clone = JSON.parse(JSON.stringify(vars));
+    //const { vars } = this.state;
+    let clone = {};
     let yMin = this.state.yMin;
     let yMax = this.state.yMax;
     for (let i = startIndex; i < solverEvents.length; i++) {
       if (solverEvents[i].updateVariable) {
         const { name, iteration, value } = solverEvents[i].updateVariable;
+        if (!value) continue;
+        if (!(name === 'z_l' || name === 'z_u')) continue;
         yMin = Math.min(yMin, value);
         yMax = Math.max(yMax, value);
         if (!clone[name]) {
           clone[name] = [];
         }
-        clone[name].push({ x: iteration || 0, y: value });
+        clone[name].push({ x: iteration[0] || 0, y: value });
       }
     }
     return { vars: clone, yMin, yMax };
