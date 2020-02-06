@@ -34,12 +34,13 @@ export class SolverRuntimes extends React.Component<Props, State> {
   }
 
   updateStateData = (solverEvents: Array, startIndex: number) => {
-    const { solvers, timeStart: ts } = this.state;
-    let clone = JSON.parse(JSON.stringify(solvers));
+    const { timeStart: ts } = this.state;
+    let clone = {};
     const timeStart = startIndex === 0 ? parseInt(solverEvents[0].timestamp) : ts;
     for (let i = startIndex; i < solverEvents.length; i++) {
       if (solverEvents[i].solveStart || solverEvents[i].solveEnd) {
-        const { timestamp, solver } = solverEvents[i];
+        const { timestamp } = solverEvents[i];
+        const solver = solverEvents[i].solveStart ? solverEvents[i].solveStart.solver : solverEvents[i].solveEnd.solver;
         const realTime = timestamp - timeStart;
         if (!clone[solver]) {
           clone[solver] = { total: 0, data: [{ start: realTime, timestamp }] };
